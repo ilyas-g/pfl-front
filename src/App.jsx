@@ -1,9 +1,28 @@
-import { useState } from 'react'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true)
+  const [data, setData] = useState();
   const [count, setCount] = useState(0)
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await axios.get(`http://localhost:1337/api/restaurants`);
+            setData(response.data);
+
+            setIsLoading(false);
+
+        } catch (error) {
+            console.log(error.message);
+        }
+    };
+    fetchData();
+}, []);
 
   return (
     <div className="App">
@@ -16,6 +35,21 @@ function App() {
         </a>
       </div>
       <h1>Vite + React + PFL</h1>
+
+      {isLoading === true ? (
+        <h1>En cours de chargement</h1>
+      ) : (
+        <>
+        <ul>
+          {data.data.map((restaurant, index) => {
+            return (
+          <li key={index}>{restaurant.attributes.name}</li>
+            )
+          })}
+        </ul> 
+        </>
+      )}
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
