@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
         try {
-            const response = await axios.get(`http://localhost:1337/api/restaurants`);
+            const response = await axios.get(`https://pfl-back-2022.herokuapp.com/api/restaurants`);
             setData(response.data);
 
             setIsLoading(false);
