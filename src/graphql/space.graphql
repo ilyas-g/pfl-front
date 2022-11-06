@@ -1,0 +1,10 @@
+import { gql } from 'graphql.macro';
+
+const CARD_QUERY = gql`
+  {
+    launchesPast(limit: 10) {
+      id
+      mission_name
+    }
+  }
+`;

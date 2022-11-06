@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react';
 import reactLogo from './assets/react.svg'
 import './App.css'
 
+import { useQuery, gql } from "@apollo/client";
+import Card from './components/card/Card';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [data, setData] = useState();
@@ -35,7 +38,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React + PFL</h1>
-
+<Card />
       {isLoading === true ? (
         <h1>En cours de chargement</h1>
       ) : (
