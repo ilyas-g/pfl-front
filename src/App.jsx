@@ -1,10 +1,15 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
 import reactLogo from './assets/react.svg'
 import './App.css'
 
 import { useQuery, gql } from "@apollo/client";
 import Card from './components/card/Card';
+import Header from './components/header/Header';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -28,7 +33,9 @@ function App() {
 }, []);
 
   return (
+    <Router>
     <div className="App">
+      <Header />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -37,8 +44,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React + PFL</h1>
-<Card />
+      <h1>Vite + React + sssPFL</h1>
+      <Card />
       {isLoading === true ? (
         <h1>En cours de chargement</h1>
       ) : (
@@ -65,6 +72,12 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
+    <Routes>
+        <Route path="/" element={<Header />} />
+        {/* <Route path="/about" element={<About />} />
+        <Route path="/product/:productId" element={<Product />} /> */}
+      </Routes>
+    </Router>
   )
 }
 
