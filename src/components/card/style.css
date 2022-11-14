@@ -1,0 +1,100 @@
+.cards__single {
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: 0.3s all ease-in-out;
+  cursor: unset;
+  border-radius: 5px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.6);
+}
+.cards__single:hover {
+  margin-top: -5px;
+  border: 2px solid #e7c292;
+  border-radius: 5px;
+}
+@media screen and (min-width: 992px) {
+  .cards__single .pfl-button {
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+.cards__single h3 {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+
+.cards__front > .cards__front__header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-height: 450px;
+}
+.cards__front > .cards__front__header > .image .cards__image.champion {
+  height: initial;
+}
+.cards__front > .cards__front__header > .image::after {
+  background-color: rgba(190, 189, 194, 0.1);
+}
+.cards__front > .cards__front__header > .image::after .cards__image.champion {
+  height: initial;
+}
+.cards__front > .cards__front__header > .image::after img {
+  height: initial;
+}
+.cards__front > .cards__front__header > .cover > .text {
+  color: #e7c292;
+}
+.cards__front > .cards__front__body > .detail > .title {
+  color: #ffffff;
+}
+@media only screen and (max-width: 1200px) {
+  .cards__front > .cards__front__footer {
+    display: inherit;
+    justify-content: space-around;
+  }
+}
+
+.cards__back {
+  top: 0;
+}
+.cards__back .container-onglets {
+  margin: 0;
+}
+.cards__back .container-onglets li.onglets {
+  width: 100%;
+  padding: 10px 0;
+}
+.cards__back .container-onglets li.onglets.active {
+  background: rgba(255, 255, 255, 0.35);
+}
+.cards__back .container-onglets li.onglets.active:first-child {
+  border-top-left-radius: 5px;
+}
+.cards__back .container-onglets li.onglets.active:last-child {
+  border-top-right-radius: 5px;
+}
+.cards__back .container-onglets li.onglets::before {
+  content: "";
+  padding: 0;
+}
+.cards__back .container-onglets li.onglets::after {
+  height: 0;
+  margin: 0 auto;
+}
+.cards__back .container-onglets li.onglets .onglets:first-child:after {
+  background: unset;
+}
+
+.cards__top {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.cards__results {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.do-flip {
+  transform: rotateY(-180deg);
+}/*# sourceMappingURL=style.css.map */
