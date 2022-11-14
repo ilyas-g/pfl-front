@@ -10,12 +10,12 @@ import './App.css'
 import { useQuery, gql } from "@apollo/client";
 import Card from './components/card/Card';
 import Header from './components/header/Header';
+import Home from './pages/Home';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [data, setData] = useState();
   const [count, setCount] = useState(0)
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -73,7 +73,7 @@ function App() {
       </p>
     </div>
     <Routes>
-        <Route path="/" element={<Header />} />
+        <Route path="/" element={<Home />} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/product/:productId" element={<Product />} /> */}
       </Routes>

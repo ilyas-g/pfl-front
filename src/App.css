@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;
@@ -41,4 +41,49 @@
 
 .read-the-docs {
   color: #888;
+}
+
+@font-face {
+  font-family: 'icons';
+  src: url('assets/fonts/icons.eot?2yyp5w');
+  src: url('assets/fonts/icons.eot?2yyp5w#iefix') format('embedded-opentype'),
+    url('assets/fonts/icons.ttf?2yyp5w') format('truetype'),
+    url('assets/fonts/icons.woff?2yyp5w') format('woff'),
+    url('assets/fonts/icons.svg?2yyp5w#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitch:before {
+  content: "\e900";
+}
+
+.icon-twitter:before {
+  content: "\e901";
+}
+
+.icon-discord:before {
+  content: "\e902";
+  color: #7289da;
+}
+
+.icon-menu:before {
+  content: "\e903";
 }
