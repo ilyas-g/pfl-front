@@ -87,3 +87,7 @@
 .icon-menu:before {
   content: "\e903";
 }
+
+.icon-cross:before {
+  content: "\e904";
+}

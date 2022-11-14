@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import BurgerMenu from '../burgerMenu/BurgerMenu';
+import Menu from '../burgerMenu/Menu';
+import WrapMenu from '../wrapMenu/WrapMenu';
 import "./style.css"
 
 export default function Header() {
@@ -11,16 +12,12 @@ export default function Header() {
     <header>
         <img src="https://yuzugaming.com/site/templates/assets/ope/pfl/pfl-logo-crop.png" width={115}/>
         <div className='header-navigation'>
-          <span className='icon-menu' onClick={() => {setBurger(!burger)}}></span>
-          {burger === true ? <BurgerMenu /> : ''}
+          <span className='icon-menu' onClick={() => {setBurger(true)}}></span>
+          {burger === true && <Menu func={() => {setBurger(false)}} />}
 
-          <nav className='main-navigation'>
-            <ul role="list">
-              <li role="listitem" className="onglets"><Link to="/">Accueil</Link></li>
-              <li role="listitem" className="onglets"><Link to="/">Ranking</Link></li>
-              <li role="listitem" className="onglets"><Link to="/">Contact</Link></li>
-            </ul>
-          </nav>
+          <div className='main-nav'>
+            <WrapMenu />
+          </div>
           <nav className='nav-lang'>
             <ul role="list">
               <li role="listitem" className="onglets"><Link to="/">EN</Link></li>
