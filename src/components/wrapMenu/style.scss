@@ -1,6 +1,10 @@
 .main-menu {
     a {
         color: #fff;
+        
+        @media screen and (min-width: 768px) {
+            color: rgb(95, 105, 125);
+        }
     }
 
     @media screen and (min-width: 768px) {
