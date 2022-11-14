@@ -66,8 +66,7 @@ export default function Card() {
 
   return (
     <div>
-      <h1>SpaceX Launches</h1>
-      <p>ok {data.league.name}</p>
+      <h1>{data.league.name}</h1>
       <ul>
         {data.league.events.nodes.map((event) => {
           return (

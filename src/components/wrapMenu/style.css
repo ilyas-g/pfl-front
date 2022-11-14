@@ -1,0 +1,16 @@
+.main-menu a {
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .main-menu a {
+    color: rgb(95, 105, 125);
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-menu {
+    display: flex;
+  }
+  .main-menu ul {
+    display: flex;
+  }
+}/*# sourceMappingURL=style.css.map */
