@@ -1,8 +1,7 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 
 import reactLogo from './assets/react.svg'
 import './App.css'
@@ -11,6 +10,7 @@ import { useQuery, gql } from "@apollo/client";
 import Card from './components/card/Card';
 import Header from './components/header/Header';
 import Home from './pages/Home';
+import SocialMedias from './components/socialMedias/SocialMedias';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -36,6 +36,7 @@ function App() {
     <Router>
     <div className="App">
       <Header />
+      <SocialMedias />
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
