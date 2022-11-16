@@ -1,21 +1,9 @@
 $media-queries-desktop: 992px;
 $media-queries-tablet: 768px;
 
-$yuzuYellow: #d99a2b;
 $white: #ffffff;
 $beige: #e7c292;
-$blue-color: #072458;
-$dark-blue-color: #061f4a;
-$red-color: #e6001f;
-$dark-red-color: #a50000;
 $grey-color: #bebdc2;
-
-$black-transparent: rgba(0,0,0,0.5);
-
-$link-color: $red-color;
-$text-color: #312a43;
-
-$lvl256-color: #272551;
 
 $margin-xs: 5px;
 $margin-sm: 10px;
@@ -24,8 +12,39 @@ $margin-mdp: 20px;
 $margin-lg: 30px;
 $margin-xl: 50px;
 
+// .cards {
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     perspective: 1000px;
+//     justify-content: center;
+//     align-content: center;
+//     align-items: center;
+
+//     @media screen and (min-width: 768px) {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-around;
+//         align-content: center;
+//         position: relative;
+//         perspective: 1000px;
+//         align-items: stretch;
+//     }
+// }
+
 .cards__single {
-    background-color: rgba(0, 0, 0, 0.75);
+    margin-bottom: 30px;
+    background: 
+      radial-gradient(circle, transparent 40%, rgb(37, 39, 103) 75%),
+      linear-gradient(to right, rgb(37, 39, 103), rgb(37, 39, 103)),
+      url('../../assets/dbfz-fond.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: color;
+    position: relative;
+    flex: 1;
+
+    color: #f0f1f3;
     transition: 0.3s all ease-in-out;
     cursor: unset;
     border-radius: 5px;
@@ -33,11 +52,18 @@ $margin-xl: 50px;
 
     &:hover {
         margin-top:-5px;
-        border: 2px solid $beige;
-        border-radius: 5px;
+        background: 
+        radial-gradient(circle, transparent 40%, rgb(110, 157, 191) 75%),
+        linear-gradient(to right, rgb(110, 157, 191), rgb(110, 157, 191)),
+        url('../../assets/dbfz-fond.jpg');
+        background-position: center center;
+        background-size: cover;
+        // border: 2px solid $beige;
     }
 
     @media screen and (min-width: $media-queries-desktop) {
+        min-height: 50vh;
+
         .pfl-button {
             padding: 1em;
             background-color: rgba($white, 0.2);
@@ -52,6 +78,20 @@ $margin-xl: 50px;
     }
 }
 
+.layer {
+    background-color: rgba(14, 17, 55, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+        background-color: rgba(65, 97, 120, 0.85);
+    }
+}
+
 .cards__front {
     &>.cards__front__header {
         border-top-left-radius: 5px;
@@ -62,7 +102,6 @@ $margin-xl: 50px;
             .cards__image.champion {
                 height:initial
             }
-
 
         }
         &>.image::after {
@@ -78,10 +117,22 @@ $margin-xl: 50px;
         }
 
         &>.cover {
-
             &>.text {
                 color: $beige;
             }
+        }
+    }
+
+    .cards__front__classement {
+        list-style: none;
+        color: #f0f1f3;
+        padding: 0;
+
+        li {
+            &:first-child, &:nth-child(2), &:nth-child(3) {font-weight: bold;}
+            &:first-child {color : #FFD700}
+            &:nth-child(2) {color : #C0C0C0}
+            &:nth-child(3) {color : #C49C48}
         }
     }
 

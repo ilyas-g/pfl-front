@@ -1,5 +1,7 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
+import "./style.css"
+import { Link } from "react-router-dom";
 
 const CARD_QUERY = gql`
   query LeagueStandings {
@@ -8,14 +10,20 @@ const CARD_QUERY = gql`
       name
       city
       events (query: {
-        perPage: 2
+        perPage: 5
       }) {
         nodes {
           id
           name
+          slug
+          videogame {
+            id
+            name
+          }
           tournament {
             id
             name
+            slug
             numAttendees
             state
             participants (query: {
@@ -65,22 +73,37 @@ export default function Card() {
   if (error) return <pre>{error.message}</pre>
 
   return (
-    <div>
-      <h1>{data.league.name}</h1>
-      <ul>
-        {data.league.events.nodes.map((event) => {
-          return (
-          <>
-            <li>{event.name}</li>
-            {event.tournament.participants.nodes.map((participant) => {
-              return (
-                <p>{participant.player.gamerTag}</p>
-              )
-            })}
-          </>
-          )
-        })}
-      </ul>
-    </div>
+  <>
+      {/* <h1>{data.league.name}</h1> */}
+
+      {data.league.events.nodes.map((event) => {
+        const bracket = `https://www.start.gg/${event.slug}`
+
+        return (
+          <div className="tournament">
+            <div className="cards">
+              <div className="cards__single">
+                <div className="layer">
+                <div className="cards__front">
+                  <div className="cards__front__header">
+                    <h3>{event.name}</h3>
+                    <ul className="cards__front__classement">
+                    {event.tournament.participants.nodes.map((participant) => {
+                      return (
+                        <li>{participant.player.gamerTag}</li>
+                      )
+                    })}
+                    </ul>
+                  </div>
+                  <div>
+                    <Link to={bracket}>TEST</Link>
+                  </div>
+                </div></div>
+              </div>
+            </div>
+          </div>
+        )
+      })}
+    </>
   );
 }

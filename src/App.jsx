@@ -11,6 +11,7 @@ import Card from './components/card/Card';
 import Header from './components/header/Header';
 import Home from './pages/Home';
 import SocialMedias from './components/socialMedias/SocialMedias';
+import TournamentsList from './components/tournamentsList/TournamentsList';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -45,8 +46,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div> */}
-      <h1>Vite + React + sssPFL</h1>
-      <Card />
+      <h1>PARISIENNE FIGHTING LEAGUE</h1>
+      <TournamentsList />
+      {/* <Card /> */}
       {isLoading === true ? (
         <h1>En cours de chargement</h1>
       ) : (
