@@ -1,7 +1,6 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import "./style.css"
-import { Link } from "react-router-dom";
 
 const CARD_QUERY = gql`
   query LeagueStandings {
@@ -77,7 +76,7 @@ export default function Card() {
       {/* <h1>{data.league.name}</h1> */}
 
       {data.league.events.nodes.map((event) => {
-        const bracket = `https://www.start.gg/${event.slug}`
+        const bracket = `${import.meta.env.VITE_STARTGG_URI}${event.slug}`
 
         return (
           <div className="tournament">
@@ -86,7 +85,7 @@ export default function Card() {
                 <div className="layer">
                   <div className="cards__front">
                     <div className="cards__front__header">
-                      <h3>{event.name}</h3>
+                      <h3>{event.tournament.name}</h3>
                       <ul className="cards__front__classement">
                       {event.tournament.participants.nodes.map((participant) => {
                         return (
@@ -96,7 +95,7 @@ export default function Card() {
                       </ul>
                     </div>
                     <div className="cards__front__footer">
-                      <Link className="btn" to={import.meta.env.VITE_STARTGG_URI}>Bracket</Link>
+                      <a className="btn" href={bracket} target="_blank" rel="noreferrer">Bracket</a>
                     </div>
                   </div>
                 </div>
