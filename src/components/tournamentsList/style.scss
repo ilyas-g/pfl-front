@@ -1,0 +1,23 @@
+.tournaments-list {
+    margin-top: 15px;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    z-index: 1;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .cards {
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+
+        .tournament {
+            flex: 25%;
+            max-width: 22%;
+        }
+    }
+}
