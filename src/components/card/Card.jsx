@@ -82,23 +82,24 @@ export default function Card() {
         return (
           <div className="tournament">
             <div className="cards">
-              <div className="cards__single">
+              <div className="cards__single firstGame">
                 <div className="layer">
-                <div className="cards__front">
-                  <div className="cards__front__header">
-                    <h3>{event.name}</h3>
-                    <ul className="cards__front__classement">
-                    {event.tournament.participants.nodes.map((participant) => {
-                      return (
-                        <li>{participant.player.gamerTag}</li>
-                      )
-                    })}
-                    </ul>
+                  <div className="cards__front">
+                    <div className="cards__front__header">
+                      <h3>{event.name}</h3>
+                      <ul className="cards__front__classement">
+                      {event.tournament.participants.nodes.map((participant) => {
+                        return (
+                          <li>{participant.player.gamerTag}</li>
+                        )
+                      })}
+                      </ul>
+                    </div>
+                    <div className="cards__front__footer">
+                      <Link className="btn" to={import.meta.env.VITE_STARTGG_URI}>Bracket</Link>
+                    </div>
                   </div>
-                  <div>
-                    <Link to={bracket}>TEST</Link>
-                  </div>
-                </div></div>
+                </div>
               </div>
             </div>
           </div>

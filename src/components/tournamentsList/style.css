@@ -10,6 +10,7 @@
   }
   .tournaments-list .cards {
     padding: 0 15px;
+    margin-bottom: 30px;
   }
   .tournaments-list .tournament {
     flex: 25%;
