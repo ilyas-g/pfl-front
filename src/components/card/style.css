@@ -39,6 +39,9 @@
   background-position: center center;
   background-size: cover;
 }
+.cards__single.firstGame:hover ul {
+  text-shadow: 2px 2px 2px #000000;
+}
 .cards__single.secondGame {
   background: radial-gradient(circle, transparent 40%, rgb(103, 25, 25) 75%), linear-gradient(to right, rgb(103, 25, 25), rgb(103, 25, 25)), url("../../assets/ggst-fond.jpg");
   background-position: center center;
