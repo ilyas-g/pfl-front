@@ -16,6 +16,10 @@ $beige: #e7c292;
     border-radius: 5px;
     box-shadow: 0 5px 6px rgb(0 0 0 / 60%);
 
+    // ul {
+    //     transition: 0.3s all ease-in-out;
+    // }
+
     &.firstGame {
         background: 
         radial-gradient(circle, transparent 40%, rgb(37, 39, 103) 85%),
@@ -48,6 +52,8 @@ $beige: #e7c292;
             background-position: center center;
             background-size: cover;
             // border: 2px solid $beige;
+
+            ul {text-shadow: 2px 2px 2px #000000;}
         }
     }
 
@@ -89,8 +95,16 @@ $beige: #e7c292;
         min-height: 66vh;
     }
 
+    @media screen and (min-height: 900px) {
+        min-height: 40vh;
+    }
+
     @media screen and (min-width: $media-queries-desktop) {
-        min-height: 50vh;
+        min-height: 60vh;
+    }
+
+    @media screen and (min-width: $media-queries-tablet) and (min-height: 900px) {
+        min-height: 40vh;
     }
 
     h3 {

@@ -90,3 +90,7 @@
 .icon-cross:before {
   content: "\e904";
 }
+
+.icon-yuzu:before {
+  content: url('assets/yuzu-lo.svg');
+}

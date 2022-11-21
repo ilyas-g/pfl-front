@@ -1,5 +1,5 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+// import axios from 'axios';
+// import React, { useEffect, useState } from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -11,27 +11,26 @@ import Card from './components/card/Card';
 import Header from './components/header/Header';
 import Home from './pages/Home';
 import SocialMedias from './components/socialMedias/SocialMedias';
-import TournamentsList from './components/tournamentsList/TournamentsList';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
-  const [data, setData] = useState();
-  const [count, setCount] = useState(0)
+  // const [isLoading, setIsLoading] = useState(true)
+  // const [data, setData] = useState();
+  // const [count, setCount] = useState(0)
 
-  useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const response = await axios.get(`https://pfl-back-2022.herokuapp.com/api/restaurants`);
-            setData(response.data);
+//   useEffect(() => {
+//     const fetchData = async () => {
+//         try {
+//             const response = await axios.get(`https://pfl-back-2022.herokuapp.com/api/restaurants`);
+//             setData(response.data);
 
-            setIsLoading(false);
+//             setIsLoading(false);
 
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
-    fetchData();
-}, []);
+//         } catch (error) {
+//             console.log(error.message);
+//         }
+//     };
+//     fetchData();
+// }, []);
 
   return (
     <Router>
@@ -46,24 +45,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div> */}
-      <h1>PARISIENNE FIGHTING LEAGUE</h1>
-      <TournamentsList />
-      {/* <Card /> */}
-      {isLoading === true ? (
-        <h1>En cours de chargement</h1>
-      ) : (
-        <>
-        <ul>
-          {data.data.map((restaurant, index) => {
-            return (
-          <li key={index}>{restaurant.attributes.name}</li>
-            )
-          })}
-        </ul> 
-        </>
-      )}
 
-      <div className="card">
+      {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -73,7 +56,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </div>
     <Routes>
         <Route path="/" element={<Home />} />

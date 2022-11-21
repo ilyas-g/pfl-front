@@ -7,8 +7,8 @@
     .socials-aside {
         display: block;
         position: fixed;
-        top: 28%;
-        left: 1.5vw;
+        top: 50%;
+        left: 2vw;
         z-index: 1;
         width: 1rem;
         transform: translate3d(0, -50%, 0);
@@ -39,6 +39,8 @@
             box-shadow: 0 1px 3px 1px rgb(20 32 79 / 50%);
             border-radius: 50%;
             margin: 15px 0;
+
+            &.yuzu-social {background-color: #111111;}
         }
     }
 }
