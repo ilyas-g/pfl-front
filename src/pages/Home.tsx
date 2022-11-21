@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <div>
-            <h1>PARISIENNE FIGHTING LEAGUE</h1>
+      {/* <h1>PARISIENNE FIGHTING LEAGUE</h1> */}
       <TournamentsList />
       {/* <Card /> */}
       {isLoading === true ? (

@@ -21,3 +21,25 @@
         }
     }
 }
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: rgb(95, 105, 125);
+
+    &:hover {
+        color: rgb(0 29 110);
+    }
+
+    &.active {
+        background-color: rgb(128, 70, 0);
+        color: white;
+      }
+}

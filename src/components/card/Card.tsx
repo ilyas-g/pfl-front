@@ -65,7 +65,12 @@ const CARD_QUERY = gql`
   }
 `;
 
-export default function Card() {
+interface Props {
+  cardSkin: string;
+}
+
+export default function Card(props: Props): JSX.Element | null {
+
   const { data, loading, error } = useQuery(CARD_QUERY);
 
   if (loading) return "Loading...";
@@ -81,7 +86,7 @@ export default function Card() {
         return (
           <div className="tournament">
             <div className="cards">
-              <div className="cards__single firstGame">
+              <div className={`cards__single ${props.cardSkin}`}>
                 <div className="layer">
                   <div className="cards__front">
                     <div className="cards__front__header">

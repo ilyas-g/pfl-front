@@ -1,0 +1,9 @@
+.tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tab {
+  font-size: 25px;
+  color: green;
+}/*# sourceMappingURL=style.css.map */
