@@ -10,6 +10,7 @@ import { useQuery, gql } from "@apollo/client";
 import Card from './components/card/Card';
 import Header from './components/header/Header';
 import Home from './pages/Home';
+import About from './pages/About';
 import SocialMedias from './components/socialMedias/SocialMedias';
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
+    <div className="App transition-fade">
       <Header />
       <SocialMedias />
       {/* <div>
@@ -60,6 +61,7 @@ function App() {
     </div>
     <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/product/:productId" element={<Product />} /> */}
       </Routes>

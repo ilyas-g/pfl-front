@@ -21,9 +21,9 @@ a {
   text-decoration: inherit;
 }
 
-a:hover {
+/* a:hover {
   color: rgb(0 29 110);
-}
+} */
 
 body {
   margin: 0;

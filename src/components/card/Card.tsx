@@ -71,6 +71,7 @@ interface Props {
 
 export default function Card(props: Props): JSX.Element | null {
 
+  console.log('okokokokoks')
   const { data, loading, error } = useQuery(CARD_QUERY);
 
   if (loading) return "Loading...";
@@ -90,7 +91,7 @@ export default function Card(props: Props): JSX.Element | null {
                 <div className="layer">
                   <div className="cards__front">
                     <div className="cards__front__header">
-                      <h3>{event.tournament.name}</h3>
+                      <h3>PFL - Ranking #10 ROAD TO EVO 2K23</h3>
                       <ul className="cards__front__classement">
                       {event.tournament.participants.nodes.map((participant) => {
                         return (
