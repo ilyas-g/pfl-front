@@ -33,6 +33,9 @@
     display: block;
     color: rgb(0, 29, 110);
   }
+  .socials-aside_ready .icon-video-camera1:before, .socials-aside_ready .icon-video-camera:before {
+    color: #ffffff;
+  }
   .socials-aside_ready a {
     background-color: white;
     box-shadow: 0 1px 3px 1px rgba(20, 32, 79, 0.5);
@@ -41,5 +44,30 @@
   }
   .socials-aside_ready a.yuzu-social {
     background-color: #202020;
+  }
+  .socials-aside_ready a.pfl-trailer {
+    background-image: url("../../assets/pfl-bg.jpg");
+    background-size: cover;
+  }
+  .socials-aside_ready .tooltip {
+    position: relative;
+  }
+  .socials-aside_ready .tooltip .tooltiptext {
+    visibility: hidden;
+    font-size: 12px;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+  }
+  .socials-aside_ready .tooltip:hover .tooltiptext {
+    visibility: visible;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -34,6 +34,8 @@
         display: block;
         color : rgb(0 29 110);
 
+        .icon-video-camera1:before, .icon-video-camera:before {color: #ffffff;}
+
         a {
             background-color: white;
             box-shadow: 0 1px 3px 1px rgb(20 32 79 / 50%);
@@ -41,6 +43,34 @@
             margin: 15px 0;
 
             &.yuzu-social {background-color: #202020;}
+            &.pfl-trailer {background-image: url('../../assets/pfl-bg.jpg'); background-size: cover;}
         }
+
+        .tooltip {
+            position: relative;
+            // display: inline-block;
+            // border-bottom: 1px dotted black;
+          }
+          
+          .tooltip .tooltiptext {
+            visibility: hidden;
+            font-size: 12px;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            left: 105%;
+          }
+          
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+          }
     }
 }
