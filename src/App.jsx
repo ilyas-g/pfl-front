@@ -12,32 +12,22 @@ import Header from './components/header/Header';
 import Home from './pages/Home';
 import About from './pages/About';
 import SocialMedias from './components/socialMedias/SocialMedias';
+import Modal from "./components/modal/Modal";
+import { useState } from "react";
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true)
   // const [data, setData] = useState();
   // const [count, setCount] = useState(0)
 
-//   useEffect(() => {
-//     const fetchData = async () => {
-//         try {
-//             const response = await axios.get(`https://pfl-back-2022.herokuapp.com/api/restaurants`);
-//             setData(response.data);
-
-//             setIsLoading(false);
-
-//         } catch (error) {
-//             console.log(error.message);
-//         }
-//     };
-//     fetchData();
-// }, []);
+  const [isModal, setIsModal] = useState(false)
 
   return (
     <Router>
     <div className="App transition-fade">
       <Header />
-      <SocialMedias />
+      <SocialMedias func={() => {setIsModal(true)}} />
+      {isModal === true ? <Modal func={() => {setIsModal(false)}} /> : '' }
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />

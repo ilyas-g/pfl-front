@@ -1,7 +1,7 @@
 .socials-aside, .socials-aside_ready {
   display: none;
 }
-.socials-aside a, .socials-aside_ready a {
+.socials-aside a, .socials-aside .tooltiptext, .socials-aside_ready a, .socials-aside_ready .tooltiptext {
   display: none;
 }
 
@@ -14,9 +14,9 @@
     z-index: 1;
     width: 1rem;
     transform: translate3d(0, -50%, 0);
-    transition: color 1000ms ease 1000ms;
+    transition: color 400ms ease 400ms;
   }
-  .socials-aside a {
+  .socials-aside a, .socials-aside button {
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -27,7 +27,15 @@
     color: inherit;
     text-decoration: none;
     line-height: 1rem;
-    transition: background-color 1000ms ease 1000ms, box-shadow 1000ms ease 1000ms;
+    transition: background-color 400ms ease 400ms, box-shadow 400ms ease 400ms;
+  }
+  .socials-aside button {
+    border: 0;
+    padding: 0;
+    outline: none;
+  }
+  .socials-aside button:hover {
+    background: white;
   }
   .socials-aside_ready {
     display: block;
@@ -36,23 +44,67 @@
   .socials-aside_ready .icon-video-camera1:before, .socials-aside_ready .icon-video-camera:before {
     color: #ffffff;
   }
-  .socials-aside_ready a {
+  .socials-aside_ready a, .socials-aside_ready button {
     background-color: white;
     box-shadow: 0 1px 3px 1px rgba(20, 32, 79, 0.5);
     border-radius: 50%;
     margin: 15px 0;
   }
-  .socials-aside_ready a.yuzu-social {
+  .socials-aside_ready a.yuzu-social, .socials-aside_ready button.yuzu-social {
     background-color: #202020;
   }
-  .socials-aside_ready a.pfl-trailer {
+  .socials-aside_ready a.yuzu-social:hover, .socials-aside_ready button.yuzu-social:hover {
+    background-color: #3a3a3a;
+  }
+  .socials-aside_ready a.pfl-trailer, .socials-aside_ready button.pfl-trailer {
     background-image: url("../../assets/pfl-bg.jpg");
+  }
+  .socials-aside_ready a.pfl-trailer:hover, .socials-aside_ready button.pfl-trailer:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("../../assets/pfl-bg.jpg");
     background-size: cover;
+  }
+  .socials-aside_ready a.pfl-trailer.five, .socials-aside_ready button.pfl-trailer.five {
+    transform: scale(1);
+  }
+  .socials-aside_ready a.pfl-trailer.five .modal-background, .socials-aside_ready button.pfl-trailer.five .modal-background {
+    background: rgba(0, 0, 0, 0);
+    -webkit-animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  .socials-aside_ready a.pfl-trailer.five .modal-background .modal, .socials-aside_ready button.pfl-trailer.five .modal-background .modal {
+    transform: translateX(-1500px);
+    -webkit-animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  .socials-aside_ready a.pfl-trailer.five.out, .socials-aside_ready button.pfl-trailer.five.out {
+    -webkit-animation: quickScaleDown 0s 0.5s linear forwards;
+            animation: quickScaleDown 0s 0.5s linear forwards;
+  }
+  .socials-aside_ready a.pfl-trailer.five.out .modal-background, .socials-aside_ready button.pfl-trailer.five.out .modal-background {
+    -webkit-animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  .socials-aside_ready a.pfl-trailer.five.out .modal-background .modal, .socials-aside_ready button.pfl-trailer.five.out .modal-background .modal {
+    -webkit-animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  .socials-aside_ready a.icon-video-camera1:before, .socials-aside_ready a.icon-cross:before, .socials-aside_ready a.icon-twitter:before, .socials-aside_ready a.icon-discord:before, .socials-aside_ready a.icon-video-camera:before, .socials-aside_ready button.icon-video-camera1:before, .socials-aside_ready button.icon-cross:before, .socials-aside_ready button.icon-twitter:before, .socials-aside_ready button.icon-discord:before, .socials-aside_ready button.icon-video-camera:before {
+    padding-top: 1px;
+  }
+  .socials-aside_ready a.icon-twitch:hover:before, .socials-aside_ready button.icon-twitch:hover:before {
+    color: #6441a5;
+  }
+  .socials-aside_ready a.icon-twitter:hover:before, .socials-aside_ready button.icon-twitter:hover:before {
+    color: #00acee;
+  }
+  .socials-aside_ready a.icon-discord:hover:before, .socials-aside_ready button.icon-discord:hover:before {
+    color: #7289da;
   }
   .socials-aside_ready .tooltip {
     position: relative;
   }
   .socials-aside_ready .tooltip .tooltiptext {
+    display: initial;
     visibility: hidden;
     font-size: 12px;
     width: 120px;
@@ -61,7 +113,6 @@
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
     top: -5px;
