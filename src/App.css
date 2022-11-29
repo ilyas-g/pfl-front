@@ -70,6 +70,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-video-camera1:before {
+  content: "\e905";
+}
+
+.icon-cross:before {
+  content: "\e904";
+}
+
 .icon-twitch:before {
   content: "\e900";
 }
@@ -80,17 +88,26 @@
 
 .icon-discord:before {
   content: "\e902";
-  color: #7289da;
+  /* color: #7289da; */
 }
 
 .icon-menu:before {
   content: "\e903";
 }
 
-.icon-cross:before {
-  content: "\e904";
+.icon-video-camera:before {
+  content: "\e914";
 }
 
 .icon-yuzu:before {
   content: url('assets/yuzu-lo.svg');
+}
+
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
 }

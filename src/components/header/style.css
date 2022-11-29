@@ -33,19 +33,45 @@ nav {
     margin-left: 40px;
   }
 }
-nav a {
-  margin-left: 15px;
-  color: rgb(95, 105, 125);
-}
 nav ul {
   font-size: 18px;
   align-items: center;
   list-style: none;
   padding: 0;
 }
+nav ul li {
+  margin-left: 15px;
+}
+nav ul li:before {
+  content: "";
+  padding: 0;
+}
+nav ul li:after {
+  background-color: #e6001f;
+  transition: width 0.4s;
+  content: "";
+  display: block;
+  height: 2px;
+  height: 0.125rem;
+  width: 0;
+}
+nav ul li:hover {
+  transition: color 1s;
+}
+nav ul li:hover:after {
+  width: 100%;
+}
 nav ul li a {
-  margin-left: 5px;
-  font-size: 16px;
+  color: rgb(95, 105, 125);
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 1s;
+}
+nav ul li a:hover {
+  color: rgb(0, 29, 110);
 }
 
 .nav-lang ul {

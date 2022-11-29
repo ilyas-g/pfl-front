@@ -70,31 +70,30 @@ interface Props {
 }
 
 export default function Card(props: Props): JSX.Element | null {
-
   const { data, loading, error } = useQuery(CARD_QUERY);
 
-  if (loading) return "Loading...";
+  if (loading) return <div className="spinner"></div>;
   if (error) return <pre>{error.message}</pre>
 
   return (
   <>
       {/* <h1>{data.league.name}</h1> */}
 
-      {data.league.events.nodes.map((event) => {
+      {data.league.events.nodes.map((event, index) => {
         const bracket = `${import.meta.env.VITE_STARTGG_URI}${event.slug}`
 
         return (
-          <div className="tournament">
+          <div key={index} className="tournament">
             <div className="cards">
               <div className={`cards__single ${props.cardSkin}`}>
                 <div className="layer">
                   <div className="cards__front">
                     <div className="cards__front__header">
-                      <h3>{event.tournament.name}</h3>
+                      <h3>PFL - Ranking #10 ROAD TO EVO 2K23</h3>
                       <ul className="cards__front__classement">
-                      {event.tournament.participants.nodes.map((participant) => {
+                      {event.tournament.participants.nodes.map((participant, index) => {
                         return (
-                          <li>{participant.player.gamerTag}</li>
+                          <li key={index}>{participant.player.gamerTag}</li>
                         )
                       })}
                       </ul>

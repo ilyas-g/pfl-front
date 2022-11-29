@@ -20,8 +20,9 @@ export default function Header() {
           </div>
           <nav className='nav-lang'>
             <ul role="list">
-              <li role="listitem" className="onglets"><Link to="/">EN</Link></li>
-              <li role="listitem" className="onglets"><Link to="/">FR</Link></li>
+              <li role="listitem" className="navlink"><Link to="/">EN</Link></li>
+              <li role="listitem" className="navlink"><Link to="/about">About</Link></li>
+              <li role="listitem" className="navlink"><Link to="/">FR</Link></li>
             </ul>
           </nav>
         </div>

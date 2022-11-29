@@ -1,0 +1,43 @@
+$video-width: 1050px;
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    right: -45px;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.video {
+    width: 100vw; 
+    max-width: $video-width;
+    height: 56.25vw;
+    border: 0;
+
+    @media (min-width:$video-width) {
+        height: calc($video-width * 0.5628205128205128);
+    }
+}
