@@ -1,11 +1,10 @@
 // import axios from 'axios';
 // import React, { useEffect, useState } from 'react';
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import reactLogo from './assets/react.svg'
 import './App.css'
 
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 import Card from './components/card/Card';
 import Header from './components/header/Header';
@@ -14,6 +13,7 @@ import About from './pages/About';
 import SocialMedias from './components/socialMedias/SocialMedias';
 import Modal from "./components/modal/Modal";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true)
@@ -21,10 +21,10 @@ function App() {
   // const [count, setCount] = useState(0)
 
   const [isModal, setIsModal] = useState(false)
-
+  const location = useLocation();
   return (
-    <Router>
-    <div className="App transition-fade">
+<>
+    <div className="App">
       <Header />
       <SocialMedias func={() => {setIsModal(true)}} />
       {isModal === true ? <Modal func={() => {setIsModal(false)}} /> : '' }
@@ -49,13 +49,15 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> */}
     </div>
-    <Routes>
+    <AnimatePresence exitBeforeEnter>
+      <Routes key={location.pathname} location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/product/:productId" element={<Product />} /> */}
       </Routes>
-    </Router>
+    </AnimatePresence>
+    </>
   )
 }
 

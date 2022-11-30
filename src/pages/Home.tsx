@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Card from '../components/card/Card';
 import TournamentsList from '../components/tournamentsList/TournamentsList';
+import AnimatePage from '../components/animatePage/AnimatePage';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -25,6 +26,7 @@ export default function Home() {
 }, []);
 
   return (
+    <AnimatePage>
     <div>
       {/* <h1>PARISIENNE FIGHTING LEAGUE</h1> */}
       <TournamentsList />
@@ -43,5 +45,6 @@ export default function Home() {
         </>
       )}
     </div>
+    </AnimatePage>
   )
 }

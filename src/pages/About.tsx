@@ -1,7 +1,10 @@
 import React from 'react'
+import AnimatePage from '../components/animatePage/AnimatePage'
 
 export default function About() {
   return (
-    <div>About</div>
+    <AnimatePage>
+      <div>About</div>
+    </AnimatePage>
   )
 }
