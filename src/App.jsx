@@ -8,8 +8,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 import Card from './components/card/Card';
 import Header from './components/header/Header';
-import Home from './pages/Home';
-import About from './pages/About';
+import Home from './pages/home/Home';
+import Ranking from './pages/Ranking';
 import SocialMedias from './components/socialMedias/SocialMedias';
 import Modal from "./components/modal/Modal";
 import { useState } from "react";
@@ -52,7 +52,7 @@ function App() {
     <AnimatePresence exitBeforeEnter>
       <Routes key={location.pathname} location={location}>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/ranking" element={<Ranking />} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/product/:productId" element={<Product />} /> */}
       </Routes>

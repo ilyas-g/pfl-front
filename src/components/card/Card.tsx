@@ -1,78 +1,18 @@
 import React from "react";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import "./style.css"
+import Spinner from "../spinner/Spinner";
 
-const CARD_QUERY = gql`
-  query LeagueStandings {
-    league(slug: "sweaty-splatoon-1v1-series") {
-      id
-      name
-      city
-      events (query: {
-        perPage: 5
-      }) {
-        nodes {
-          id
-          name
-          slug
-          videogame {
-            id
-            name
-          }
-          tournament {
-            id
-            name
-            slug
-            numAttendees
-            state
-            participants (query: {
-              perPage: 8
-            }) {
-              nodes {
-                id
-                player {
-                  id
-                  prefix
-                  gamerTag
-                  user {
-                    id
-                    name
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      standings (query: {
-        page: 1,
-        perPage: 8
-      }) {
-        pageInfo {
-          totalPages
-          total
-        }
-        nodes {
-          id
-          placement
-          entrant {
-            id
-            name
-          }
-        }
-      }
-    }
-  }
-`;
+import {CARD_QUERY} from "../../queries/queries"
 
 interface Props {
   cardSkin: string;
 }
 
-export default function Card(props: Props): JSX.Element | null {
+function Card(props: Props): JSX.Element | null {
   const { data, loading, error } = useQuery(CARD_QUERY);
 
-  if (loading) return <div className="spinner"></div>;
+  if (loading) return <Spinner />;
   if (error) return <pre>{error.message}</pre>
 
   return (
@@ -111,3 +51,5 @@ export default function Card(props: Props): JSX.Element | null {
     </>
   );
 }
+
+export default Card;

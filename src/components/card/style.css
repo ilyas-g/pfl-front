@@ -189,27 +189,4 @@
     width: 100%;
     bottom: 0;
   }
-}
-
-.spinner {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 9px solid;
-  border-color: #dbdcef;
-  border-right-color: #001d6e;
-  -webkit-animation: spinner-d3wgkg 1s infinite linear;
-          animation: spinner-d3wgkg 1s infinite linear;
-}
-
-@-webkit-keyframes spinner-d3wgkg {
-  to {
-    transform: rotate(1turn);
-  }
-}
-
-@keyframes spinner-d3wgkg {
-  to {
-    transform: rotate(1turn);
-  }
 }/*# sourceMappingURL=style.css.map */
