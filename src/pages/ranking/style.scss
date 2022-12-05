@@ -1,0 +1,45 @@
+.tournaments-list {
+    margin-top: 15px;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    z-index: 1;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .cards {
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+
+        .tournament {
+            flex: 25%;
+            max-width: 22%;
+        }
+    }
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: rgb(95, 105, 125);
+
+    &:hover {
+        color: rgb(0 29 110);
+    }
+
+    &.active {
+        background-color: rgb(128, 70, 0);
+        color: white;
+      }
+}

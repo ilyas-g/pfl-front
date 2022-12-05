@@ -5,6 +5,7 @@
 .cards__single {
   position: relative;
   flex: 1;
+  text-align: center;
   color: #f0f1f3;
   transition: 0.3s all ease-in-out;
   border-radius: 5px;
@@ -18,7 +19,7 @@
 }
 .cards__single.firstGame .layer {
   background-color: rgba(14, 17, 55, 0.85);
-  padding: 40px;
+  padding: 15px;
   border-radius: 5px;
 }
 .cards__single.firstGame .layer:hover {
@@ -50,7 +51,7 @@
 }
 .cards__single.secondGame .layer {
   background-color: rgba(55, 14, 14, 0.85);
-  padding: 40px;
+  padding: 15px;
   border-radius: 5px;
 }
 .cards__single.secondGame .layer:hover {
@@ -96,6 +97,7 @@
   font-size: 18px;
   text-transform: uppercase;
   line-height: 24px;
+  margin-top: 5px;
 }
 
 @media screen and (min-width: 768px) {

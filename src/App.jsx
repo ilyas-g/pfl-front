@@ -9,7 +9,7 @@ import { useQuery, gql } from "@apollo/client";
 import Card from './components/card/Card';
 import Header from './components/header/Header';
 import Home from './pages/home/Home';
-import Ranking from './pages/Ranking';
+import Ranking from './pages/ranking/Ranking';
 import SocialMedias from './components/socialMedias/SocialMedias';
 import Modal from "./components/modal/Modal";
 import { useState } from "react";

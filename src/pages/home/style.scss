@@ -1,4 +1,42 @@
+.homepage {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
 .evo {
     width: 100%;
     max-width: 300px;
+}
+
+.width360 {
+    width: 100%;
+    max-width: 360px;
+}
+
+.firstSection {
+    text-align: center;
+}
+
+.secondSection {
+    // padding: 7px;
+    padding: 25px;
+    position: relative;
+
+    .cards__single {
+        margin-bottom: 20px;
+    }
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.firstGame.standing {
+    left: 170px;
+    bottom: 145px;
+    z-index: 1;
 }

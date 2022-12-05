@@ -37,6 +37,12 @@ body {
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
