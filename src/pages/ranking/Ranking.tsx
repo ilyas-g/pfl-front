@@ -36,7 +36,7 @@ export default function Ranking() {
                 })}
               </ul>
             </Card>
-          : <Card cardSkin="secondGame" link={bracket}>
+          : <Card cardSkin="secondGame" link={bracket} title="PFL - Ranking #10 ROAD TO EVO 2K23">
               <ul className="cards__front__classement">
                 {event.tournament.participants.nodes.map((participant, index) => {
                   return <li key={index}>{participant.player.gamerTag}</li>
