@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .tournaments-list {
     margin-top: 15px;
     // position: absolute;
@@ -5,7 +7,7 @@
     // right: 0;
     z-index: 1;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $media-queries-tablet) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -39,7 +41,6 @@
     }
 
     &.active {
-        background-color: rgb(128, 70, 0);
-        color: white;
+        color: rgb(230 0 31);
       }
 }

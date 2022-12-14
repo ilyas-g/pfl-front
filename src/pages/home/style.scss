@@ -1,0 +1,65 @@
+@import "../../variables";
+
+.homepage {
+    @media screen and (min-width: $media-queries-tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.evo {
+    width: 100%;
+
+    @media screen and (min-width: $media-queries-tablet) {
+        max-width: 100px;
+    }
+}
+
+.width360 {
+    width: 100%;
+    max-width: 360px;
+}
+
+.firstSection {
+    font-weight: bold;
+
+    @media screen and (min-width: $media-queries-tablet) {
+        position: absolute;
+        top: 14vh;
+        right: 4vw;
+        // bottom: 0;
+        left: auto;
+        // width: 35vw;
+        // min-width: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        // opacity: 0;
+    }
+}
+
+.secondSection {
+    // padding: 7px;
+    padding: 25px;
+    position: relative;
+
+    .cards__single {
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $media-queries-tablet) {
+            margin: 10px;
+        }
+    }
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.firstGame.standing {
+    left: 170px;
+    bottom: 145px;
+    z-index: 1;
+}

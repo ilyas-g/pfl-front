@@ -7,7 +7,7 @@ export default function WrapMenu() {
         <nav className='main-menu'>
             <ul role="list">
                 <li role="listitem" className="onglets"><Link to="/">Accueil</Link></li>
-                <li role="listitem" className="onglets"><Link to="/">Ranking</Link></li>
+                <li role="listitem" className="onglets"><Link to="/ranking">Ranking</Link></li>
                 <li role="listitem" className="onglets"><Link to="/">Contact</Link></li>
             </ul>
         </nav>
