@@ -1,16 +1,9 @@
-$media-queries-desktop: 992px;
-$media-queries-tablet: 768px;
-
-$white: #ffffff;
-$beige: #e7c292;
-
-.cards {padding: 15px;}
+@import "../../variables";
 
 .cards__single {
     position: relative;
     flex: 1;
     text-align: center;
-
     color: #f0f1f3;
     transition: 0.3s all ease-in-out;
     border-radius: 5px;
@@ -18,33 +11,20 @@ $beige: #e7c292;
 
     &.firstGame {
         background: 
-        radial-gradient(circle, transparent 40%, rgb(37, 39, 103) 85%),
-        linear-gradient(to right, rgb(37, 39, 103), rgb(37, 39, 103)),
-        url('../../assets/dbfz-fond.jpg');
+        radial-gradient(circle, transparent 40%, rgb(18, 18, 66) 85%),
+        linear-gradient(to right, rgb(18, 18, 66), rgb(18, 18, 66)),
+        url('../../assets/dbfz-fond.jpg'), rgba(14, 17, 55, 0.85);
         background-position: center center;
         background-size: cover;
         background-blend-mode: color;
 
-        .layer {
-            background-color: rgba(14, 17, 55, 0.85);
-            padding: 15px;
-            border-radius: 5px;
-
-            &:hover {
-                background-color: rgba(18, 18, 66, 0.7);
-            }
-
-            @media screen and (min-width: $media-queries-tablet) {padding: 20px;}
-            @media screen and (min-width: $media-queries-desktop) {padding: 0;}
-
-        }
-
         &:hover {
-            // margin-top:-5px;
+            margin-top:-5px;
             background: 
             radial-gradient(circle, transparent 40%, rgb(18, 18, 66) 85%),
             linear-gradient(to right, rgb(18, 18, 66), rgb(18, 18, 66)),
-            url('../../assets/dbfz-fond.jpg');
+            url('../../assets/dbfz-fond.jpg'),
+            rgba(14, 17, 55, 0.65);
             background-position: center center;
             background-size: cover;
             // border: 2px solid $beige;
@@ -55,40 +35,31 @@ $beige: #e7c292;
 
     &.secondGame {
         background: 
-        radial-gradient(circle, transparent 40%, rgb(103, 25, 25) 75%),
-        linear-gradient(to right, rgb(103, 25, 25), rgb(103, 25, 25)),
-        url('../../assets/ggst-fond.jpg');
+        radial-gradient(circle, transparent 40%, rgb(55, 14, 14) 75%),
+        linear-gradient(to right, rgb(55, 14, 14), rgb(55, 14, 14)),
+        url('../../assets/ggst-fond.jpg'), rgba(55, 14, 14, 0.85);
         background-position: center center;
         background-size: cover;
         background-blend-mode: color;
-
-        .layer {
-            background-color: rgba(55, 14, 14, 0.85);
-            padding: 15px;
-            border-radius: 5px;
-
-            &:hover {
-                background-color: rgba(120, 65, 65, 0.7);
-            }
-
-            @media screen and (min-width: $media-queries-tablet) {padding: 20px;}
-            @media screen and (min-width: $media-queries-desktop) {padding: 0;}
-        }
 
         &:hover {
             margin-top:-5px;
             background: 
             radial-gradient(circle, transparent 40%, rgb(191, 110, 110) 75%),
             linear-gradient(to right, rgb(191, 110, 110), rgb(191, 110, 110)),
-            url('../../assets/ggst-fond.jpg');
+            url('../../assets/ggst-fond.jpg'),
+            rgba(55, 14, 14, 0.65);
             background-position: center center;
             background-size: cover;
             // border: 2px solid $beige;
+
+            ul {text-shadow: 2px 2px 2px #000000;}
         }
     }
 
     @media screen and (min-width: $media-queries-tablet) {
         min-height: 66vh;
+        margin: 10px;
     }
 
     @media screen and (min-height: 900px) {

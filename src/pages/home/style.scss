@@ -1,6 +1,7 @@
-.homepage {
+@import "../../variables";
 
-    @media screen and (min-width: 768px) {
+.homepage {
+    @media screen and (min-width: $media-queries-tablet) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -9,7 +10,10 @@
 
 .evo {
     width: 100%;
-    max-width: 300px;
+
+    @media screen and (min-width: $media-queries-tablet) {
+        max-width: 100px;
+    }
 }
 
 .width360 {
@@ -18,7 +22,22 @@
 }
 
 .firstSection {
-    text-align: center;
+    font-weight: bold;
+
+    @media screen and (min-width: $media-queries-tablet) {
+        position: absolute;
+        top: 14vh;
+        right: 4vw;
+        // bottom: 0;
+        left: auto;
+        // width: 35vw;
+        // min-width: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        // opacity: 0;
+    }
 }
 
 .secondSection {
@@ -28,6 +47,10 @@
 
     .cards__single {
         margin-bottom: 20px;
+
+        @media screen and (min-width: $media-queries-tablet) {
+            margin: 10px;
+        }
     }
 }
 

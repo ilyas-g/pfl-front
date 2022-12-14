@@ -10,9 +10,7 @@ interface Props {
 
 function Card({cardSkin, children, title, link}: Props): JSX.Element | null {
   return (
-
     <div className={`cards__single ${cardSkin}`}>
-      <div className="layer">
         <div className="cards__front">
           <div className="cards__front__header">
             <h3>{title}</h3>
@@ -22,7 +20,6 @@ function Card({cardSkin, children, title, link}: Props): JSX.Element | null {
             <a className="btn" href={link} target="_blank" rel="noreferrer">Bracket</a>
           </div>
         </div>
-      </div>
     </div> 
   );
 }

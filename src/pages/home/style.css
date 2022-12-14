@@ -8,7 +8,11 @@
 
 .evo {
   width: 100%;
-  max-width: 300px;
+}
+@media screen and (min-width: 768px) {
+  .evo {
+    max-width: 100px;
+  }
 }
 
 .width360 {
@@ -17,7 +21,18 @@
 }
 
 .firstSection {
-  text-align: center;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .firstSection {
+    position: absolute;
+    top: 14vh;
+    right: 4vw;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .secondSection {
@@ -26,6 +41,11 @@
 }
 .secondSection .cards__single {
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .secondSection .cards__single {
+    margin: 10px;
+  }
 }
 
 .p-absolute {

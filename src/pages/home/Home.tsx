@@ -44,11 +44,6 @@ if (error) return <pre>{error.message}</pre>
           return (<div key={index}>{paragraph.attributes.text_paragraph}</div>)
         })} */}
 
-        <div className='firstSection'>
-          <p>kdfgjh</p>
-          <img src={evoLogo} alt="EVO 2023" className='evo'/>
-        </div>
-
         <div className='secondSection'>
           <Card cardSkin="firstGame width360" link={standingsLink} title="Classement Dragon Ball FighterZ">
             <ul className="cards__front__classement">
@@ -66,6 +61,10 @@ if (error) return <pre>{error.message}</pre>
           </Card>
         </div>
 
+        <div className='firstSection p-absolute'>
+          <p>Road to </p>
+          <img src={evoLogo} alt="EVO 2023" className='evo'/>
+        </div>
     </div>
     </AnimatePage>
   )
