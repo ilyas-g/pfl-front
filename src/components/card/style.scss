@@ -58,27 +58,29 @@
     }
 
     @media screen and (min-width: $media-queries-tablet) {
-        min-height: 66vh;
+        // min-height: 66vh;
         margin: 10px;
     }
 
     @media screen and (min-height: 900px) {
-        min-height: 40vh;
+        // min-height: 40vh;
     }
 
     @media screen and (min-width: $media-queries-desktop) {
-        min-height: 60vh;
+        // min-height: 60vh;
     }
 
     @media screen and (min-width: $media-queries-tablet) and (min-height: 900px) {
-        min-height: 40vh;
+        // min-height: 40vh;
     }
 
     h3 {
         font-size: 18px;
         text-transform: uppercase;
         line-height: 24px;
-        margin-top: 5px;
+        margin-top: 0;
+        // padding: 10px;
+        line-height: 1.5;
     }
 }
 
@@ -107,6 +109,8 @@
 }
 
 .cards__front {
+    padding: 15px;
+
     &>.cards__front__header {
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -117,6 +121,7 @@
         list-style: none;
         color: #f0f1f3;
         padding: 0;
+        line-height: 1.5;
 
         li {
             &:first-child, &:nth-child(2), &:nth-child(3) {font-weight: bold;}
@@ -162,9 +167,10 @@
         @media only screen and (min-width: $media-queries-desktop) {
             display: inherit;
             justify-content: space-around;
-            position: absolute;
+            // position: absolute;
             width: 100%;
             bottom: 0;
+            padding-bottom: 1px;
         }
     }
 }

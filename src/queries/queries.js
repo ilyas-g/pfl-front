@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 const CARD_QUERY = gql`
   query LeagueStandings {
-    league(slug: "sweaty-splatoon-1v1-series") {
+    league(slug: "classement-parisienne-fighting-ligue-ggst-road-to-evo-2k23") {
       id
       name
       city
@@ -48,7 +48,7 @@ const CARD_QUERY = gql`
 
 const STANDING_QUERY = gql`
   query LeagueStandings {
-    league(slug: "sweaty-splatoon-1v1-series") {
+    league(slug: "classement-parisienne-fighting-ligue-ggst-road-to-evo-2k23") {
       standings (query: {
         page: 1,
         perPage: 8

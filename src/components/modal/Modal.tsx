@@ -11,7 +11,7 @@ export default function Modal({func}) {
           <iframe
             className="video"
             //  src="https://www.youtube.com/embed/eFfrU5vCaqc"
-            src="https://www.youtube.com/embed/diWNEuBiNW4"
+            src="https://www.youtube.com/embed/eFfrU5vCaqc"
             title="YouTube video player"
             frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen>

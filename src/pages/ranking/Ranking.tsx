@@ -17,10 +17,7 @@ export default function Ranking() {
 
   return (
     <AnimatePage>
-      <div className='tabs'>
-        <div className={`tab ${tabs === true ? 'active' : ''}`} onClick={() => {setTabs(true)}}>Dragon Ball FighterZ</div>
-        <div className={`tab ${tabs === false ? 'active' : ''}`} onClick={() => {setTabs(false)}}>Guilty Gear Strive</div>
-      </div>
+
 
       <div className='tournaments-list'>
       {data.league.events.nodes.map((event, index) => {
@@ -28,22 +25,14 @@ export default function Ranking() {
 
         return (
           <div  className="tournament">
-            {tabs === true ? 
-            <Card cardSkin="firstGame" link={bracket} title="PFL - Ranking #10 ROAD TO EVO 2K23">
+            <Card cardSkin="secondGame" link={bracket} title={event.tournament.name}>
               <ul className="cards__front__classement">
                 {event.tournament.participants.nodes.map((participant, index) => {
                   return <li key={index}>{participant.player.gamerTag}</li>
                 })}
               </ul>
             </Card>
-          : <Card cardSkin="secondGame" link={bracket} title="PFL - Ranking #10 ROAD TO EVO 2K23">
-              <ul className="cards__front__classement">
-                {event.tournament.participants.nodes.map((participant, index) => {
-                  return <li key={index}>{participant.player.gamerTag}</li>
-                })}
-              </ul>
-            </Card>
-            }
+            
           </div>
         )
       })}

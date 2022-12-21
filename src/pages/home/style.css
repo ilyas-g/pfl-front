@@ -1,5 +1,9 @@
+.homepage {
+  padding: 15px;
+}
 @media screen and (min-width: 768px) {
   .homepage {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -25,13 +29,11 @@
 }
 @media screen and (min-width: 768px) {
   .firstSection {
-    position: absolute;
-    top: 14vh;
-    right: 4vw;
     left: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
   }
 }
 
