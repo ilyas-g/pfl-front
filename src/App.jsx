@@ -22,6 +22,8 @@ function App() {
 
   const [isModal, setIsModal] = useState(false)
   const location = useLocation();
+
+  const currentYear = new Date().getFullYear();
   return (
 <>
     <div className="App">
@@ -48,6 +50,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
+
     </div>
     <AnimatePresence exitBeforeEnter>
       <Routes key={location.pathname} location={location}>
@@ -57,6 +60,9 @@ function App() {
         <Route path="/product/:productId" element={<Product />} /> */}
       </Routes>
     </AnimatePresence>
+    <footer>  Website by <a href="https://twitter.com/iamarktall" target="_blank">
+        Arktall (@iamarktall)</a> PFL2 © Yuzu Gaming - {currentYear}
+        </footer>
     </>
   )
 }

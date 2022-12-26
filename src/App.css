@@ -35,10 +35,6 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
 }
@@ -110,4 +106,24 @@
 
 html.is-animating .transition-fade {
   opacity: 0;
+}
+
+.is-mobile {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .is-mobile-none {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  footer {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-size: 12px;
+  }
 }
