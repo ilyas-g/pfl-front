@@ -1,5 +1,5 @@
 import React from "react";
-
+// https://dev.to/reedbarger/how-to-create-a-custom-usedevicedetect-react-hook-56l1
 export default function useDeviceDetect() {
     const [isMobile, setMobile] = React.useState(false);
 
