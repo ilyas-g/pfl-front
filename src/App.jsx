@@ -26,7 +26,7 @@ function App() {
   const currentYear = new Date().getFullYear();
   return (
 <>
-    <div className="App">
+    <div>
       <Header />
       <SocialMedias func={() => {setIsModal(true)}} />
       {isModal === true ? <Modal func={() => {setIsModal(false)}} /> : '' }
@@ -51,7 +51,6 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> */}
 
-    </div>
     <AnimatePresence exitBeforeEnter>
       <Routes key={location.pathname} location={location}>
         <Route path="/" element={<Home />} />
@@ -60,9 +59,11 @@ function App() {
         <Route path="/product/:productId" element={<Product />} /> */}
       </Routes>
     </AnimatePresence>
-    <footer>  Website by <a href="https://twitter.com/iamarktall" target="_blank">
-        Arktall (@iamarktall)</a> PFL2 © Yuzu Gaming - {currentYear}
+        <footer>  Website by <a href="https://twitter.com/iamarktall" target="_blank">
+          Arktall (@iamarktall)</a> - 
+          Photos by <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a> - PFL2 © Yuzu Gaming - {currentYear}
         </footer>
+        </div>
     </>
   )
 }

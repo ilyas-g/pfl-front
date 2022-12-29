@@ -4,6 +4,18 @@ header {
   align-items: center;
   padding: 0.65rem 15px;
   /* background-color: rgba(0, 1, 0, 0.55); */
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
 }
 
 .header-navigation {
@@ -61,7 +73,7 @@ nav ul li:hover:after {
   width: 100%;
 }
 nav ul li a {
-  color: rgb(95, 105, 125);
+  color: rgb(167, 184, 217);
   display: block;
   font-size: 18px;
   font-weight: 400;
@@ -70,7 +82,7 @@ nav ul li a {
   transition: all 1s;
 }
 nav ul li a:hover {
-  color: rgb(0, 29, 110);
+  color: rgb(244, 247, 255);
 }
 
 .nav-lang ul {

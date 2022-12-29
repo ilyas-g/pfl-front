@@ -1,21 +1,50 @@
 @import "../../variables";
 
 .homepage {
-    padding: 15px;
+    // padding: 15px;
+    padding: 120px 15px 15px;
+
+    // background: url('../../assets/2.png') no-repeat center bottom fixed, green;
+    background: radial-gradient(circle, transparent 90%, rgba(0, 1, 0, 0.5)), 
+    linear-gradient(to right, rgba(0, 1, 0, 0.5), rgba(0, 1, 0, 0.5)), 
+    url('../../assets/4.png'), rgba(0, 1, 0, 0.5);
+    background-position: center bottom;
+    background-size: cover;
+    background-blend-mode: color;
+    position: relative;
+    overflow: hidden;
 
     @media screen and (min-width: $media-queries-tablet) {
-        padding: 0;
+        padding: 135px 0 65px;
+        // padding: 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+    img {
+        margin: auto;
+        text-align: center;
+        display: block;
+    }
+}
+
+.roadTo {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+
+    @media screen and (min-width: $media-queries-tablet) {
+        font-size: 30px;
     }
 }
 
 .evo {
     width: 100%;
-
+    max-width: 150px;
     @media screen and (min-width: $media-queries-tablet) {
-        max-width: 100px;
+        max-width: 150px;
     }
 }
 
@@ -26,6 +55,11 @@
 
 .firstSection {
     font-weight: bold;
+    margin-bottom: 45px;
+
+    img {
+        width: 100%;
+    }
 
     @media screen and (min-width: $media-queries-tablet) {
         // position: absolute;
@@ -38,21 +72,67 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        text-align: center;
+        // text-align: center;
         // opacity: 0;
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $media-queries-tablet) {
+        .pfl-logo {width: 520px;}
     }
 }
 
 .secondSection {
-    // padding: 7px;
-    padding: 25px;
-    position: relative;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 1;
+    
+    img {
+        width: 100%;
+        max-width: 740px;
+    }
 
-    .cards__single {
-        margin-bottom: 20px;
+    p {
+        padding: 10px 15px;
+    }
 
-        @media screen and (min-width: $media-queries-tablet) {
-            margin: 10px;
+    & > div {
+        background-color: rgb(96, 59, 209);
+        margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: $media-queries-desktop) {
+        font-size: 3vw;
+        width: 75%;
+        margin: 100px auto;
+
+        p {padding: 0;}
+
+        .img-crop {
+            width: 420px; height: 300px;
+            object-fit: cover; object-position: 50% 0;
+        }
+
+        .d-flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            p {
+                padding: 0 60px 0 0;
+            }
+
+            &:nth-child(2n) {
+                p {
+                    padding: 0 0 0 60px;
+                }
+            }
+
+            div {
+                position: relative;
+            }
         }
     }
 }
@@ -66,3 +146,5 @@
     bottom: 145px;
     z-index: 1;
 }
+
+.mmt50 {margin-top: -50px}

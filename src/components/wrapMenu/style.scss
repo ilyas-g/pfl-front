@@ -2,11 +2,8 @@
 
 .main-menu {
     a {
-        color: #fff;
-        
-        @media screen and (min-width: $media-queries-tablet) {
-            color: rgb(95, 105, 125);
-        }
+        // color: #fff;
+        color: rgb(167, 184, 217);
     }
 
     @media screen and (min-width: $media-queries-tablet) {
