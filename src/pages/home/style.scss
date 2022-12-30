@@ -105,7 +105,7 @@
 
     @media screen and (min-width: $media-queries-desktop) {
         font-size: 3vw;
-        width: 75%;
+        width: 85%;
         margin: 100px auto;
 
         p {padding: 0;}
@@ -117,7 +117,6 @@
 
         .d-flex {
             display: flex;
-            justify-content: space-around;
             align-items: center;
 
             p {

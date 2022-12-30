@@ -22,6 +22,10 @@ import { motion } from "framer-motion";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import {STANDING_QUERY} from "../../queries/queries"
 
+import { useTranslation } from 'react-i18next';
+
+import './moduleA.json'
+
 export default function Home() {
   const [dataa, setData] = useState();
 
@@ -29,18 +33,20 @@ export default function Home() {
 
   const { isMobile } = useDeviceDetect();
 
-  useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const response = await axios.get(`https://pfl-back-2022.herokuapp.com/api/paragraphs`);
-            setData(response.data);
+  const { t, i18n } = useTranslation();
 
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
-    fetchData();
-}, []);
+//   useEffect(() => {
+//     const fetchData = async () => {
+//         try {
+//             const response = await axios.get(`https://pfl-back-2022.herokuapp.com/api/paragraphs`);
+//             setData(response.data);
+
+//         } catch (error) {
+//             console.log(error.message);
+//         }
+//     };
+//     fetchData();
+// }, []);
 
 const standingsLink = `${import.meta.env.VITE_STANDING}`
 
@@ -74,6 +80,8 @@ if (error) return <pre>{error.message}</pre>
           <div>
             <p>12 Ranking Offline (Octobre 2022 - Avril 2022)</p>
             <p>6 Ranking Online (Janvier 2023 - Mars 2023)</p>
+            {/* <p>{i18n.t('keys')}</p> */}
+            <p>{t('Welcome to React')}</p>
           </div>
           <div>
             <img src={img7} alt="img7" />

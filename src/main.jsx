@@ -7,12 +7,13 @@ import { BrowserRouter } from "react-router-dom";
 import App from './App'
 import './index.css'
 
+import './i18n';
+
 const httpLink = createHttpLink({
   uri: 'https://api.start.gg/gql/alpha',
 });
 
 // const backendPort = import.meta.env.VITE_GRAY_TOKEN;
-
 // const token = process.env.VITE_GRAY_TOKEN;
 // console.log(token)
 const authLink = setContext((_, { headers }) => {

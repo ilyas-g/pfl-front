@@ -91,7 +91,7 @@
 @media screen and (min-width: 992px) {
   .secondSection {
     font-size: 3vw;
-    width: 75%;
+    width: 85%;
     margin: 100px auto;
   }
   .secondSection p {
@@ -107,7 +107,6 @@
   }
   .secondSection .d-flex {
     display: flex;
-    justify-content: space-around;
     align-items: center;
   }
   .secondSection .d-flex p {
