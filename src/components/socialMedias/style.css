@@ -52,9 +52,17 @@
   }
   .socials-aside_ready a.yuzu-social, .socials-aside_ready button.yuzu-social {
     background-color: #202020;
+    border: 2px solid #ffd342;
+    box-sizing: border-box;
   }
   .socials-aside_ready a.yuzu-social:hover, .socials-aside_ready button.yuzu-social:hover {
     background-color: #3a3a3a;
+  }
+  .socials-aside_ready a.nsxc-social, .socials-aside_ready button.nsxc-social {
+    background-color: #ff7f26;
+  }
+  .socials-aside_ready a.nsxc-social:hover, .socials-aside_ready button.nsxc-social:hover {
+    background-color: #ff9d59;
   }
   .socials-aside_ready a.pfl-trailer, .socials-aside_ready button.pfl-trailer {
     background-image: url("../../assets/pfl-bg.jpg");

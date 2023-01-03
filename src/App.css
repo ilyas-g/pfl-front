@@ -96,7 +96,11 @@
 }
 
 .icon-yuzu:before {
-  content: url('assets/yuzu-lo.svg');
+  content: url('assets/yuzu-social.svg');
+}
+
+.icon-nsxc:before {
+  content: url('assets/nsxc-logo.svg');
 }
 
 .transition-fade {
