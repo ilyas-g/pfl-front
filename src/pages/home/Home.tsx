@@ -22,18 +22,18 @@ import { motion } from "framer-motion";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import {STANDING_QUERY} from "../../queries/queries"
 
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next'
 
-import './moduleA.json'
+interface AppProps {
+  lang?: 'en' | 'fr'
+}
 
-export default function Home() {
+const Home:React.FC<AppProps> = (props) => {
   const [dataa, setData] = useState();
 
   const { data, loading, error } = useQuery(STANDING_QUERY);
 
   const { isMobile } = useDeviceDetect();
-
-  const { t, i18n } = useTranslation();
 
 //   useEffect(() => {
 //     const fetchData = async () => {
@@ -47,6 +47,12 @@ export default function Home() {
 //     };
 //     fetchData();
 // }, []);
+
+  const { t, i18n } = useTranslation();
+
+  // useEffect(() => {
+  //   i18n.changeLanguage(props.lang);
+  // }, [props.lang])
 
 const standingsLink = `${import.meta.env.VITE_STANDING}`
 
@@ -78,10 +84,8 @@ if (error) return <pre>{error.message}</pre>
       <div className='secondSection'>
         <div className='mb-30 d-flex'>
           <div>
-            <p>12 Ranking Offline (Octobre 2022 - Avril 2022)</p>
-            <p>6 Ranking Online (Janvier 2023 - Mars 2023)</p>
-            {/* <p>{i18n.t('keys')}</p> */}
-            <p>{t('Welcome to React')}</p>
+            <p>{t('offline')}</p>
+            <p>{t('online')}</p>
           </div>
           <div>
             <img src={img7} alt="img7" />
@@ -95,13 +99,13 @@ if (error) return <pre>{error.message}</pre>
             <img src={img13} alt="img10" className='img-crop'/>
           </div>
           <div>
-            <p>Le Top 7 sera qualifié pour les phases finales</p>
-            <p>+1 place qualificative lors du LCQ (Avril 2023)</p>
+            <p>{t('top7')}</p>
+            <p>{t('lcq')}</p>
           </div>
         </div>
         <div className='mb-30 d-flex'>
           <div>
-            <p>Le winner de la PFL aura son billet d'avion pour l'EVO 2023</p>
+            <p>{t('winner')}</p>
           </div>
           <div>
             <img src={img9} alt="img7" />
@@ -112,3 +116,5 @@ if (error) return <pre>{error.message}</pre>
     </AnimatePage>
   )
 }
+
+export default Home;

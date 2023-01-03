@@ -1,0 +1,14 @@
+{
+    "welcome": "Welcome to React and react-i18next",
+    "key": "value of key",
+    "look": {
+        "deep": "value of look deep"
+    },
+    "very": {
+        "deeply": {
+            "nested": {
+                "key": "here"
+            }
+        }
+    }
+}

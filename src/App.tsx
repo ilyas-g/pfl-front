@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 // import axios from 'axios';
 // import React, { useEffect, useState } from 'react';
 
@@ -14,6 +16,8 @@ import SocialMedias from './components/socialMedias/SocialMedias';
 import Modal from "./components/modal/Modal";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+
+import './i18n'
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true)
