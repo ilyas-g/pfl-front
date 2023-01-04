@@ -1,49 +1,41 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-
-import en from "./en.json";
-import fr from "./fr.json";
-
-// the translations
-// (tip move them in a JSON file and import them,
-// or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
-// const resources = {en, fr};
-
-// the translations
-// (tip move them in a JSON file and import them,
-// or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
-const resources = {
-  en: {
-    translation: {
-      "offline": "12 Offline Rankings (October 2022 - April 2023)",
-      "online": "6 Online Rankings (January 2023 - March 2023)",
-      "top7": "The Top 7 will qualify for the finals",
-      "lcq": "+1 place of qualification during the LCQ (April 2023)",
-      "winner": "The winner of the PFL will win a plane ticket to EVO 2023"
-    }
-  },
-  fr: {
-    translation: {
-      "offline": "12 Rankings offline (Octobre 2022 - Avril 2023)",
-      "online": "6 Rankings online (Janvier 2023 - Mars 2023)",
-      "top7": "Le Top 7 sera qualifié pour les phases finales",
-      "lcq": "+1 place qualificative lors du LCQ (Avril 2023)",
-      "winner": "Le gagnant de la PFL remportera un billet d'avion pour l'EVO 2023"
-    }
-  }
-};
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
+  // detect user language
+  // learn more: https://github.com/i18next/i18next-browser-languageDetector
+  .use(LanguageDetector)
+  // pass the i18n instance to react-i18next.
+  .use(initReactI18next)
+  // init i18next
+  // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    resources,
-    lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
-    // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
-    // if you're using a language detector, do not define the lng option
-
+    debug: true,
+    fallbackLng: 'en',
     interpolation: {
-      escapeValue: false // react already safes from xss
+      escapeValue: false, // not needed for react as it escapes by default
+    },
+    resources: {
+      en: {
+        translation: {
+          "offline": "12 Offline Rankings (October 2022 - April 2023)",
+          "online": "6 Online Rankings (January 2023 - March 2023)",
+          "top7": "The Top 7 will qualify for the finals",
+          "lcq": "+1 place of qualification during the LCQ (April 2023)",
+          "winner": "The winner of the PFL will win a plane ticket to EVO 2023"
+        }
+      },
+      fr: {
+        translation: {
+          "offline": "12 Rankings offline (Octobre 2022 - Avril 2023)",
+          "online": "6 Rankings online (Janvier 2023 - Mars 2023)",
+          "top7": "Le Top 7 sera qualifié pour les phases finales",
+          "lcq": "+1 place qualificative lors du LCQ (Avril 2023)",
+          "winner": "Le gagnant de la PFL remportera un billet d'avion pour l'EVO 2023"
+        }
+      }
     }
   });
 
-  export default i18n;
+export default i18n;

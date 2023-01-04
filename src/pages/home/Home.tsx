@@ -29,42 +29,31 @@ interface AppProps {
 }
 
 const Home:React.FC<AppProps> = (props) => {
-  const [dataa, setData] = useState();
 
   const { data, loading, error } = useQuery(STANDING_QUERY);
 
   const { isMobile } = useDeviceDetect();
 
-//   useEffect(() => {
-//     const fetchData = async () => {
-//         try {
-//             const response = await axios.get(`https://pfl-back-2022.herokuapp.com/api/paragraphs`);
-//             setData(response.data);
-
-//         } catch (error) {
-//             console.log(error.message);
-//         }
-//     };
-//     fetchData();
-// }, []);
-
   const { t, i18n } = useTranslation();
 
-  // useEffect(() => {
-  //   i18n.changeLanguage(props.lang);
-  // }, [props.lang])
-
-const standingsLink = `${import.meta.env.VITE_STANDING}`
+  const lngs = {
+    en: { nativeName: 'English' },
+    fr: { nativeName: 'Français' }
+  };
 
 if (loading) return <Spinner />;
 if (error) return <pre>{error.message}</pre>
   return (
     <AnimatePage>
       <div className='homepage'>
-        {/* {dataa.data.map((paragraph, index) => {
-          return (<div key={index}>{paragraph.attributes.text_paragraph}</div>)
-        })} */}
 
+        <div>
+          {Object.keys(lngs).map((lng) => (
+            <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+              {lngs[lng].nativeName}
+            </button>
+          ))}
+        </div>
         <div className='firstSection'>
         {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />}
           <img src={pflYN} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
