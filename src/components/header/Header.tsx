@@ -5,6 +5,7 @@ import Text from '../text/Text'
 import WrapMenu from '../wrapMenu/WrapMenu';
 import "./style.css"
 import useDeviceDetect from "../../utils/useDeviceDetect";
+import pflYN from '../../assets/pfl-by-yn.png';
 
 export default function Header() {
 
@@ -13,7 +14,9 @@ export default function Header() {
 
   return (
     <header>
-        <img src="https://yuzugaming.com/site/templates/assets/ope/pfl/pfl-logo-crop.png" width={115}/>
+        {/* <img src="https://yuzugaming.com/site/templates/assets/ope/pfl/pfl-logo-crop.png" width={115}/> */}
+        <img src={pflYN} alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" width={115} />
+        
         {!isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />}
 
         <div className='header-navigation'>

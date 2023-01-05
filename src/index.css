@@ -33,12 +33,11 @@ body {
   min-height: 100vh;
   /* background-color: #eae9e4; */
   /* background-color: #f0f1f3; */
-  background-color: #081333ba;
-  background: #d2d2da;
+  /* background-color: #081333ba; */
+  background-color: rgb(0, 4, 26);
   /* background: linear-gradient(113deg, #0a0e2b, #4a4c7f, #c9cef4); */
   /* color: #183153; */
-  color: #001d6e;
-  /* color: #ffffff; */
+  color: #ffffff;
   overflow-x: hidden;
 }
 

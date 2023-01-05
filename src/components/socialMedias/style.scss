@@ -14,7 +14,7 @@
         z-index: 1;
         width: 1rem;
         transform: translate3d(0, -50%, 0);
-        transition: color 400ms ease 400ms;
+        transition: color 400ms ease 100ms;
 
         a, button {
             font-size: 20px;
@@ -27,7 +27,7 @@
             color: inherit;
             text-decoration: none;
             line-height: 1rem;
-            transition: background-color 400ms ease 400ms, box-shadow 400ms ease 400ms;
+            transition: background-color 400ms ease 100ms, box-shadow 400ms ease 100ms;
         }
 
         button {
@@ -55,7 +55,14 @@
 
             &.yuzu-social {
                 background-color: #202020;
+                border: 2px solid #ffd342;
+                box-sizing: border-box;
                 &:hover {background-color: lighten(#202020, 10%)}
+            }
+
+            &.nsxc-social {
+                background-color: #ff7f26;
+                &:hover {background-color: lighten(#ff7f26, 10%)}
             }
 
             &.pfl-trailer {

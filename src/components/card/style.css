@@ -14,7 +14,6 @@
   background-blend-mode: color;
 }
 .cards__single.firstGame:hover {
-  margin-top: -5px;
   background: radial-gradient(circle, transparent 40%, rgb(18, 18, 66) 85%), linear-gradient(to right, rgb(18, 18, 66), rgb(18, 18, 66)), url("../../assets/dbfz-fond.jpg"), rgba(14, 17, 55, 0.65);
   background-position: center center;
   background-size: cover;
@@ -23,13 +22,12 @@
   text-shadow: 2px 2px 2px #000000;
 }
 .cards__single.secondGame {
-  background: radial-gradient(circle, transparent 40%, rgb(55, 14, 14) 75%), linear-gradient(to right, rgb(55, 14, 14), rgb(55, 14, 14)), url("../../assets/ggst-fond.jpg"), rgba(55, 14, 14, 0.85);
+  background: radial-gradient(circle, transparent 40%, rgb(69, 3, 8) 75%), linear-gradient(to right, rgb(69, 3, 8), rgb(69, 3, 8)), url("../../assets/ggst-fond.jpg"), rgba(69, 3, 8, 0.85);
   background-position: center center;
   background-size: cover;
   background-blend-mode: color;
 }
 .cards__single.secondGame:hover {
-  margin-top: -5px;
   background: radial-gradient(circle, transparent 40%, rgb(191, 110, 110) 75%), linear-gradient(to right, rgb(191, 110, 110), rgb(191, 110, 110)), url("../../assets/ggst-fond.jpg"), rgba(55, 14, 14, 0.65);
   background-position: center center;
   background-size: cover;

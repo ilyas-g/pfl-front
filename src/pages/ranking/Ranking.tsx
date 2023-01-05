@@ -17,25 +17,23 @@ export default function Ranking() {
 
   return (
     <AnimatePage>
-
-
       <div className='tournaments-list'>
-      {data.league.events.nodes.map((event, index) => {
-        const bracket = `${import.meta.env.VITE_STARTGG_URI}${event.slug}`
+        {data.league.events.nodes.map((event, index) => {
+          const bracket = `${import.meta.env.VITE_STARTGG_URI}${event.slug}`
 
-        return (
-          <div  className="tournament">
-            <Card cardSkin="secondGame" link={bracket} title={event.tournament.name}>
-              <ul className="cards__front__classement">
-                {event.tournament.participants.nodes.map((participant, index) => {
-                  return <li key={index}>{participant.player.gamerTag}</li>
-                })}
-              </ul>
-            </Card>
-            
-          </div>
-        )
-      })}
+          return (
+            <div  className="tournament">
+              <Card cardSkin="secondGame" link={bracket} title={event.tournament.name}>
+                <ul className="cards__front__classement">
+                  {event.tournament.participants.nodes.map((participant, index) => {
+                    return <li key={index}>{participant.player.gamerTag}</li>
+                  })}
+                </ul>
+              </Card>
+              
+            </div>
+          )
+        })}
       </div>
     </AnimatePage>
   )
