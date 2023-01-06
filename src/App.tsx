@@ -32,7 +32,8 @@ function App() {
 <>
     <div>
       <Header />
-      <SocialMedias func={() => {setIsModal(true)}} />
+      {isModal === false ? <SocialMedias func={() => {setIsModal(true)}} /> : '' }
+      {/* <SocialMedias func={() => {setIsModal(true)}} /> */}
       {isModal === true ? <Modal func={() => {setIsModal(false)}} /> : '' }
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">

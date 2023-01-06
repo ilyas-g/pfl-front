@@ -17,6 +17,9 @@ header {
     z-index: 1;
   }
 }
+header + .socials-aside {
+  display: none;
+}
 
 .header-navigation {
   display: flex;
