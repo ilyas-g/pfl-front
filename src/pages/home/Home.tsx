@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useQuery } from "@apollo/client";
 
 import AnimatePage from '../../components/animatePage/AnimatePage';
-import Card from '../../components/card/Card'
 import Spinner from '../../components/spinner/Spinner';
 import Text from '../../components/text/Text'
 
@@ -24,22 +23,15 @@ import {STANDING_QUERY} from "../../queries/queries"
 
 import {useTranslation} from 'react-i18next'
 
-interface AppProps {
-  lang?: 'en' | 'fr'
-}
-
-const Home:React.FC<AppProps> = (props) => {
+const Home = () => {
 
   const { data, loading, error } = useQuery(STANDING_QUERY);
 
   const { isMobile } = useDeviceDetect();
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const lngs = {
-    en: { nativeName: 'English' },
-    fr: { nativeName: 'Français' }
-  };
+
 
 if (loading) return <Spinner />;
 if (error) return <pre>{error.message}</pre>
@@ -47,22 +39,17 @@ if (error) return <pre>{error.message}</pre>
     <AnimatePage>
       <div className='homepage'>
 
+
         <div>
-          {Object.keys(lngs).map((lng) => (
-            <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
-              {lngs[lng].nativeName}
-            </button>
-          ))}
-        </div>
+
+<p className='roadTo'>Road to</p>
+<img src={evoLogo} alt="EVO 2023" className='evo'/>
+</div>
         <div className='firstSection'>
         {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />}
           <img src={pflYN} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
         </div>
-        <div>
 
-          <p className='roadTo'>Road to</p>
-          <img src={evoLogo} alt="EVO 2023" className='evo'/>
-        </div>
       </div>
       <div className='secondSection'>
         <div className='mb-30 d-flex'>

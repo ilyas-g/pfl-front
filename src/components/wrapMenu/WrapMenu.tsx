@@ -15,7 +15,7 @@ export default function WrapMenu() {
             <ul role="list">
                 <li role="listitem" className="onglets"><Link to="/">Accueil</Link></li>
                 <li role="listitem" className="onglets"><Link to="/ranking">Ranking</Link></li>
-                <li role="listitem" className="onglets"><Link to="/">Contact</Link></li>
+                {/* <li role="listitem" className="onglets"><Link to="/">Contact</Link></li> */}
             </ul>
         <SocialMedias func={() => {console.log('okokok')}} />
         </nav>
@@ -28,8 +28,6 @@ export default function WrapMenu() {
             </div>
         </div>
       {/* {isMobile === false ? <SocialMedias func={() => {setIsModal(true)}} /> : '' } */}
-
-
 
         </div>
     )

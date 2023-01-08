@@ -8,8 +8,9 @@ import useDeviceDetect from "../../utils/useDeviceDetect";
 import logo from '../../assets/pfl-logo.png';
 import AnnouncementBlock from '../announcementBlock/AnnouncementBlock';
 import 'react-i18next'
+import DropdownMenu from '../dropdownMenu/DropdownMenu';
 
-export default function Header({rankingFunc}) {
+const Header = ({rankingFunc, bracketFunc, langFunc, children}) => {
 
   const [burger, setBurger] = useState<boolean>(false)
 
@@ -19,6 +20,13 @@ export default function Header({rankingFunc}) {
     <header>
       <div style={{display: 'flex'}}>
       <img src={logo} alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" width={115} />
+
+      <DropdownMenu 
+        nameMenu='lang' 
+        func={langFunc}>
+        {children}
+      </DropdownMenu>
+
       <div className='main-nav'>
           <WrapMenu />
         </div>
@@ -31,16 +39,10 @@ export default function Header({rankingFunc}) {
 
         <button onClick={rankingFunc}>Ranking</button>
 
-      {!isMobile && <AnnouncementBlock />}
-
-
-        {/* <nav className='nav-lang'>
-            <ul role="list">
-              <li role="listitem" className="navlink"><Link to="/">EN</Link></li>
-              <li role="listitem" className="navlink"><Link to="/">FR</Link></li>
-            </ul>
-          </nav> */}
+        {!isMobile && <AnnouncementBlock func={bracketFunc} />}
       </div>
     </header>
   )
 }
+
+export default Header;

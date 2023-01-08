@@ -25,6 +25,8 @@ import {STANDING_QUERY} from "./queries/queries"
 import './i18n'
 import AnnouncementBlock from './components/announcementBlock/AnnouncementBlock';
 
+import {useTranslation} from 'react-i18next'
+
 function App() {
   // const [isLoading, setIsLoading] = useState(true)
   // const [data, setData] = useState();
@@ -39,13 +41,31 @@ function App() {
   const currentYear = new Date().getFullYear();
 
   const [ranking, setRanking] = useState<boolean>(false)
+  
+  const { t, i18n } = useTranslation();
+
+  const lngs = {
+    en: { nativeName: 'English' },
+    fr: { nativeName: 'Français' }
+  };
+
   if (loading) return <Spinner />;
-if (error) return <pre>{error.message}</pre>
+  if (error) return <pre>{error.message}</pre>
+
   return (
-<>
+  <>
     <div>
-      {isMobile && <AnnouncementBlock />}
-      <Header rankingFunc={()=> {{ranking === false ? setRanking(true) :  setRanking(false)}}}/>
+      {isMobile && <AnnouncementBlock func={() => console.log('okok')} />}
+      <Header 
+        rankingFunc={() => {{ranking === false ? setRanking(true) :  setRanking(false)}}}
+        bracketFunc={() => {console.log('plplplpl')}}
+        langFunc={() => {console.log('lang')}}>
+                    {Object.keys(lngs).map((lng) => (
+            <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+              {lngs[lng].nativeName}
+            </button>
+          ))}
+          </Header>
 
       {ranking === true ? 
         <Card cardSkin="secondGame width360" title="Classement Guilty Gear Strive">
