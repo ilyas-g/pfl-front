@@ -13,11 +13,17 @@ import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import Ranking from './pages/ranking/Ranking';
 import SocialMedias from './components/socialMedias/SocialMedias';
+import Spinner from './components/spinner/Spinner';
+
 import Modal from "./components/modal/Modal";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import useDeviceDetect from "./utils/useDeviceDetect";
+
+import {STANDING_QUERY} from "./queries/queries"
 
 import './i18n'
+import AnnouncementBlock from './components/announcementBlock/AnnouncementBlock';
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true)
@@ -26,12 +32,32 @@ function App() {
 
   const [isModal, setIsModal] = useState(false)
   const location = useLocation();
+  const { isMobile } = useDeviceDetect();
+
+  const { data, loading, error } = useQuery(STANDING_QUERY);
 
   const currentYear = new Date().getFullYear();
+
+  const [ranking, setRanking] = useState<boolean>(false)
+  if (loading) return <Spinner />;
+if (error) return <pre>{error.message}</pre>
   return (
 <>
     <div>
-      <Header />
+      {isMobile && <AnnouncementBlock />}
+      <Header rankingFunc={()=> {{ranking === false ? setRanking(true) :  setRanking(false)}}}/>
+
+      {ranking === true ? 
+        <Card cardSkin="secondGame width360" title="Classement Guilty Gear Strive">
+          <ul className="cards__front__classement">
+            {data.league.standings.nodes.map((participant, index) => {
+              return <li key={index}>{participant.entrant.name}</li>
+            })}
+          </ul>
+        </Card>
+        : ""
+      }
+
       {isModal === false ? <SocialMedias func={() => {setIsModal(true)}} /> : '' }
       {/* <SocialMedias func={() => {setIsModal(true)}} /> */}
       {isModal === true ? <Modal func={() => {setIsModal(false)}} /> : '' }

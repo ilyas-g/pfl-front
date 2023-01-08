@@ -59,13 +59,7 @@ if (error) return <pre>{error.message}</pre>
           <img src={pflYN} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
         </div>
         <div>
-          <Card cardSkin="secondGame width360" title="Classement Guilty Gear Strive">
-            <ul className="cards__front__classement">
-              {data.league.standings.nodes.map((participant, index) => {
-                return <li key={index}>{participant.entrant.name}</li>
-              })}
-            </ul>
-          </Card>
+
           <p className='roadTo'>Road to</p>
           <img src={evoLogo} alt="EVO 2023" className='evo'/>
         </div>
