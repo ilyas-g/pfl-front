@@ -19,6 +19,8 @@ i18n
     resources: {
       en: {
         translation: {
+          "langTitle":  "EN",
+          "register": "Register for the next tournament",
           "offline": "12 Offline Rankings (October 2022 - April 2023)",
           "online": "6 Online Rankings (January 2023 - March 2023)",
           "top7": "The Top 7 will qualify for the finals",
@@ -28,6 +30,8 @@ i18n
       },
       fr: {
         translation: {
+          "langTitle":  "FR",
+          "register": "S'inscrire au prochain tournoi",
           "offline": "12 Rankings offline (Octobre 2022 - Avril 2023)",
           "online": "6 Rankings online (Janvier 2023 - Mars 2023)",
           "top7": "Le Top 7 sera qualifié pour les phases finales",

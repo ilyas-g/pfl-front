@@ -1,12 +1,6 @@
 import React from 'react'
 import './style.css'
 
+const AnnouncementBlock = ({func, text}) => <button onClick={func} className='announcement'>{text}</button>
 
-export default function AnnouncementBlock({func}) {
-  return (
-      <button onClick={func} className='announcement'>
-          Register for the next tournament
-          {/* S'inscrire au prochain tournoi */}
-      </button>
-  )
-}
+export default AnnouncementBlock

@@ -10,25 +10,31 @@ import AnnouncementBlock from '../announcementBlock/AnnouncementBlock';
 import 'react-i18next'
 import DropdownMenu from '../dropdownMenu/DropdownMenu';
 
-const Header = ({rankingFunc, bracketFunc, langFunc, children}) => {
+import {useTranslation} from 'react-i18next'
+
+const Header = ({rankingFunc, bracketFunc, langFunc, langName, children}) => {
 
   const [burger, setBurger] = useState<boolean>(false)
 
   const { isMobile } = useDeviceDetect();
 
+  const { t } = useTranslation();
+
   return (
     <header>
-      <div style={{display: 'flex'}}>
+      <div style={{display: 'flex', alignItems: 'center'}}>
       <img src={logo} alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" width={115} />
 
+      <div style={{display: 'flex', alignItems: 'center'}}>
       <DropdownMenu 
-        nameMenu='lang' 
+        nameMenu={langName} 
         func={langFunc}>
         {children}
       </DropdownMenu>
 
       <div className='main-nav'>
           <WrapMenu />
+        </div>
         </div>
       </div>
       {/* {!isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
@@ -39,7 +45,7 @@ const Header = ({rankingFunc, bracketFunc, langFunc, children}) => {
 
         <button onClick={rankingFunc}>Ranking</button>
 
-        {!isMobile && <AnnouncementBlock func={bracketFunc} />}
+        {!isMobile && <AnnouncementBlock func={bracketFunc} text={t('register')} />}
       </div>
     </header>
   )

@@ -55,17 +55,21 @@ function App() {
   return (
   <>
     <div>
-      {isMobile && <AnnouncementBlock func={() => console.log('okok')} />}
+      {isMobile && <AnnouncementBlock text={t('register')} func={() => console.log('okok')} />}
       <Header 
-        rankingFunc={() => {{ranking === false ? setRanking(true) :  setRanking(false)}}}
-        bracketFunc={() => {console.log('plplplpl')}}
-        langFunc={() => {console.log('lang')}}>
-                    {Object.keys(lngs).map((lng) => (
-            <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+      rankingFunc={() => {{ranking === false ? setRanking(true) :  setRanking(false)}}}
+      bracketFunc={() => {console.log('plplplpl')}}
+      langFunc={() => {console.log('lang')}}
+      langName={t('langTitle')}>
+
+        <ul>
+            {Object.keys(lngs).map((lng) => (
+            <li key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
               {lngs[lng].nativeName}
-            </button>
-          ))}
-          </Header>
+            </li>
+            ))}
+        </ul>
+      </Header>
 
       {ranking === true ? 
         <Card cardSkin="secondGame width360" title="Classement Guilty Gear Strive">
