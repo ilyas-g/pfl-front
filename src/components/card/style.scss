@@ -13,8 +13,10 @@
 //     transition: all 1s;
 //    -webkit-transition: all 1s;
 
-position: absolute;
-top: 20%;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    left: 5%;
 
     &.active {
         opacity: 1;
@@ -74,6 +76,7 @@ top: 20%;
         &.classement {
             z-index: 0;
             position: absolute;
+            left: initial;
             right: 11%;
             top: 0;
 

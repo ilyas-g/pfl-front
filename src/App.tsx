@@ -72,7 +72,7 @@ function App() {
       </Header>
 
       {/* {ranking === true ?  */}
-        <Card cardSkin={`secondGame width360 classement ${ranking === true ? 'active' : ''}`} title="Classement Guilty Gear Strive">
+        <Card cardSkin={`secondGame classement ${ranking === true ? 'active' : ''}`} title="Classement Guilty Gear Strive">
           <ul className="cards__front__classement">
             {data.league.standings.nodes.map((participant, index) => {
               return <li key={index}>{participant.entrant.name}</li>
