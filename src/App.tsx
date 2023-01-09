@@ -81,7 +81,7 @@ function App() {
         </Card>
          {/* : ""} */}
 
-      {isModal === false ? <SocialMedias func={() => {setIsModal(true)}} /> : '' }
+      {!isMobile && <SocialMedias func={() => {setIsModal(true)}} /> }
       {/* <SocialMedias func={() => {setIsModal(true)}} /> */}
       {isModal === true ? <Modal func={() => {setIsModal(false)}} /> : '' }
       {/* <div>
