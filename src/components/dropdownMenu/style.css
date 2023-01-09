@@ -2,8 +2,12 @@
 .dropbtnn {
   background-color: transparent;
   color: rgb(167, 184, 217);
-  padding: 16px;
+  padding: 0;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 1em;
   font-size: 16px;
+  outline: none;
   border: none;
   text-transform: uppercase;
 }
@@ -16,18 +20,27 @@
 .dropdownn:hover .dropdownn-content {
   display: block;
 }
-.dropdownn:hover .dropbtnn {
-  background-color: #3e568e;
-}
 
 /* Dropdown Content (Hidden by Default) */
 .dropdownn-content {
   display: none;
   position: absolute;
-  background-color: #a80b0b;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+.dropdownn-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 10px 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.dropdownn-content ul li {
+  cursor: pointer;
+}
+.dropdownn-content ul li:hover {
+  font-weight: bold;
 }
 .dropdownn-content a {
   color: rgb(167, 184, 217);

@@ -7,7 +7,7 @@ header {
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 12;
 }
 @media screen and (min-width: 768px) {
   header {
@@ -79,11 +79,16 @@ nav ul li:hover:after {
 nav ul li a {
   color: rgb(167, 184, 217);
   display: block;
-  font-size: 18px;
+  font-size: 60px;
   font-weight: 400;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 1s;
+}
+@media screen and (min-width: 768px) {
+  nav ul li a {
+    font-size: 18px;
+  }
 }
 nav ul li a:hover {
   color: rgb(244, 247, 255);

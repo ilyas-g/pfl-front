@@ -1,10 +1,7 @@
 @import "../../variables";
 
 .tournaments-list {
-    margin-top: 15px;
-    // position: absolute;
-    // left: 0;
-    // right: 0;
+    padding: 135px 0 65px;
     z-index: 1;
 
     @media screen and (min-width: $media-queries-tablet) {

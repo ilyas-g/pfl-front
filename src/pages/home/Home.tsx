@@ -7,13 +7,15 @@ import Spinner from '../../components/spinner/Spinner';
 import Text from '../../components/text/Text'
 
 import evoLogo from '../../assets/evo720.png';
-import pflYN from '../../assets/pfl-by-yn.png';
+import pfl from '../../assets/pfl-logo.png';
 import img6 from '../../assets/6.jpg';
 import img7 from '../../assets/7.jpg';
 import img8 from '../../assets/8.jpg';
 import img9 from '../../assets/9.jpg';
 import img13 from '../../assets/13.jpg';
 import img14 from '../../assets/14.jpg';
+import yuzuLogo from '../../assets/logo-yuzu.svg';
+import nsxcLogo from '../../assets/nsxc-logo.svg';
 
 import './style.css'
 import { motion } from "framer-motion";
@@ -38,20 +40,38 @@ if (error) return <pre>{error.message}</pre>
   return (
     <AnimatePage>
       <div className='homepage'>
+        <section className='firstSection'>
 
+          <div>
+            <h1>{t('mainTitle')}</h1>
+            <div className="presentation">
 
-        <div>
+              <p>{t('pflPresentation')}</p>
 
-<p className='roadTo'>Road to</p>
-<img src={evoLogo} alt="EVO 2023" className='evo'/>
-</div>
-        <div className='firstSection'>
-        {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />}
-          <img src={pflYN} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
+              <div className='logoSection'>
+                <div className='logos'>
+                  <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoYuzu'/>
+                  <img src={nsxcLogo} alt="NSxC" className='evo logoNSXC'/>
+                </div>
+
+                <div>
+                  <img src={evoLogo} alt="EVO 2023" className='evo'/>
+                </div>
+              </div>
+            </div>
+
+            {/* <p className='roadTo'>Road to</p>
+            <img src={evoLogo} alt="EVO 2023" className='evo'/> */}
+          </div>
+
+          
+            {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
+            <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
+
+      </section>
         </div>
 
-      </div>
-      <div className='secondSection'>
+      <section className='secondSection'>
         <div className='mb-30 d-flex'>
           <div>
             <p>{t('offline')}</p>
@@ -82,7 +102,7 @@ if (error) return <pre>{error.message}</pre>
             <img src={img6} alt="img10" className='img-crop'/>
           </div>
         </div>
-      </div>
+      </section>
     </AnimatePage>
   )
 }

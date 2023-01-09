@@ -58,13 +58,20 @@
     }
 
     @media screen and (min-width: $media-queries-tablet) {
-        // min-height: 66vh;
-        // margin: 10px;
-        z-index: 1;
-        position: absolute;
-        right: 11%;
-        top: 12%;
+        &.classement {
+            z-index: 2;
+            position: absolute;
+            right: 11%;
+            top: 12%;
+          }
     }
+    //     // min-height: 66vh;
+    //     // margin: 10px;
+    //     z-index: 1;
+    //     position: absolute;
+    //     right: 11%;
+    //     top: 12%;
+    // }
 
     @media screen and (min-height: 900px) {
         // min-height: 40vh;

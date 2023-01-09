@@ -122,8 +122,31 @@ html.is-animating .transition-fade {
   }
 }
 
+.f-bold {
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+}
+
 .mb-50 {
   margin-bottom: 50px;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    width: 85%;
+  }
 }
 
 /* @media screen and (min-width: 768px) {

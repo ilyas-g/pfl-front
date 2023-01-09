@@ -73,14 +73,14 @@
 
             &.yuzu-social {
                 background-color: #202020;
-                border: 2px solid #ffd342;
+                border: 2px solid $yellow;
                 box-sizing: border-box;
                 &:hover {background-color: lighten(#202020, 10%)}
             }
 
             &.nsxc-social {
-                background-color: #ff7f26;
-                &:hover {background-color: lighten(#ff7f26, 10%)}
+                background-color: $orange;
+                &:hover {background-color: lighten($orange, 10%)}
             }
 
             &.pfl-trailer {

@@ -15,7 +15,7 @@ header {
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 12;
 
     @media screen and (min-width: $media-queries-tablet) {
         position: absolute;
@@ -86,14 +86,17 @@ nav {
             }
 
             a {
-                // color: rgb(95, 105, 125);
                 color: rgb(167, 184, 217);
                 display: block;
-                font-size: 18px;
+                font-size: 60px;
                 font-weight: 400;
                 text-transform: uppercase;
                 cursor: pointer;
                 transition: all 1s;
+                
+                @media screen and (min-width: $media-queries-tablet) {
+                    font-size: 18px;
+                }
 
                 &:hover {
                   color: rgb(244, 247, 255);

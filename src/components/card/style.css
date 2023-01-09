@@ -36,8 +36,8 @@
   text-shadow: 2px 2px 2px #000000;
 }
 @media screen and (min-width: 768px) {
-  .cards__single {
-    z-index: 1;
+  .cards__single.classement {
+    z-index: 2;
     position: absolute;
     right: 11%;
     top: 12%;

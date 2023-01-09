@@ -1,13 +1,23 @@
 .announcement {
-  background-color: rgb(79, 97, 255);
   padding: 15px;
   margin: 0;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 2px solid #c1a768;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.announcement:hover {
+  border: 2px solid #faf4ea;
+  box-shadow: 0 5px 18px rgba(250, 244, 234, 0.6);
 }
 .announcement p {
   margin: 0;

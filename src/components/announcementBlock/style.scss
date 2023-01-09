@@ -1,15 +1,24 @@
 @import "../../variables";
 
 .announcement {
-    background-color: rgb(79, 97, 255);
     padding: 15px;
     margin: 0;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: 2px solid #c1a768;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    user-select: none;
+
+    &:hover {
+        border: 2px solid #faf4ea;
+        box-shadow: 0 5px 18px rgb(250 244 234 / 60%);
+    }
 
     p {
         margin: 0;

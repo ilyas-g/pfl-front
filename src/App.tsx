@@ -64,7 +64,7 @@ function App() {
 
         <ul>
             {Object.keys(lngs).map((lng) => (
-            <li key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+            <li key={lng} className={i18n.resolvedLanguage === lng ? 'f-bold' : '' } type="submit" onClick={() => i18n.changeLanguage(lng)}>
               {lngs[lng].nativeName}
             </li>
             ))}
@@ -72,7 +72,7 @@ function App() {
       </Header>
 
       {ranking === true ? 
-        <Card cardSkin="secondGame width360" title="Classement Guilty Gear Strive">
+        <Card cardSkin="secondGame width360 classement" title="Classement Guilty Gear Strive">
           <ul className="cards__front__classement">
             {data.league.standings.nodes.map((participant, index) => {
               return <li key={index}>{participant.entrant.name}</li>
