@@ -1,16 +1,46 @@
 @import "../../variables";
 
 .main-menu {
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     a {
         // color: #fff;
         color: rgb(167, 184, 217);
     }
 
+    ul {
+        margin-bottom: 50px;
+        li {
+            margin: 0 0 15px 0;
+
+            a {
+                font-size: 28px;
+            }
+        }
+    }
+
     @media screen and (min-width: $media-queries-tablet) {
         display: flex;
-
+        position: static;
+        transform: none;
         ul {
             display: flex;
+            margin-bottom: 0;
+
+            li {
+                margin-bottom: 0;
+                margin-left: 15px;
+
+                a {
+                    font-size: 18px;
+                }
+            }
         }
     }
 }
+

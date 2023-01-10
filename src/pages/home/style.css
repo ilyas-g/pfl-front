@@ -1,11 +1,40 @@
 .homepage {
   padding: 120px 15px 15px;
+  height: 100vh;
   background: radial-gradient(circle, transparent 90%, rgba(0, 1, 0, 0.5)), linear-gradient(to right, rgba(0, 1, 0, 0.5), rgba(0, 1, 0, 0.5)), url("../../assets/4.png"), rgba(0, 1, 0, 0.5);
   background-position: center bottom;
   background-size: cover;
   background-blend-mode: color;
   position: relative;
   overflow: hidden;
+}
+.homepage h1 {
+  text-transform: uppercase;
+}
+.homepage .presentation {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 768px) {
+  .homepage .presentation {
+    padding-right: 120px;
+  }
+}
+.homepage .presentation .logos {
+  display: flex;
+  width: 50%;
+}
+.homepage .presentation .logos img {
+  width: 100%;
+  max-width: 100px;
+}
+.homepage .presentation .logos img.logoYuzu:hover {
+  filter: drop-shadow(0 0 2em #ffd342);
+}
+.homepage .presentation .logos img.logoNSXC:hover {
+  filter: drop-shadow(0 0 2em #ff7f26);
 }
 @media screen and (min-width: 768px) {
   .homepage {
@@ -49,23 +78,32 @@
 }
 
 .firstSection {
-  font-weight: bold;
-  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .firstSection img {
   width: 100%;
 }
+.firstSection .logoSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 @media screen and (min-width: 768px) {
   .firstSection {
-    left: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     margin-bottom: 0;
   }
 }
+.firstSection .pfl-logo {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .firstSection .pfl-logo {
+    display: block;
     width: 520px;
   }
 }

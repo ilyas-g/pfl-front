@@ -7,6 +7,7 @@ import AnimatePage from '../../components/animatePage/AnimatePage'
 
 import "./style.css"
 import {CARD_QUERY} from "../../queries/queries"
+import TournamentEmbed from '../../components/tournamentEmbed/TournamentEmbed';
 
 export default function Ranking() {
   const [tabs, setTabs] = useState<boolean>(true)
@@ -30,11 +31,11 @@ export default function Ranking() {
                   })}
                 </ul>
               </Card>
-              
             </div>
           )
         })}
       </div>
+      {/* <TournamentEmbed /> */}
     </AnimatePage>
   )
 }

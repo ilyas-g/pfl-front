@@ -1,33 +1,48 @@
 @import "../../variables";
 
-.socials-aside, .socials-aside_ready {
-    display: none;
-    a, .tooltiptext {display: none;}
-}
+// .socials-aside, .socials-aside_ready {
+//     display: none;
+//     a, .tooltiptext {display: none;}
+// }
 
-@media screen and (min-width: $media-queries-tablet) {
+// @media screen and (min-width: $media-queries-tablet) {
     .socials-aside {
-        display: block;
-        position: fixed;
-        top: 50%;
-        left: 2vw;
-        z-index: 1;
-        width: 1rem;
-        transform: translate3d(0, -50%, 0);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        // max-width: 160px;
+        margin: auto;
         transition: color 400ms ease 100ms;
+        z-index: 1;
+
+        @media screen and (min-width: $media-queries-tablet) {
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 2vw;
+            width: 1rem;
+            transform: translate3d(0, -50%, 0);
+        }
 
         a, button {
-            font-size: 20px;
+            font-size: 35px;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: calc(1rem + 26px);
-            height: calc(1rem + 26px);
+            width: calc(1rem + 56px);
+            height: calc(1rem + 56px);
             text-align: center;
             color: inherit;
             text-decoration: none;
             line-height: 1rem;
             transition: background-color 400ms ease 100ms, box-shadow 400ms ease 100ms;
+
+        @media screen and (min-width: $media-queries-tablet) {
+            font-size: 20px;
+            width: calc(1rem + 26px);
+            height: calc(1rem + 26px);
+        }
         }
 
         button {
@@ -42,9 +57,12 @@
     }
 
     .socials-aside_ready {
-        display: block;
+        // display: flex;
         color : rgb(0 29 110);
-
+        
+        @media screen and (min-width: $media-queries-tablet) {
+            display: block;
+        }
         .icon-video-camera1:before, .icon-video-camera:before {color: #ffffff;}
 
         a, button {
@@ -55,14 +73,14 @@
 
             &.yuzu-social {
                 background-color: #202020;
-                border: 2px solid #ffd342;
+                border: 2px solid $yellow;
                 box-sizing: border-box;
                 &:hover {background-color: lighten(#202020, 10%)}
             }
 
             &.nsxc-social {
-                background-color: #ff7f26;
-                &:hover {background-color: lighten(#ff7f26, 10%)}
+                background-color: $orange;
+                &:hover {background-color: lighten($orange, 10%)}
             }
 
             &.pfl-trailer {
@@ -134,4 +152,4 @@
             visibility: visible;
         }
     }
-}
+

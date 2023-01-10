@@ -5,34 +5,50 @@ import Text from '../text/Text'
 import WrapMenu from '../wrapMenu/WrapMenu';
 import "./style.css"
 import useDeviceDetect from "../../utils/useDeviceDetect";
-import pflYN from '../../assets/pfl-by-yn.png';
+import logo from '../../assets/pfl-logo.png';
+import AnnouncementBlock from '../announcementBlock/AnnouncementBlock';
+import 'react-i18next'
+import DropdownMenu from '../dropdownMenu/DropdownMenu';
 
-export default function Header() {
+import {useTranslation} from 'react-i18next'
+
+const Header = ({rankingFunc, bracketFunc, langFunc, langName, children}) => {
 
   const [burger, setBurger] = useState<boolean>(false)
+
   const { isMobile } = useDeviceDetect();
+
+  const { t } = useTranslation();
 
   return (
     <header>
-        {/* <img src="https://yuzugaming.com/site/templates/assets/ope/pfl/pfl-logo-crop.png" width={115}/> */}
-        <img src={pflYN} alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" width={115} />
-        
-        {!isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />}
+      <div style={{display: 'flex', alignItems: 'center'}}>
+      <img src={logo} alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" width={115} />
 
-        <div className='header-navigation'>
-          <span className='icon-menu' onClick={() => {setBurger(true)}}></span>
-          {burger === true && <Menu func={() => {setBurger(false)}} />}
+      <div style={{display: 'flex', alignItems: 'center'}}>
+      <DropdownMenu 
+        nameMenu={langName} 
+        func={langFunc}>
+        {children}
+      </DropdownMenu>
 
-          <div className='main-nav'>
-            <WrapMenu />
-          </div>
-          <nav className='nav-lang'>
-            <ul role="list">
-              <li role="listitem" className="navlink"><Link to="/">EN</Link></li>
-              <li role="listitem" className="navlink"><Link to="/">FR</Link></li>
-            </ul>
-          </nav>
+      <div className='main-nav'>
+          <WrapMenu />
         </div>
+        </div>
+      </div>
+      {/* {!isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
+
+      <div className='header-navigation'>
+        <span className='icon-menu' onClick={() => { setBurger(true) }}></span>
+        {burger === true && <Menu func={() => { setBurger(false) }} />}
+
+        <button className='announcement' onClick={rankingFunc}>{t('rankingButton')}</button>
+
+        {!isMobile && <AnnouncementBlock func={bracketFunc} text={t('register')} />}
+      </div>
     </header>
   )
 }
+
+export default Header;

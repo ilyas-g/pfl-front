@@ -7,6 +7,18 @@
   border-radius: 5px;
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.6);
 }
+.cards__single.classement {
+  z-index: 0;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  left: 5%;
+  opacity: 0;
+}
+.cards__single.classement.active {
+  opacity: 1;
+  z-index: 3;
+}
 .cards__single.firstGame {
   background: radial-gradient(circle, transparent 40%, rgb(18, 18, 66) 85%), linear-gradient(to right, rgb(18, 18, 66), rgb(18, 18, 66)), url("../../assets/dbfz-fond.jpg"), rgba(14, 17, 55, 0.85);
   background-position: center center;
@@ -36,8 +48,16 @@
   text-shadow: 2px 2px 2px #000000;
 }
 @media screen and (min-width: 768px) {
-  .cards__single {
-    margin: 10px;
+  .cards__single.classement {
+    z-index: 0;
+    position: absolute;
+    left: initial;
+    right: 11%;
+    top: 0;
+  }
+  .cards__single.classement.active {
+    top: 12%;
+    z-index: 2;
   }
 }
 .cards__single h3 {

@@ -22,7 +22,8 @@ $video-width: 1050px;
     font-size: 60px;
     font-weight: bold;
     position: absolute;
-    right: -45px;
+    right: 0;
+    top: -18px;
 }
 
 .close:hover, .close:focus {
@@ -32,12 +33,31 @@ $video-width: 1050px;
 }
 
 .video {
-    width: 100vw; 
     max-width: $video-width;
-    height: 56.25vw;
-    border: 0;
 
     @media (min-width:$video-width) {
         height: calc($video-width * 0.5628205128205128);
     }
 }
+
+.register {
+    max-width: 1900px;
+
+    @media (min-width:768px) {
+        padding: 0 100px;
+        height: calc($video-width * 0.6628205128205128);
+    }
+
+    #onetrust-banner-sdk {
+        display: none !important;
+    }
+}
+
+.video, .register {
+    width: 100vw; 
+    // height: 56.25vw;
+    border: 0;
+}
+
+.close:has(+ .video-container) {right: -45px;}
+.close:has(+ .embedt) {right: 55px;}
