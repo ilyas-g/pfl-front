@@ -1,38 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-// import axios from 'axios';
-// import React, { useEffect, useState } from 'react';
-
-import reactLogo from './assets/react.svg'
+import React, {useState} from 'react';
 import './App.css'
 
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
+
+import AnnouncementBlock from './components/announcementBlock/AnnouncementBlock';
 import Card from './components/card/Card';
 import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import Ranking from './pages/ranking/Ranking';
 import SocialMedias from './components/socialMedias/SocialMedias';
 import Spinner from './components/spinner/Spinner';
-
 import Modal from "./components/modal/Modal";
-import { useState } from "react";
+import TournamentEmbed from "./components/TournamentEmbed/TournamentEmbed";
+
 import { AnimatePresence } from "framer-motion";
-import useDeviceDetect from "./utils/useDeviceDetect";
-
-import {STANDING_QUERY} from "./queries/queries"
-
-import './i18n'
-import AnnouncementBlock from './components/announcementBlock/AnnouncementBlock';
 
 import {useTranslation} from 'react-i18next'
+import './i18n'
+
+import useDeviceDetect from "./utils/useDeviceDetect";
+import {STANDING_QUERY} from "./queries/queries"
 
 function App() {
-  // const [isLoading, setIsLoading] = useState(true)
-  // const [data, setData] = useState();
-  // const [count, setCount] = useState(0)
-
   const [isModal, setIsModal] = useState(false)
+  const [isBracket, setIsBracket] = useState(false)
   const location = useLocation();
   const { isMobile } = useDeviceDetect();
 
@@ -55,16 +47,16 @@ function App() {
   return (
   <>
     <div>
-      {isMobile && <AnnouncementBlock text={t('register')} func={() => console.log('okok')} />}
+      {isMobile && <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />}
       <Header 
       rankingFunc={() => {{ranking === false ? setRanking(true) :  setRanking(false)}}}
-      bracketFunc={() => {console.log('plplplpl')}}
+      bracketFunc={() => setIsBracket(true)}
       langFunc={() => {console.log('lang')}}
       langName={t('langTitle')}>
 
         <ul>
             {Object.keys(lngs).map((lng) => (
-            <li key={lng} className={i18n.resolvedLanguage === lng ? 'f-bold' : '' } type="submit" onClick={() => i18n.changeLanguage(lng)}>
+            <li key={lng} className={i18n.resolvedLanguage === lng ? 'f-bold' : '' } onClick={() => i18n.changeLanguage(lng)}>
               {lngs[lng].nativeName}
             </li>
             ))}
@@ -83,27 +75,28 @@ function App() {
 
       {!isMobile && <SocialMedias func={() => {setIsModal(true)}} /> }
       {/* <SocialMedias func={() => {setIsModal(true)}} /> */}
-      {isModal === true ? <Modal func={() => {setIsModal(false)}} /> : '' }
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div> */}
+      {isModal === true && 
+        <Modal func={() => {setIsModal(false)}}>
+          <div className="video-container">
+            <iframe
+              className="video"
+              //  src="https://www.youtube.com/embed/eFfrU5vCaqc"
+              src="https://www.youtube.com/embed/eFfrU5vCaqc"
+              title="YouTube video player"
+              frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen>
+            </iframe>
+          </div>
+        </Modal>
+      }
 
-      {/* <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
+      {isBracket === true && 
+        <Modal func={() => {setIsBracket(false)}}>
+          <div className='embedt'>
+            <iframe className='register' src="https://start.gg/tournament/pfl-ranking-5-road-to-evo-2k23/register/embed"></iframe>
+          </div>
+        </Modal>
+      }
 
     <AnimatePresence exitBeforeEnter>
       <Routes key={location.pathname} location={location}>
