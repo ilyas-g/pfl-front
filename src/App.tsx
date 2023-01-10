@@ -21,6 +21,7 @@ import './i18n'
 
 import useDeviceDetect from "./utils/useDeviceDetect";
 import {STANDING_QUERY} from "./queries/queries"
+import { Footer } from './components/footer/Footer';
 
 function App() {
   const [isModal, setIsModal] = useState(false)
@@ -98,6 +99,8 @@ function App() {
         </Modal>
       }
 
+
+
     <AnimatePresence exitBeforeEnter>
       <Routes key={location.pathname} location={location}>
         <Route path="/" element={<Home />} />
@@ -106,10 +109,13 @@ function App() {
         <Route path="/product/:productId" element={<Product />} /> */}
       </Routes>
     </AnimatePresence>
-        <footer>  Website by <a href="https://twitter.com/iamarktall" target="_blank">
-          Arktall (@iamarktall)</a> - 
-          Photos by <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a> - PFL2 © Yuzu Gaming - {currentYear}
-        </footer>
+
+    <Footer>
+      <p>{t('copyright')} 2021 - {currentYear}. {t('rights')}</p>
+      <p>{t('websiteby')} <a href="https://twitter.com/iamarktall" target="_blank">Arktall (@iamarktall)</a>. {t('photosby')} <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a>.
+      </p>
+    </Footer>
+
         </div>
     </>
   )

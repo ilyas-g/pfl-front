@@ -4,7 +4,6 @@ import { useQuery } from "@apollo/client";
 
 import AnimatePage from '../../components/animatePage/AnimatePage';
 import Spinner from '../../components/spinner/Spinner';
-import Text from '../../components/text/Text'
 
 import evoLogo from '../../assets/evo720.png';
 import pfl from '../../assets/pfl-logo.png';
@@ -33,10 +32,9 @@ const Home = () => {
 
   const { t } = useTranslation();
 
+  if (loading) return <Spinner />;
+  if (error) return <pre>{error.message}</pre>
 
-
-if (loading) return <Spinner />;
-if (error) return <pre>{error.message}</pre>
   return (
     <AnimatePage>
       <div className='homepage'>
@@ -64,12 +62,10 @@ if (error) return <pre>{error.message}</pre>
             <img src={evoLogo} alt="EVO 2023" className='evo'/> */}
           </div>
 
-          
-            {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
-            <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
-
-      </section>
-        </div>
+          {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
+          <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
+        </section>
+      </div>
 
       <section className='secondSection'>
         <div className='mb-30 d-flex'>

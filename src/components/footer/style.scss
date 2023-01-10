@@ -1,0 +1,31 @@
+footer {
+    padding: 10px 20px;
+    border-top: 1px solid #fff;
+    text-align: center;
+
+    p {
+        line-height: 1.5;
+        text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
+
+        &:first-child{margin-bottom: 0;}
+        &:last-child{margin-top: 0;}
+    }
+
+    a {
+        color: rgb(167, 184, 217);
+
+        &:hover {
+            color: rgb(244, 247, 255)
+        }
+    }
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100px;
+    }
+}
