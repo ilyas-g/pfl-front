@@ -27,4 +27,14 @@ footer a:hover {
 }
 .footer-images img {
   width: 100px;
+}
+
+.container-footer {
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-top: 1px solid #e0e4e7;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
