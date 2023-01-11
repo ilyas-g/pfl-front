@@ -6,7 +6,7 @@ import nsxcLogo from '../../assets/nsxc-logo.svg';
 
 export const Footer = ({children}) => {
   return (
-    <footer>
+    <footer className='container-footer'>
         <div className='footer-images'>
             <img src={yuzuLogo} alt="Yuzu Gaming" />
             <img src={nsxcLogo} alt="NSxC" />

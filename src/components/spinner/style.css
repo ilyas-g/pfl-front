@@ -8,6 +8,7 @@
   -webkit-animation: spinner-d3wgkg 1s infinite linear;
           animation: spinner-d3wgkg 1s infinite linear;
   position: absolute;
+  top: 50%;
   left: 50%;
 }
 

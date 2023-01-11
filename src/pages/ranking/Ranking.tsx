@@ -23,11 +23,11 @@ export default function Ranking() {
           const bracket = `${import.meta.env.VITE_STARTGG_URI}${event.slug}`
 
           return (
-            <div  className="tournament">
+            <div key={index} className="tournament">
               <Card cardSkin="secondGame" link={bracket} title={event.tournament.name}>
                 <ul className="cards__front__classement">
-                  {event.tournament.participants.nodes.map((participant, index) => {
-                    return <li key={index}>{participant.player.gamerTag}</li>
+                  {event.standings.nodes.map((player, index) => {
+                    return <li key={index}>{player.entrant.name}</li>
                   })}
                 </ul>
               </Card>
