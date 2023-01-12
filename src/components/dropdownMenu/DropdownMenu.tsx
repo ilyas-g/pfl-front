@@ -11,7 +11,7 @@ import './style.css'
 const DropdownMenu = ({nameMenu, children, func}) => {
     return (
         <div className="dropdownn">
-            <button className="dropbtnn" onClick={func}>{nameMenu}</button>
+            <button className="dropbtnn" onClick={func}>{nameMenu} <i className='icon-arrow-down'></i></button>
             <div className="dropdownn-content">
                 {children}
             </div>

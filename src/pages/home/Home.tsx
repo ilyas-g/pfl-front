@@ -82,7 +82,7 @@ const Home = () => {
         <div className='mb-30 d-flex'>
           <div>
             <img src={img8} alt="img7" />
-            <img src={img13} alt="img10" className='img-crop'/>
+            <img src={img13} alt="img10" className='img-crop mmt50'/>
           </div>
           <div>
             <p>{t('top7')}</p>
@@ -95,7 +95,7 @@ const Home = () => {
           </div>
           <div>
             <img src={img9} alt="img7" />
-            <img src={img6} alt="img10" className='img-crop'/>
+            <img src={img6} alt="img10" className='img-crop mmt50'/>
           </div>
         </div>
       </section>

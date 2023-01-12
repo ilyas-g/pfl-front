@@ -53,6 +53,7 @@ function App() {
       rankingFunc={() => {{ranking === false ? setRanking(true) :  setRanking(false)}}}
       bracketFunc={() => setIsBracket(true)}
       langFunc={() => {console.log('lang')}}
+      classAnnouncement={ranking === true ? 'gly-rotate-180' : ''}
       langName={t('langTitle')}>
 
         <ul>
@@ -65,7 +66,7 @@ function App() {
       </Header>
 
       {/* {ranking === true ?  */}
-        <Card cardSkin={`secondGame classement ${ranking === true ? 'active' : ''}`} title="Classement Guilty Gear Strive">
+        <Card cardSkin={`secondGame classement ${ranking === true ? 'active' : ''}`} title={t('standingGGST')}>
           <ul className="cards__front__classement">
             {data.league.standings.nodes.map((participant, index) => {
               return <li key={index}>{participant.entrant.name}</li>

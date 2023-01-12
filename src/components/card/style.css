@@ -3,7 +3,7 @@
   flex: 1;
   text-align: center;
   color: #f0f1f3;
-  transition: 0.3s all ease-in-out;
+  transition: 0.5s all ease;
   border-radius: 5px;
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.6);
 }
@@ -52,11 +52,11 @@
     z-index: 0;
     position: absolute;
     left: initial;
-    right: 11%;
-    top: 0;
+    right: calc(310px - 5rem);
+    top: 61px;
   }
   .cards__single.classement.active {
-    top: 12%;
+    top: calc(180px - 5rem);
     z-index: 2;
   }
 }

@@ -1,19 +1,30 @@
 @import "../../variables";
 
 .announcement {
+    position: relative;
     padding: 15px;
     margin: 0;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
 
-    display: block;
+    display: flex;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     border: 2px solid #c1a768;
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     user-select: none;
+
+    span.textButton {
+        margin-right: 10px;
+    }
+
+    .icon-arrow-down {
+        font-size: 16px;
+        transition: all $transition-time;
+    }
 
     &:hover {
         border: 2px solid #faf4ea;
@@ -24,11 +35,11 @@
         margin: 0;
     }
 
-    span {
-        display: block;
-        font-weight: 700;
-        text-align: center;
-    }
+    // span {
+    //     display: block;
+    //     font-weight: 700;
+    //     text-align: center;
+    // }
 
     @media screen and (min-width: $media-queries-tablet) {
         display: block;
