@@ -20,6 +20,13 @@ header {
 header + .socials-aside {
   display: none;
 }
+header .announcement {
+  padding: 10px;
+}
+header .icon-menu {
+  order: 1;
+  margin-left: 20px;
+}
 
 .header-navigation {
   display: flex;

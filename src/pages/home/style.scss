@@ -47,6 +47,11 @@
                 }
             }
         }
+
+        .announcement {
+            margin: 0;
+            font-size: 24px;
+        }
     }
 
     @media screen and (min-width: $media-queries-tablet) {
@@ -138,8 +143,10 @@
     }
 
     &>div {
-        // background-color: rgb(96, 59, 209);
         margin-bottom: 50px;
+        @media screen and (min-width: $media-queries-desktop) {
+            display: flex;
+        }
     }
 
     @media screen and (min-width: $media-queries-desktop) {

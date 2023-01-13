@@ -36,6 +36,10 @@
 .homepage .presentation .logos img.logoNSXC:hover {
   filter: drop-shadow(0 0 2em #ff7f26);
 }
+.homepage .presentation .announcement {
+  margin: 0;
+  font-size: 24px;
+}
 @media screen and (min-width: 768px) {
   .homepage {
     padding: 135px 0 65px;
@@ -124,6 +128,11 @@
 }
 .secondSection > div {
   margin-bottom: 50px;
+}
+@media screen and (min-width: 992px) {
+  .secondSection > div {
+    display: flex;
+  }
 }
 @media screen and (min-width: 992px) {
   .secondSection {

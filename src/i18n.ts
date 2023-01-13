@@ -35,7 +35,9 @@ i18n
           "copyright": "Parisienne Fighting Ligue © Yuzu Gaming.",
           "rights": "All rights reserved.",
           "websiteby": "Website made by",
-          "photosby": "Photos by"
+          "photosby": "Photos by",
+          "venueTitle": "Venue",
+          "venueText": "The PFL will take place from June 6 to September 25, 2021 at the following address:"
         }
       },
       fr: {
@@ -56,7 +58,9 @@ i18n
           "copyright": "Parisienne Fighting League © Yuzu Gaming.",
           "rights": "Tout droits réservés.",
           "websiteby": "Site réalisé par",
-          "photosby": "Photos prises par"
+          "photosby": "Photos prises par",
+          "venueTitle": "Plan 'd'accès",
+          "venueText": "La PFL se déroulera du mois de Novembre 2022 à Mai 2023 à l'adresse suivante :"
         }
       }
     }

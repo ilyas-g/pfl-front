@@ -43,7 +43,13 @@ const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAn
         <span className='icon-menu' onClick={() => { setBurger(true) }}></span>
         {burger === true && <Menu func={() => { setBurger(false) }} />}
 
-        <button className='announcement' onClick={rankingFunc}><span className='textButton'>{t('rankingButton')}</span> <i className={`icon-arrow-down ${classAnnouncement}`}></i></button>
+        {/* <button className='announcement' onClick={rankingFunc}><span className='textButton'>
+          {t('rankingButton')}</span> <i className={`icon-arrow-down ${classAnnouncement}`}></i> */}
+
+        <button className='announcement' onClick={rankingFunc}>
+          {isMobile ? <span><i className='icon-list1'></i></span> 
+          : <span className='textButton'>{t('rankingButton')} <i className={`icon-arrow-down ${classAnnouncement}`}></i></span>}
+        </button>
 
         {!isMobile && <AnnouncementBlock func={bracketFunc} text={t('register')} />}
       </div>

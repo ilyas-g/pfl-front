@@ -10,10 +10,15 @@
 .cards__single.classement {
   z-index: 0;
   position: absolute;
-  top: 20%;
+  top: 4%;
   right: 5%;
   left: 5%;
   opacity: 0;
+}
+@media screen and (min-width: 768px) {
+  .cards__single.classement {
+    top: 20%;
+  }
 }
 .cards__single.classement.active {
   opacity: 1;

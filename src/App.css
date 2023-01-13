@@ -91,6 +91,10 @@
   }
 }
 
+.icon-list1:before {
+  content: "\e907";
+}
+
 .icon-arrow-down:before {
   content: "\e906";
 }
@@ -122,6 +126,10 @@
 
 .icon-video-camera:before {
   content: "\e914";
+}
+
+.icon-list:before {
+  content: "\e9ba";
 }
 
 .icon-yuzu:before {
