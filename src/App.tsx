@@ -48,7 +48,7 @@ function App() {
   return (
   <>
     <div>
-      {isMobile && <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />}
+      {/* {isMobile && <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />} */}
       <Header 
       rankingFunc={() => {{ranking === false ? setRanking(true) :  setRanking(false)}}}
       bracketFunc={() => setIsBracket(true)}

@@ -2,6 +2,9 @@
   padding: 135px 0 65px;
   z-index: 1;
 }
+.tournaments-list .tournament {
+  padding: 15px;
+}
 @media screen and (min-width: 768px) {
   .tournaments-list {
     display: flex;

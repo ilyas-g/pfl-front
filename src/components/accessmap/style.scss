@@ -1,12 +1,16 @@
+@import "../../variables";
+
 .access-map-section {
     height: auto;
     min-height: 0;
     padding: 30px 15px;
-    margin-top: 30px;
-    color: #ffffff;
-    background-color: #061f4a;
-
+    color: $white;
+    background-color: $darkBlue;
+    margin-bottom: 70px;
+    
     @media screen and (min-width: 992px) {
+        margin-top: 30px;
+        margin-bottom: 20px;
         padding: 100px 15px;
     }
 
@@ -63,7 +67,7 @@
     }
 
     span {
-        color: #e7c292;
+        color: $yellow;
     }
 }
 

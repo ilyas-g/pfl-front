@@ -12,7 +12,7 @@
     &.classement {
         z-index: 0;
         position: absolute;
-        top: 4%;
+        top: 5%;
         right: 5%;
         left: 5%;
         opacity: 0;
@@ -81,11 +81,12 @@
             z-index: 0;
             position: absolute;
             left: initial;
-            right: calc(310px - 5rem);
-            top: 61px;
+            // top: 61px;
+            top: calc(180px - 5rem);
+            right: -400px;
 
             &.active {
-                top: calc(180px - 5rem);
+                right: calc(95px - 5rem);
                 z-index: 2;
             }
           }

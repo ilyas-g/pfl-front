@@ -86,9 +86,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #f0f1f3;
 }
 .firstSection img {
   width: 100%;
+}
+.firstSection h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
 }
 .firstSection .logoSection {
   display: flex;
@@ -139,9 +145,6 @@
     font-size: 3vw;
     width: 85%;
     margin: 100px auto;
-  }
-  .secondSection p {
-    padding: 0;
   }
   .secondSection .img-crop {
     width: 420px;

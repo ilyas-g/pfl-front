@@ -2,12 +2,14 @@
   height: auto;
   min-height: 0;
   padding: 30px 15px;
-  margin-top: 30px;
-  color: #ffffff;
-  background-color: #061f4a;
+  color: #f0f1f3;
+  background-color: #183153;
+  margin-bottom: 70px;
 }
 @media screen and (min-width: 992px) {
   .access-map-section {
+    margin-top: 30px;
+    margin-bottom: 20px;
     padding: 100px 15px;
   }
 }
@@ -65,5 +67,5 @@
           margin-block-end: 1em;
 }
 .contenu span {
-  color: #e7c292;
+  color: #ffd342;
 }/*# sourceMappingURL=style.css.map */

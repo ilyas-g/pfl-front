@@ -68,10 +68,10 @@ const Home = () => {
             </div>
           </div>
 
-<div>
-          {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
-          <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
-          <h2>FROM NOVEMBER 2022, TO MAY 2023</h2>
+          <div>
+            {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
+            <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
+            <h2>{t('pflDates')}</h2>
           </div>
         </section>
       </div>

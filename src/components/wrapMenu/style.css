@@ -7,9 +7,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.main-menu a {
-  color: rgb(167, 184, 217);
-}
 .main-menu ul {
   margin-bottom: 50px;
 }

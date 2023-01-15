@@ -51,7 +51,7 @@ const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAn
           : <span className='textButton'>{t('rankingButton')} <i className={`icon-arrow-down ${classAnnouncement}`}></i></span>}
         </button>
 
-        {!isMobile && <AnnouncementBlock func={bracketFunc} text={t('register')} />}
+        {/* {!isMobile && <AnnouncementBlock func={bracketFunc} text={t('register')} />} */}
       </div>
     </header>
   )

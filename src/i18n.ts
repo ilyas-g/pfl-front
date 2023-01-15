@@ -27,6 +27,7 @@ i18n
           "standingGGST": "Guilty Gear Strive Standing",
           "mainTitle": "The PFL is back!",
           "pflPresentation": "The PFL is an event project created by Yuzu Gaming and NSxC. This year the PFL is giving to the players the chance to win a travail for the EVO 2023",
+          "pflDates": "FROM NOVEMBER 2022, TO MAY 2023",
           "offline": "12 Offline Rankings (October 2022 - April 2023)",
           "online": "6 Online Rankings (January 2023 - March 2023)",
           "top7": "The Top 7 will qualify for the finals",
@@ -50,6 +51,7 @@ i18n
           "standingGGST": "Classement Guilty Gear Strive",
           "mainTitle": "La PFL est de retour !",
           "pflPresentation": "La PFL est un projet événementiel créé par Yuzu Gaming et NSxC. Cette année, la PFL offre aux joueurs la possibilité de gagner un voyage pour l'EVO 2023",
+          "pflDates": "De Novembre 2022 à Mai 2023",
           "offline": "12 Rankings offline (Octobre 2022 - Avril 2023)",
           "online": "6 Rankings online (Janvier 2023 - Mars 2023)",
           "top7": "Le Top 7 sera qualifié pour les phases finales",
@@ -59,7 +61,7 @@ i18n
           "rights": "Tout droits réservés.",
           "websiteby": "Site réalisé par",
           "photosby": "Photos prises par",
-          "venueTitle": "Plan 'd'accès",
+          "venueTitle": "Plan d'accès",
           "venueText": "La PFL se déroulera du mois de Novembre 2022 à Mai 2023 à l'adresse suivante :"
         }
       }
