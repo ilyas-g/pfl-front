@@ -80,14 +80,9 @@ function App() {
       {isModal === true && 
         <Modal func={() => {setIsModal(false)}}>
           <div className="video-container">
-            <iframe
-              className="video"
-              //  src="https://www.youtube.com/embed/eFfrU5vCaqc"
-              src="https://www.youtube.com/watch?v=FZgkhis5Cdg"
-              title="TRAILER PARISIENNE FIGHTING LIGUE SAISON 2 - 2022-2023"
-              frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen>
-            </iframe>
+            <iframe className="video" src="https://www.youtube.com/embed/FZgkhis5Cdg" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </div>
         </Modal>
       }
