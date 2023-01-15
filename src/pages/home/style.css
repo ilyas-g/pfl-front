@@ -36,6 +36,10 @@
 .homepage .presentation .logos img.logoNSXC:hover {
   filter: drop-shadow(0 0 2em #ff7f26);
 }
+.homepage .presentation .announcement {
+  margin: 0;
+  font-size: 24px;
+}
 @media screen and (min-width: 768px) {
   .homepage {
     padding: 135px 0 65px;
@@ -82,9 +86,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #f0f1f3;
 }
 .firstSection img {
   width: 100%;
+}
+.firstSection h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
 }
 .firstSection .logoSection {
   display: flex;
@@ -123,17 +133,18 @@
   padding: 10px 15px;
 }
 .secondSection > div {
-  background-color: rgb(96, 59, 209);
   margin-bottom: 50px;
+}
+@media screen and (min-width: 992px) {
+  .secondSection > div {
+    display: flex;
+  }
 }
 @media screen and (min-width: 992px) {
   .secondSection {
     font-size: 3vw;
     width: 85%;
     margin: 100px auto;
-  }
-  .secondSection p {
-    padding: 0;
   }
   .secondSection .img-crop {
     width: 420px;

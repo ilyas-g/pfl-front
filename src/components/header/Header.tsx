@@ -12,7 +12,7 @@ import DropdownMenu from '../dropdownMenu/DropdownMenu';
 
 import {useTranslation} from 'react-i18next'
 
-const Header = ({rankingFunc, bracketFunc, langFunc, langName, children}) => {
+const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAnnouncement}) => {
 
   const [burger, setBurger] = useState<boolean>(false)
 
@@ -22,10 +22,10 @@ const Header = ({rankingFunc, bracketFunc, langFunc, langName, children}) => {
 
   return (
     <header>
-      <div style={{display: 'flex', alignItems: 'center'}}>
+      <div className='d-flex-center'>
       <img src={logo} alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" width={115} />
 
-      <div style={{display: 'flex', alignItems: 'center'}}>
+      <div className='d-flex-center'>
       <DropdownMenu 
         nameMenu={langName} 
         func={langFunc}>
@@ -43,9 +43,15 @@ const Header = ({rankingFunc, bracketFunc, langFunc, langName, children}) => {
         <span className='icon-menu' onClick={() => { setBurger(true) }}></span>
         {burger === true && <Menu func={() => { setBurger(false) }} />}
 
-        <button className='announcement' onClick={rankingFunc}>{t('rankingButton')}</button>
+        {/* <button className='announcement' onClick={rankingFunc}><span className='textButton'>
+          {t('rankingButton')}</span> <i className={`icon-arrow-down ${classAnnouncement}`}></i> */}
 
-        {!isMobile && <AnnouncementBlock func={bracketFunc} text={t('register')} />}
+        <button className='announcement' onClick={rankingFunc}>
+          {isMobile ? <span><i className='icon-list1'></i></span> 
+          : <span className='textButton'>{t('rankingButton')} <i className={`icon-arrow-down ${classAnnouncement}`}></i></span>}
+        </button>
+
+        {/* {!isMobile && <AnnouncementBlock func={bracketFunc} text={t('register')} />} */}
       </div>
     </header>
   )

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css'
 
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 
 import AnnouncementBlock from './components/announcementBlock/AnnouncementBlock';
 import Card from './components/card/Card';
@@ -12,7 +12,6 @@ import Ranking from './pages/ranking/Ranking';
 import SocialMedias from './components/socialMedias/SocialMedias';
 import Spinner from './components/spinner/Spinner';
 import Modal from "./components/modal/Modal";
-import TournamentEmbed from "./components/TournamentEmbed/TournamentEmbed";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -22,6 +21,7 @@ import './i18n'
 import useDeviceDetect from "./utils/useDeviceDetect";
 import {STANDING_QUERY} from "./queries/queries"
 import { Footer } from './components/footer/Footer';
+import AccessMap from './components/accessmap/AccessMap';
 
 function App() {
   const [isModal, setIsModal] = useState(false)
@@ -48,11 +48,12 @@ function App() {
   return (
   <>
     <div>
-      {isMobile && <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />}
+      {/* {isMobile && <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />} */}
       <Header 
       rankingFunc={() => {{ranking === false ? setRanking(true) :  setRanking(false)}}}
       bracketFunc={() => setIsBracket(true)}
       langFunc={() => {console.log('lang')}}
+      classAnnouncement={ranking === true ? 'gly-rotate-180' : ''}
       langName={t('langTitle')}>
 
         <ul>
@@ -65,7 +66,7 @@ function App() {
       </Header>
 
       {/* {ranking === true ?  */}
-        <Card cardSkin={`secondGame classement ${ranking === true ? 'active' : ''}`} title="Classement Guilty Gear Strive">
+        <Card cardSkin={`secondGame classement ${ranking === true ? 'active' : ''}`} title={t('standingGGST')}>
           <ul className="cards__front__classement">
             {data.league.standings.nodes.map((participant, index) => {
               return <li key={index}>{participant.entrant.name}</li>
@@ -82,8 +83,8 @@ function App() {
             <iframe
               className="video"
               //  src="https://www.youtube.com/embed/eFfrU5vCaqc"
-              src="https://www.youtube.com/embed/eFfrU5vCaqc"
-              title="YouTube video player"
+              src="https://www.youtube.com/watch?v=FZgkhis5Cdg"
+              title="TRAILER PARISIENNE FIGHTING LIGUE SAISON 2 - 2022-2023"
               frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen>
             </iframe>
@@ -110,11 +111,12 @@ function App() {
       </Routes>
     </AnimatePresence>
 
-    <Footer>
-      <p>{t('copyright')} 2021 - {currentYear}. {t('rights')}</p>
-      <p>{t('websiteby')} <a href="https://twitter.com/iamarktall" target="_blank">Arktall (@iamarktall)</a>. {t('photosby')} <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a>.
-      </p>
-    </Footer>
+    <AccessMap title={t('venueTitle')} text={t('venueText')} />
+        <Footer>
+          <p>{t('copyright')} 2021 - {currentYear}. {t('rights')}</p>
+          <p>{t('websiteby')} <a href="https://twitter.com/iamarktall" target="_blank">Arktall (@iamarktall)</a>. {t('photosby')} <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a>.
+          </p>
+        </Footer>
 
         </div>
     </>

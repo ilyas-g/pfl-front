@@ -23,6 +23,8 @@ import useDeviceDetect from "../../utils/useDeviceDetect";
 import {STANDING_QUERY} from "../../queries/queries"
 
 import {useTranslation} from 'react-i18next'
+import AnnouncementBlock from '../../components/announcementBlock/AnnouncementBlock';
+import Modal from '../../components/modal/Modal';
 
 const Home = () => {
 
@@ -30,12 +32,15 @@ const Home = () => {
 
   const { isMobile } = useDeviceDetect();
 
+  const [isBracket, setIsBracket] = useState(false)
+
   const { t } = useTranslation();
 
   if (loading) return <Spinner />;
   if (error) return <pre>{error.message}</pre>
 
   return (
+    <>
     <AnimatePage>
       <div className='homepage'>
         <section className='firstSection'>
@@ -46,29 +51,33 @@ const Home = () => {
 
               <p>{t('pflPresentation')}</p>
 
-              <div className='logoSection'>
-                <div className='logos'>
-                  <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoYuzu'/>
-                  <img src={nsxcLogo} alt="NSxC" className='evo logoNSXC'/>
-                </div>
+              {/* <div className='d-flex-center'>
+                <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
+              </div> */}
 
-                <div>
-                  <img src={evoLogo} alt="EVO 2023" className='evo'/>
+                <div className='logoSection'>
+                  <div className='logos'>
+                    <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoYuzu'/>
+                    <img src={nsxcLogo} alt="NSxC" className='evo logoNSXC'/>
+                  </div>
+
+                  <div>
+                    <img src={evoLogo} alt="EVO 2023" className='evo'/>
+                  </div>
                 </div>
-              </div>
             </div>
-
-            {/* <p className='roadTo'>Road to</p>
-            <img src={evoLogo} alt="EVO 2023" className='evo'/> */}
           </div>
 
-          {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
-          <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
+          <div>
+            {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
+            <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
+            <h2>{t('pflDates')}</h2>
+          </div>
         </section>
       </div>
 
       <section className='secondSection'>
-        <div className='mb-30 d-flex'>
+        <div className='mb-30 '>
           <div>
             <p>{t('offline')}</p>
             <p>{t('online')}</p>
@@ -79,27 +88,36 @@ const Home = () => {
           </div>
         </div>
 
-        <div className='mb-30 d-flex'>
+        <div className='mb-30'>
           <div>
             <img src={img8} alt="img7" />
-            <img src={img13} alt="img10" className='img-crop'/>
+            <img src={img13} alt="img10" className='img-crop mmt50'/>
           </div>
           <div>
             <p>{t('top7')}</p>
             <p>{t('lcq')}</p>
           </div>
         </div>
-        <div className='mb-30 d-flex'>
+        <div className='mb-30'>
           <div>
             <p>{t('winner')}</p>
           </div>
           <div>
             <img src={img9} alt="img7" />
-            <img src={img6} alt="img10" className='img-crop'/>
+            <img src={img6} alt="img10" className='img-crop mmt50'/>
           </div>
         </div>
       </section>
     </AnimatePage>
+
+    {isBracket === true && 
+      <Modal func={() => {setIsBracket(false)}}>
+        <div className='embedt'>
+          <iframe className='register' src="https://start.gg/tournament/pfl-ranking-5-road-to-evo-2k23/register/embed"></iframe>
+        </div>
+      </Modal>
+    }
+    </>
   )
 }
 

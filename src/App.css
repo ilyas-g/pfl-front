@@ -66,6 +66,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gly-rotate-180 {
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+.icon-rotate {
+  animation: animName 2s linear;
+}
+
+@keyframes animName {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.icon-list1:before {
+  content: "\e907";
+}
+
+.icon-arrow-down:before {
+  content: "\e906";
+}
+
 .icon-video-camera1:before {
   content: "\e905";
 }
@@ -93,6 +126,10 @@
 
 .icon-video-camera:before {
   content: "\e914";
+}
+
+.icon-list:before {
+  content: "\e9ba";
 }
 
 .icon-yuzu:before {
@@ -128,6 +165,11 @@ html.is-animating .transition-fade {
 
 .d-flex {
   display: flex;
+}
+
+.d-flex-center {
+  display: flex;
+  align-items: center
 }
 
 .mb-50 {

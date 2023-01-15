@@ -19,8 +19,6 @@
     }
 
     .presentation {
-        // font-size: 18px;
-        // line-height: 1.5;
         font-size: 30px;
         line-height: 40px;
         font-weight: 700;
@@ -46,6 +44,11 @@
                     filter: drop-shadow(0 0 2em $orange);
                 }
             }
+        }
+
+        .announcement {
+            margin: 0;
+            font-size: 24px;
         }
     }
 
@@ -93,9 +96,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: $white;
 
     img {
         width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 28px;
     }
 
     .logoSection {
@@ -138,18 +148,16 @@
     }
 
     &>div {
-        background-color: rgb(96, 59, 209);
         margin-bottom: 50px;
+        @media screen and (min-width: $media-queries-desktop) {
+            display: flex;
+        }
     }
 
     @media screen and (min-width: $media-queries-desktop) {
         font-size: 3vw;
         width: 85%;
         margin: 100px auto;
-
-        p {
-            padding: 0;
-        }
 
         .img-crop {
             width: 420px;

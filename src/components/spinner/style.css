@@ -1,3 +1,8 @@
+.spinblock {
+  min-height: 100vh;
+  position: relative;
+}
+
 .spinner {
   width: 56px;
   height: 56px;
@@ -8,7 +13,7 @@
   -webkit-animation: spinner-d3wgkg 1s infinite linear;
           animation: spinner-d3wgkg 1s infinite linear;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
 }
 
