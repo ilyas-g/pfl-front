@@ -25,6 +25,7 @@ import {STANDING_QUERY} from "../../queries/queries"
 import {useTranslation} from 'react-i18next'
 import AnnouncementBlock from '../../components/announcementBlock/AnnouncementBlock';
 import Modal from '../../components/modal/Modal';
+import { BlockSection } from './BlockSection';
 
 const Home = () => {
 
@@ -98,6 +99,7 @@ const Home = () => {
             <p>{t('lcq')}</p>
           </div>
         </div>
+
         <div className='mb-30'>
           <div>
             <p>{t('winner')}</p>
