@@ -22,7 +22,50 @@ header + .socials-aside {
   display: none;
 }
 header .announcement {
-  padding: 10px;
+  position: relative;
+  padding: 15px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 2px solid #c1a768;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+header .announcement span.textButton {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header .announcement span.textButton {
+    display: initial;
+    margin-right: 10px;
+  }
+}
+header .announcement .icon-arrow-down {
+  font-size: 16px;
+  transition: all 0.5s;
+  margin-left: 5px;
+}
+header .announcement:hover {
+  border: 2px solid #faf4ea;
+  box-shadow: 0 5px 18px rgba(250, 244, 234, 0.6);
+}
+header .announcement p {
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  header .announcement {
+    display: block;
+    margin-left: 20px;
+  }
 }
 header .icon-menu {
   order: 1;
@@ -35,7 +78,7 @@ header .icon-menu {
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .header-navigation .icon-menu {
+  .header-navigation .icon-menu, .header-navigation .icon-list1 {
     display: none;
   }
 }

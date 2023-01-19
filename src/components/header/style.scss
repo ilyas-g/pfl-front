@@ -32,7 +32,49 @@ header {
     }
 
     .announcement {
-        padding: 10px;
+        position: relative;
+        padding: 15px;
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+    
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        border: 2px solid #c1a768;
+        text-decoration: none;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        user-select: none;
+    
+        span.textButton {
+            display: none;
+            @media screen and (min-width: $media-queries-tablet) {
+                display: initial;
+                margin-right: 10px;
+            }
+        }
+    
+        .icon-arrow-down {
+            font-size: 16px;
+            transition: all $transition-time;
+            margin-left: 5px;
+        }
+    
+        &:hover {
+            border: 2px solid #faf4ea;
+            box-shadow: 0 5px 18px rgb(250 244 234 / 60%);
+        }
+    
+        p {
+            margin: 0;
+        }
+
+        @media screen and (min-width: $media-queries-tablet) {
+            display: block;
+            margin-left: 20px;
+        }
     }
 
     .icon-menu {
@@ -47,7 +89,7 @@ header {
     align-items: center;
 
     @media screen and (min-width: $media-queries-tablet) {
-        .icon-menu {
+        .icon-menu, .icon-list1 {
             display: none;
         }
     }
@@ -161,3 +203,5 @@ nav {
   .redButton {
     background-color: #e6001f;
   }
+
+

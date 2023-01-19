@@ -95,25 +95,24 @@ function App() {
         </Modal>
       }
 
+      <AnimatePresence exitBeforeEnter>
+        <Routes key={location.pathname} location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/ranking" element={<Ranking />} />
+          {/* <Route path="/about" element={<About />} />
+          <Route path="/product/:productId" element={<Product />} /> */}
+        </Routes>
+      </AnimatePresence>
 
+      <AccessMap title={t('venueTitle')} text={t('venueText')} />
 
-    <AnimatePresence exitBeforeEnter>
-      <Routes key={location.pathname} location={location}>
-        <Route path="/" element={<Home />} />
-        <Route path="/ranking" element={<Ranking />} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/product/:productId" element={<Product />} /> */}
-      </Routes>
-    </AnimatePresence>
+      <Footer>
+        <p>{t('copyright')} 2021 - {currentYear}. {t('rights')}</p>
+        <p>{t('websiteby')} <a href="https://twitter.com/iamarktall" target="_blank">Arktall (@iamarktall)</a>. {t('photosby')} <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a>.
+        </p>
+      </Footer>
 
-    <AccessMap title={t('venueTitle')} text={t('venueText')} />
-        <Footer>
-          <p>{t('copyright')} 2021 - {currentYear}. {t('rights')}</p>
-          <p>{t('websiteby')} <a href="https://twitter.com/iamarktall" target="_blank">Arktall (@iamarktall)</a>. {t('photosby')} <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a>.
-          </p>
-        </Footer>
-
-        </div>
+      </div>
     </>
   )
 }

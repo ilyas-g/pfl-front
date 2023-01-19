@@ -23,7 +23,7 @@ i18n
           "menuHome": "Home",
           "menuRanking": "Ranking",
           "register": "Register for the next tournament",
-          "rankingButton": "Ranking",
+          "rankingButton": "Standing",
           "standingGGST": "Guilty Gear Strive Standing",
           "mainTitle": "The PFL is back!",
           "pflPresentation": "The PFL is an event project created by Yuzu Gaming and NSxC. This year the PFL is giving to the players the chance to win a travail for the EVO 2023",
