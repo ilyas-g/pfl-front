@@ -47,8 +47,8 @@ const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAn
           {t('rankingButton')}</span> <i className={`icon-arrow-down ${classAnnouncement}`}></i> */}
 
         <button className='announcement' onClick={rankingFunc}>
-          {isMobile ? <span><i className='icon-list1'></i></span> 
-          : <span className='textButton'>{t('rankingButton')} <i className={`icon-arrow-down ${classAnnouncement}`}></i></span>}
+          <span><i className='icon-list1'></i></span> 
+          <span className='textButton'>{t('rankingButton')} <i className={`icon-arrow-down ${classAnnouncement}`}></i></span>
         </button>
 
         {/* {!isMobile && <AnnouncementBlock func={bracketFunc} text={t('register')} />} */}
