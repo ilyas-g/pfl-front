@@ -42,7 +42,7 @@
 }
 @media screen and (min-width: 768px) {
   .homepage {
-    padding: 135px 0 65px;
+    padding: 115px 0 65px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

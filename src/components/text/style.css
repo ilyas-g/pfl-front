@@ -1,12 +1,11 @@
 .texti {
   color: #f0f1f3;
-  padding: 15px;
+  margin-top: 0;
+  padding-top: 3px;
   text-align: center;
   text-transform: uppercase;
   font-size: 22px;
-}
-@media screen and (min-width: 992px) {
-  .texti {
-    font-size: 30px;
-  }
+  font-weight: 700;
+  background-color: #e6001f;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

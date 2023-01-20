@@ -7,6 +7,6 @@ interface Props {
 
 export default function Text({text}: Props): JSX.Element | null {
   return (
-    <div className='texti'>{text}</div>
+    <p className='texti'>{text}</p>
   )
 }

@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 
 import AnimatePage from '../../components/animatePage/AnimatePage';
 import Spinner from '../../components/spinner/Spinner';
+import Text from '../../components/text/Text';
 
 import evoLogo from '../../assets/evo720.png';
 import pfl from '../../assets/pfl-logo.png';
@@ -25,7 +26,6 @@ import {STANDING_QUERY} from "../../queries/queries"
 import {useTranslation} from 'react-i18next'
 import AnnouncementBlock from '../../components/announcementBlock/AnnouncementBlock';
 import Modal from '../../components/modal/Modal';
-import { BlockSection } from './BlockSection';
 
 const Home = () => {
 
@@ -44,6 +44,7 @@ const Home = () => {
     <>
     <AnimatePage>
       <div className='homepage'>
+      <Text text={t('nextRanking')} />
         <section className='firstSection'>
 
           <div>
