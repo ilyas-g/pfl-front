@@ -53,9 +53,9 @@ const Home = () => {
 
               <p>{t('pflPresentation')}</p>
 
-              {/* <div className='d-flex-center'>
+              <div className='d-flex-center'>
                 <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
-              </div> */}
+              </div>
 
                 <div className='logoSection'>
                   <div className='logos'>
