@@ -4,7 +4,9 @@ import { useQuery } from "@apollo/client";
 
 import AnimatePage from '../../components/animatePage/AnimatePage';
 import Spinner from '../../components/spinner/Spinner';
+import Modal from '../../components/modal/Modal';
 import Text from '../../components/text/Text';
+import AnimatedTextWord from '../../components/animatedTextWord/AnimatedTextWord';
 
 import evoLogo from '../../assets/evo720.png';
 import pfl from '../../assets/pfl-logo.png';
@@ -24,8 +26,6 @@ import useDeviceDetect from "../../utils/useDeviceDetect";
 import {STANDING_QUERY} from "../../queries/queries"
 
 import {useTranslation} from 'react-i18next'
-import AnnouncementBlock from '../../components/announcementBlock/AnnouncementBlock';
-import Modal from '../../components/modal/Modal';
 
 const Home = () => {
 
@@ -42,7 +42,7 @@ const Home = () => {
 
   return (
     <>
-    <AnimatePage>
+
       <div className='homepage'>
       <Text text={t('nextRanking')} />
         <section className='firstSection'>
@@ -59,7 +59,7 @@ const Home = () => {
 
                 <div className='logoSection'>
                   <div className='logos'>
-                    <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoYuzu'/>
+                    <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoNSXC'/>
                     <img src={nsxcLogo} alt="NSxC" className='evo logoNSXC'/>
                   </div>
 
@@ -82,7 +82,9 @@ const Home = () => {
         <div className='mb-30 '>
           <div>
             <p>{t('offline')}</p>
-            <p>{t('online')}</p>
+            {/* <AnimatedTextWord text={t('offline')} />
+            <AnimatedTextWord text={t('offline')} delay="0.5" />
+            <AnimatedTextWord text={t('online')} delay="1" /> */}
           </div>
           <div>
             <img src={img7} alt="img7" />
@@ -111,7 +113,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </AnimatePage>
+
 
     {isBracket === true && 
       <Modal func={() => {setIsBracket(false)}}>
