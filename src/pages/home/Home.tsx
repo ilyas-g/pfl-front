@@ -8,6 +8,7 @@ import Modal from '../../components/modal/Modal';
 import Text from '../../components/text/Text';
 import Square from '../../components/animatedSquare/AnimatedSquare';
 import AnimatedTextWord from '../../components/animatedTextWord/AnimatedTextWord';
+import AnnouncementBlock from '../../components/announcementBlock/AnnouncementBlock';
 
 import evoLogo from '../../assets/evo720.png';
 import pfl from '../../assets/pfl-logo.png';
@@ -81,15 +82,14 @@ const Home = () => {
       <section className='secondSection'>
         <div className='mb-30 '>
           <div>
-            <p>{t('offline')}</p>
+            {/* <p>{t('offline')}</p> */}
             {/* <AnimatedTextWord text={t('offline')} />
             <AnimatedTextWord text={t('offline')} delay="0.5" />
             <AnimatedTextWord text={t('online')} delay="1" /> */}
 
-            <Square />
-            <Square />
-            <Square />
-            <Square />
+            <Square text={t('offline')} />
+            <Square text={t('online')} />
+
           </div>
           <div>
             <img src={img7} alt="img7" />
@@ -103,14 +103,14 @@ const Home = () => {
             <img src={img13} alt="img10" className='img-crop mmt50'/>
           </div>
           <div>
-            <p>{t('top7')}</p>
-            <p>{t('lcq')}</p>
+            <Square text={t('top7')} />
+            <Square text={t('lcq')} />
           </div>
         </div>
 
         <div className='mb-30'>
           <div>
-            <p>{t('winner')}</p>
+            <Square text={t('winner')} />
           </div>
           <div>
             <img src={img9} alt="img7" />
