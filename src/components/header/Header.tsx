@@ -46,7 +46,7 @@ const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAn
         {/* <button className='announcement' onClick={rankingFunc}><span className='textButton'>
           {t('rankingButton')}</span> <i className={`icon-arrow-down ${classAnnouncement}`}></i> */}
 
-        {!isMobile && <AnnouncementBlock func={bracketFunc} text={t('register')} />}
+        {!isMobile && import.meta.env.VITE_REGISTER_IFRAME_LINK !== "" && <AnnouncementBlock func={bracketFunc} text={t('register')} />}
 
         <button className='announcement' onClick={rankingFunc}>
           <span><i className='icon-list1'></i></span> 

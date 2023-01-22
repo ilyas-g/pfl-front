@@ -52,9 +52,11 @@ const Home = () => {
 
               <p>{t('pflPresentation')}</p>
 
-              <div className='d-flex-center'>
-                <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
-              </div>
+              {import.meta.env.VITE_REGISTER_IFRAME_LINK !== "" &&
+                <div className='d-flex-center'>
+                  <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
+                </div>
+              }
 
                 <div className='logoSection'>
                   <div className='logos'>
