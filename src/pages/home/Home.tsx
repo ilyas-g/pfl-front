@@ -6,6 +6,7 @@ import AnimatePage from '../../components/animatePage/AnimatePage';
 import Spinner from '../../components/spinner/Spinner';
 import Modal from '../../components/modal/Modal';
 import Text from '../../components/text/Text';
+import Square from '../../components/animatedSquare/AnimatedSquare';
 import AnimatedTextWord from '../../components/animatedTextWord/AnimatedTextWord';
 
 import evoLogo from '../../assets/evo720.png';
@@ -20,7 +21,6 @@ import yuzuLogo from '../../assets/logo-yuzu.svg';
 import nsxcLogo from '../../assets/nsxc-logo.svg';
 
 import './style.css'
-import { motion } from "framer-motion";
 
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import {STANDING_QUERY} from "../../queries/queries"
@@ -85,6 +85,11 @@ const Home = () => {
             {/* <AnimatedTextWord text={t('offline')} />
             <AnimatedTextWord text={t('offline')} delay="0.5" />
             <AnimatedTextWord text={t('online')} delay="1" /> */}
+
+            <Square />
+            <Square />
+            <Square />
+            <Square />
           </div>
           <div>
             <img src={img7} alt="img7" />
