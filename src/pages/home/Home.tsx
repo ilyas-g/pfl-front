@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import { useQuery } from "@apollo/client";
 
 import AnimatePage from '../../components/animatePage/AnimatePage';
 import Spinner from '../../components/spinner/Spinner';
+import Modal from '../../components/modal/Modal';
 import Text from '../../components/text/Text';
+import AnimatedText from '../../components/animatedText/AnimatedText';
+import AnnouncementBlock from '../../components/announcementBlock/AnnouncementBlock';
 
 import evoLogo from '../../assets/evo720.png';
 import pfl from '../../assets/pfl-logo.png';
@@ -18,14 +20,11 @@ import yuzuLogo from '../../assets/logo-yuzu.svg';
 import nsxcLogo from '../../assets/nsxc-logo.svg';
 
 import './style.css'
-import { motion } from "framer-motion";
 
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import {STANDING_QUERY} from "../../queries/queries"
 
 import {useTranslation} from 'react-i18next'
-import AnnouncementBlock from '../../components/announcementBlock/AnnouncementBlock';
-import Modal from '../../components/modal/Modal';
 
 const Home = () => {
 
@@ -42,7 +41,7 @@ const Home = () => {
 
   return (
     <>
-    <AnimatePage>
+
       <div className='homepage'>
       <Text text={t('nextRanking')} />
         <section className='firstSection'>
@@ -53,13 +52,15 @@ const Home = () => {
 
               <p>{t('pflPresentation')}</p>
 
-              <div className='d-flex-center'>
-                <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
-              </div>
+              {import.meta.env.VITE_REGISTER_IFRAME_LINK !== "" &&
+                <div className='d-flex-center'>
+                  <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
+                </div>
+              }
 
                 <div className='logoSection'>
                   <div className='logos'>
-                    <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoYuzu'/>
+                    <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoNSXC'/>
                     <img src={nsxcLogo} alt="NSxC" className='evo logoNSXC'/>
                   </div>
 
@@ -81,8 +82,9 @@ const Home = () => {
       <section className='secondSection'>
         <div className='mb-30 '>
           <div>
-            <p>{t('offline')}</p>
-            <p>{t('online')}</p>
+            <AnimatedText text={t('offline')} />
+            <AnimatedText text={t('online')} />
+
           </div>
           <div>
             <img src={img7} alt="img7" />
@@ -96,14 +98,14 @@ const Home = () => {
             <img src={img13} alt="img10" className='img-crop mmt50'/>
           </div>
           <div>
-            <p>{t('top7')}</p>
-            <p>{t('lcq')}</p>
+            <AnimatedText text={t('top7')} />
+            <AnimatedText text={t('lcq')} />
           </div>
         </div>
 
         <div className='mb-30'>
           <div>
-            <p>{t('winner')}</p>
+            <AnimatedText text={t('winner')} />
           </div>
           <div>
             <img src={img9} alt="img7" />
@@ -111,12 +113,12 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </AnimatePage>
 
-    {isBracket === true && 
+
+    {isBracket === true &&
       <Modal func={() => {setIsBracket(false)}}>
         <div className='embedt'>
-          <iframe className='register' src="https://start.gg/tournament/pfl-ranking-5-road-to-evo-2k23/register/embed"></iframe>
+          <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
         </div>
       </Modal>
     }
