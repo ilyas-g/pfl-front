@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import { useQuery } from "@apollo/client";
 
 import AnimatePage from '../../components/animatePage/AnimatePage';
 import Spinner from '../../components/spinner/Spinner';
 import Modal from '../../components/modal/Modal';
 import Text from '../../components/text/Text';
-import Square from '../../components/animatedSquare/AnimatedSquare';
-import AnimatedTextWord from '../../components/animatedTextWord/AnimatedTextWord';
+import AnimatedText from '../../components/animatedText/AnimatedText';
 import AnnouncementBlock from '../../components/announcementBlock/AnnouncementBlock';
 
 import evoLogo from '../../assets/evo720.png';
@@ -82,13 +80,8 @@ const Home = () => {
       <section className='secondSection'>
         <div className='mb-30 '>
           <div>
-            {/* <p>{t('offline')}</p> */}
-            {/* <AnimatedTextWord text={t('offline')} />
-            <AnimatedTextWord text={t('offline')} delay="0.5" />
-            <AnimatedTextWord text={t('online')} delay="1" /> */}
-
-            <Square text={t('offline')} />
-            <Square text={t('online')} />
+            <AnimatedText text={t('offline')} />
+            <AnimatedText text={t('online')} />
 
           </div>
           <div>
@@ -103,14 +96,14 @@ const Home = () => {
             <img src={img13} alt="img10" className='img-crop mmt50'/>
           </div>
           <div>
-            <Square text={t('top7')} />
-            <Square text={t('lcq')} />
+            <AnimatedText text={t('top7')} />
+            <AnimatedText text={t('lcq')} />
           </div>
         </div>
 
         <div className='mb-30'>
           <div>
-            <Square text={t('winner')} />
+            <AnimatedText text={t('winner')} />
           </div>
           <div>
             <img src={img9} alt="img7" />
@@ -120,10 +113,10 @@ const Home = () => {
       </section>
 
 
-    {isBracket === true && 
+    {isBracket === true &&
       <Modal func={() => {setIsBracket(false)}}>
         <div className='embedt'>
-          <iframe className='register' src="https://start.gg/tournament/pfl-ranking-5-road-to-evo-2k23/register/embed"></iframe>
+          <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
         </div>
       </Modal>
     }
