@@ -5,7 +5,7 @@ import "./style.css"
 export default function Menu({func}) {
   return (
     <div className='menu'>
-      <WrapMenu />
+      <WrapMenu menuFunc={func}/>
       <span onClick={func} className="icon-cross"></span>
     </div>
   )

@@ -6,7 +6,7 @@ import SocialMedias from "../../components/socialMedias/SocialMedias";
 
 import {useTranslation} from 'react-i18next'
 
-export default function WrapMenu() {
+export default function WrapMenu({menuFunc}) {
 
   const { t } = useTranslation();
 
@@ -14,11 +14,11 @@ export default function WrapMenu() {
         <div className='d-flex'>
             <nav className='main-menu'>
                 <ul role="list">
-                    <li role="listitem" className="onglets"><Link to="/">{t('menuHome')}</Link></li>
-                    <li role="listitem" className="onglets"><Link to="/ranking">{t('menuRanking')}</Link></li>
+                    <li role="listitem" className="onglets" onClick={menuFunc}><Link to="/" onClick={menuFunc}>{t('menuHome')}</Link></li>
+                    <li role="listitem" className="onglets" onClick={menuFunc}><Link to="/ranking" onClick={menuFunc}>{t('menuRanking')}</Link></li>
                     {/* <li role="listitem" className="onglets"><Link to="/">Contact</Link></li> */}
                 </ul>
-            <SocialMedias func={() => {console.log('okokok')}} />
+            <SocialMedias func={() => {console.log('social medias')}} />
             </nav>
 
       {/* {isMobile === false ? <SocialMedias func={() => {setIsModal(true)}} /> : '' } */}
