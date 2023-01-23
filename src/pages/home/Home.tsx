@@ -25,6 +25,8 @@ import useDeviceDetect from "../../utils/useDeviceDetect";
 import {STANDING_QUERY} from "../../queries/queries"
 
 import {useTranslation} from 'react-i18next'
+import { motion } from "framer-motion";
+import AnimateModal from '../../components/animateModal/AnimateModal';
 
 const Home = () => {
 
@@ -39,6 +41,11 @@ const Home = () => {
   if (loading) return <Spinner />;
   if (error) return <pre>{error.message}</pre>
 
+  // const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setIsBracket(false);
+  const open = () => setIsBracket(true);
+
   return (
     <>
 
@@ -52,12 +59,23 @@ const Home = () => {
 
               <p>{t('pflPresentation')}</p>
 
-              {import.meta.env.VITE_REGISTER_IFRAME_LINK !== "" &&
+              {/* <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="save-button"
+                onClick={() => (modalOpen ? close() : open())}
+              >
+                Launch modal
+              </motion.button> */}
+
+            {!isMobile ? 
+              import.meta.env.VITE_REGISTER_IFRAME_LINK !== "" &&
                 <div className='d-flex-center'>
                   <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
                 </div>
+              : <a href={import.meta.env.VITE_REGISTER_LINK} className='announcement'>{t('register')}</a>
               }
-
+      
                 <div className='logoSection'>
                   <div className='logos'>
                     <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoNSXC'/>
@@ -71,7 +89,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div>
+          <div className='logoDates'>
             {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
             <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
             <h2>{t('pflDates')}</h2>
@@ -114,14 +132,21 @@ const Home = () => {
         </div>
       </section>
 
+      {isBracket && 
+        <AnimateModal modalOpen={isBracket} handleClose={close}>
+        <div className='embedt'>
+            <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
+          </div>
+        </AnimateModal>
+      }
 
-    {isBracket === true &&
+    {/* {isBracket === true &&
       <Modal func={() => {setIsBracket(false)}}>
         <div className='embedt'>
           <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
         </div>
       </Modal>
-    }
+    } */}
     </>
   )
 }

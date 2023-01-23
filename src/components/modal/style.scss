@@ -23,7 +23,10 @@ $video-width: 1050px;
     font-weight: bold;
     position: absolute;
     right: 0;
-    top: -18px;
+    // top: -18px;
+    top: 50%;
+    transform: translateY(-370px);
+    z-index: 2;
 }
 
 .close:hover, .close:focus {

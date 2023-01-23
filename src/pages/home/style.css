@@ -1,6 +1,5 @@
 .homepage {
   padding: 120px 15px 15px;
-  height: 100vh;
   background: radial-gradient(circle, transparent 90%, rgba(0, 1, 0, 0.5)), linear-gradient(to right, rgba(0, 1, 0, 0.5), rgba(0, 1, 0, 0.5)), url("../../assets/4.png"), rgba(0, 1, 0, 0.5);
   background-position: center bottom;
   background-size: cover;
@@ -10,6 +9,11 @@
 }
 .homepage h1 {
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .homepage {
+    height: 100vh;
+  }
 }
 .homepage .presentation {
   font-size: 30px;
@@ -23,8 +27,12 @@
   }
 }
 .homepage .presentation .logos {
-  display: flex;
   width: 50%;
+}
+@media screen and (min-width: 768px) {
+  .homepage .presentation .logos {
+    display: flex;
+  }
 }
 .homepage .presentation .logos img {
   width: 100%;
@@ -98,8 +106,14 @@
 }
 .firstSection .logoSection {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .firstSection .logoSection {
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .firstSection {
@@ -115,6 +129,14 @@
   .firstSection .pfl-logo {
     display: block;
     width: 520px;
+  }
+}
+.firstSection .logoDates {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .firstSection .logoDates {
+    display: block;
   }
 }
 
@@ -138,6 +160,7 @@
 @media screen and (min-width: 992px) {
   .secondSection > div {
     display: flex;
+    align-items: center;
   }
 }
 @media screen and (min-width: 992px) {
@@ -179,6 +202,8 @@
   z-index: 1;
 }
 
-.mmt50 {
-  margin-top: -50px;
+@media screen and (min-width: 992px) {
+  .mmt50 {
+    margin-top: -50px;
+  }
 }/*# sourceMappingURL=style.css.map */
