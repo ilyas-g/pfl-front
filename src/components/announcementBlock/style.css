@@ -5,6 +5,7 @@
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
@@ -36,5 +37,6 @@
   .announcement {
     display: block;
     margin-left: 20px;
+    text-align: unset;
   }
 }/*# sourceMappingURL=style.css.map */

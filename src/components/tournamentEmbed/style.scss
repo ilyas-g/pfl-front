@@ -3,6 +3,8 @@
 .embedt {
     margin: 30px auto;
     width: 100%;
-
     max-width: 768px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }

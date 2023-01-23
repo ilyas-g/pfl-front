@@ -33,7 +33,7 @@ const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAn
       </DropdownMenu>
 
       <div className='main-nav'>
-          <WrapMenu />
+          <WrapMenu menuFunc={() => { setBurger(false) }}/>
         </div>
         </div>
       </div>
