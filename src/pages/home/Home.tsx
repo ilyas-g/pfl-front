@@ -132,21 +132,21 @@ const Home = () => {
         </div>
       </section>
 
-      {isBracket && 
+      {/* {isBracket && 
         <AnimateModal modalOpen={isBracket} handleClose={close}>
         <div className='embedt'>
             <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
           </div>
         </AnimateModal>
-      }
+      } */}
 
-    {/* {isBracket === true &&
+    {isBracket === true &&
       <Modal func={() => {setIsBracket(false)}}>
         <div className='embedt'>
           <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
         </div>
       </Modal>
-    } */}
+    }
     </>
   )
 }
