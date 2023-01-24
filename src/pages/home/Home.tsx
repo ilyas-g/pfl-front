@@ -15,9 +15,10 @@ import img7 from '../../assets/7.jpg';
 import img8 from '../../assets/8.jpg';
 import img9 from '../../assets/9.jpg';
 import img13 from '../../assets/13.jpg';
-import img14 from '../../assets/14.jpg';
+import img10 from '../../assets/10.jpg';
 import yuzuLogo from '../../assets/logo-yuzu.svg';
 import nsxcLogo from '../../assets/nsxc-logo.svg';
+import logo256 from '../../assets/logo-level256.svg';
 
 import './style.css'
 
@@ -78,8 +79,9 @@ const Home = () => {
       
                 <div className='logoSection'>
                   <div className='logos'>
-                    <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoNSXC'/>
+                    <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoYuzu'/>
                     <img src={nsxcLogo} alt="NSxC" className='evo logoNSXC'/>
+                    <img src={logo256} alt="NSxC" className='evo logoNSXC'/>
                   </div>
 
                   <div>
@@ -106,7 +108,7 @@ const Home = () => {
           </div>
           <div>
             <img src={img7} alt="img7" />
-            <img src={img14} alt="img10" className='img-crop mmt50'/>
+            <img src={img10} alt="img10" className='img-crop mmt50'/>
           </div>
         </div>
 

@@ -9,7 +9,7 @@ export default function AccessMap({title, text}) {
             <h2>{title}</h2>
             <p>{text}</p>
 
-            <p><span>14/16 Rue Soleillet, 75020 Paris, France</span></p>
+            <p><span>18/20 Rue Soleillet, 75020 Paris, France</span></p>
 
             <h3>Transports</h3>
 

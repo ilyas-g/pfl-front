@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import 'react-i18next'
+import "./style.css"
+
 import Menu from '../burgerMenu/Menu';
 import Text from '../text/Text'
 import WrapMenu from '../wrapMenu/WrapMenu';
-import "./style.css"
+import AnnouncementBlock from '../announcementBlock/AnnouncementBlock';
+import DropdownMenu from '../dropdownMenu/DropdownMenu';
+
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import logo from '../../assets/pfl-logo.png';
-import AnnouncementBlock from '../announcementBlock/AnnouncementBlock';
-import 'react-i18next'
-import DropdownMenu from '../dropdownMenu/DropdownMenu';
 
 import {useTranslation} from 'react-i18next'
 
@@ -23,18 +25,18 @@ const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAn
   return (
     <header>
       <div className='d-flex-center'>
-      <img src={logo} alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" width={115} />
+        <img src={logo} alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" width={115} />
 
-      <div className='d-flex-center'>
-      <DropdownMenu 
-        nameMenu={langName} 
-        func={langFunc}>
-        {children}
-      </DropdownMenu>
+        <div className='d-flex-center'>
+          <DropdownMenu 
+            nameMenu={langName} 
+            func={langFunc}>
+            {children}
+          </DropdownMenu>
 
-      <div className='main-nav'>
-          <WrapMenu menuFunc={() => { setBurger(false) }}/>
-        </div>
+          <div className='main-nav'>
+            <WrapMenu menuFunc={() => { setBurger(false) }}/>
+          </div>
         </div>
       </div>
       {/* {!isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
