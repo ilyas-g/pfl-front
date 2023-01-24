@@ -10,11 +10,6 @@
 .homepage h1 {
   text-transform: uppercase;
 }
-@media screen and (min-width: 768px) {
-  .homepage {
-    height: 100vh;
-  }
-}
 .homepage .presentation {
   font-size: 30px;
   line-height: 40px;
@@ -48,7 +43,7 @@
   margin: 0;
   font-size: 24px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .homepage {
     padding: 115px 0 65px;
     display: flex;
@@ -68,7 +63,7 @@
   font-weight: 700;
   font-size: 24px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .roadTo {
     font-size: 30px;
   }
@@ -78,7 +73,7 @@
   width: 100%;
   max-width: 150px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .evo {
     max-width: 150px;
   }
@@ -106,26 +101,32 @@
 }
 .firstSection .logoSection {
   display: flex;
+  align-items: center;
   margin-top: 30px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .firstSection .logoSection {
     align-items: center;
-    justify-content: space-around;
-    margin: 0;
+    justify-content: space-between;
+    margin-top: 10px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .firstSection {
     display: flex;
     flex-direction: row;
     margin-bottom: 0;
   }
 }
+@media screen and (min-height: 780px) {
+  .firstSection {
+    margin-top: 15px;
+  }
+}
 .firstSection .pfl-logo {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .firstSection .pfl-logo {
     display: block;
     width: 520px;
@@ -134,7 +135,7 @@
 .firstSection .logoDates {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .firstSection .logoDates {
     display: block;
   }
