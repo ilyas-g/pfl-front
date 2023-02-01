@@ -37,12 +37,6 @@
   width: 100%;
   max-width: 100px;
 }
-.homepage .presentation .logos img.logoYuzu:hover {
-  filter: drop-shadow(0 0 2em #ffd342);
-}
-.homepage .presentation .logos img.logoNSXC:hover {
-  filter: drop-shadow(0 0 2em #ff7f26);
-}
 .homepage .presentation .announcement {
   margin: 0;
   font-size: 24px;
@@ -236,4 +230,10 @@
 }
 .logos img.logoNSXC:hover {
   filter: drop-shadow(0 0 2em #ff7f26);
+}
+.logos img.logo256:hover {
+  filter: drop-shadow(0 0 2em #f0f1f3);
+}
+.logos img.logoEvo:hover {
+  filter: drop-shadow(0 0 2em #125995);
 }/*# sourceMappingURL=style.css.map */
