@@ -1,12 +1,19 @@
 import React from 'react'
 import "./style.css"
 
+import useDeviceDetect from "../../utils/useDeviceDetect";
+
 export default function SocialMedias({func}) {
+  const { isMobile } = useDeviceDetect();
+
   return (
     <div className="socials-aside socials-aside socials-aside_ready">
-        <button type="button" role="button" aria-pressed="false"className="pfl-trailer tooltip icon-video-camera1" onClick={func}>
-          {/* <span className="tooltiptext">Trailer de la PFL#2</span> */}
-        </button>
+
+        {!isMobile ?
+          <button type="button" role="button" aria-pressed="false"className="pfl-trailer tooltip icon-video-camera1" onClick={func}></button>
+          : <a href="https://www.youtube.com/watch?v=FZgkhis5Cdg" target="_blank" title="PFL Trailer" aria-label="PFL Trailer" className='pfl-trailer tooltip icon-video-camera1'></a>
+        }
+
         {/* <a href={import.meta.env.VITE_DISCORD} target="_blank" title="Discord Yuzu" aria-label="Discord" className='icon-discord'></a> */}
         <a href={import.meta.env.VITE_TWITCH} target="_blank" title="Twitch's FlashNo47" aria-label="Twitch" className='icon-twitch'></a>
         {/* <a href={import.meta.env.VITE_TWITTER} target="_blank" title="Twitter Yuzu" aria-label="Twitter" className='icon-twitter'></a> */}

@@ -79,11 +79,9 @@ function App() {
       {/* <SocialMedias func={() => {setIsModal(true)}} /> */}
       {isModal === true && 
         <Modal func={() => {setIsModal(false)}}>
-          <div className="video-container">
             <iframe className="video" src="https://www.youtube.com/embed/FZgkhis5Cdg" 
-            title="YouTube video player" 
+            title="PFL Trailer" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-          </div>
         </Modal>
       }
 

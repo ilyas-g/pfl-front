@@ -19,11 +19,22 @@
         }
 
         .tournament {
+            flex: 50%;
+            max-width: 28%;
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: $media-queries-desktop) {
+        .tournament {
             flex: 25%;
             max-width: 22%;
             padding: 0 15px;
+            margin-bottom: 30px;
         }
-    }
+}
+
 }
 
 .tabs {
