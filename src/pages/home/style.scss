@@ -42,14 +42,6 @@
             img {
                 width: 100%;
                 max-width: 100px;
-
-                &.logoYuzu:hover {
-                    filter: drop-shadow(0 0 2em $yellow);
-                }
-
-                &.logoNSXC:hover {
-                    filter: drop-shadow(0 0 2em $orange);
-                }
             }
         }
 
@@ -251,6 +243,14 @@
 
         &.logoNSXC:hover {
             filter: drop-shadow(0 0 2em $orange);
+        }
+
+        &.logo256:hover {
+            filter: drop-shadow(0 0 2em $white);
+        }
+
+        &.logoEvo:hover {
+            filter: drop-shadow(0 0 2em #125995);
         }
     }
 }

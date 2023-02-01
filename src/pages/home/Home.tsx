@@ -93,8 +93,8 @@ const Home = () => {
             <div className='logos'>
               <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoYuzu'/>
               <img src={nsxcLogo} alt="NSxC" className='evo logoNSXC'/>
-              <img src={logo256} alt="NSxC" className='evo logoNSXC'/>
-              <img src={evoLogo} alt="EVO 2023" className='evo'/>
+              <img src={logo256} alt="Level 256" className='evo logo256'/>
+              <img src={evoLogo} alt="EVO 2023" className='evo logoEvo'/>
             </div>
           </div>
 
