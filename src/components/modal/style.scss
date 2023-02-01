@@ -2,7 +2,7 @@ $video-width: 1050px;
 
 .modal {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     left: 0;
     right: 0;
     top: 0;
@@ -17,15 +17,20 @@ $video-width: 1050px;
     transform: translate(-50%, -50%);
 }
 
+
+.video-container {
+    position: relative;
+}
+
 .close {
     color: #ffffff;
     font-size: 60px;
     font-weight: bold;
     position: absolute;
-    right: 0;
+    right: 10px;
     // top: -18px;
-    top: 50%;
-    transform: translateY(-370px);
+    // top: 50%;
+    // transform: translateY(-370px);
     z-index: 2;
 }
 
@@ -37,9 +42,10 @@ $video-width: 1050px;
 
 .video {
     max-width: $video-width;
+    padding: 50px;
+    height: calc($video-width * 0.5628205128205128);
 
     @media (min-width:$video-width) {
-        height: calc($video-width * 0.5628205128205128);
     }
 }
 

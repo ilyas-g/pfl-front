@@ -10,7 +10,7 @@ query LeagueStandings {
       name
     }
     events (query: {
-      perPage: 4
+      perPage: 16
     }) {
       nodes {
         id

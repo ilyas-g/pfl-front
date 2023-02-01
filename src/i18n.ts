@@ -25,7 +25,7 @@ i18n
           "register": "Register for the next tournament",
           "rankingButton": "Standing",
           "standingGGST": "Guilty Gear Strive Standing",
-          "nextRanking": "Next rankings : 01/27, 02/10, 02/17, 03/10, 03/17",
+          "nextRanking": "Next rankings : 02/10, 02/17, 03/10, 03/17",
           "mainTitle": "The PFL is back!",
           "pflPresentation": "The PFL is an event project created by Yuzu Gaming and NSxC. This year the PFL is giving to the players the chance to win a travel for the EVO 2023",
           "pflDates": "FROM NOVEMBER 2022, TO MAY 2023",
@@ -39,7 +39,7 @@ i18n
           "websiteby": "Website made by",
           "photosby": "Photos by",
           "venueTitle": "Venue",
-          "venueText": "The PFL will take place from June 6 to September 25, 2021 at the following address:"
+          "venueText": "The PFL will take place from November 2022 to May 2023 at the following address:"
         }
       },
       fr: {
@@ -50,7 +50,7 @@ i18n
           "register": "S'inscrire au prochain tournoi",
           "rankingButton": "Actuels Qualifiés",
           "standingGGST": "Classement Guilty Gear Strive",
-          "nextRanking": "Prochains rankings : 27/01, 10/02, 17/02, 10/03, 17/03",
+          "nextRanking": "Prochains rankings : 10/02, 17/02, 10/03, 17/03",
           "mainTitle": "La PFL est de retour !",
           "pflPresentation": "La PFL est un projet événementiel créé par Yuzu Gaming et NSxC. Cette année, la PFL offre aux joueurs la possibilité de gagner un voyage pour l'EVO 2023",
           "pflDates": "De Novembre 2022 à Mai 2023",
@@ -59,7 +59,7 @@ i18n
           "top7": "Le Top 7 sera qualifié pour les phases finales",
           "lcq": "+1 place qualificative lors du LCQ (Avril 2023)",
           "winner": "Le gagnant de la PFL remportera un billet d'avion pour l'EVO 2023",
-          "copyright": "Parisienne Fighting League © Yuzu Gaming.",
+          "copyright": "Parisienne Fighting Ligue © Yuzu Gaming.",
           "rights": "Tout droits réservés.",
           "websiteby": "Site réalisé par",
           "photosby": "Photos prises par",

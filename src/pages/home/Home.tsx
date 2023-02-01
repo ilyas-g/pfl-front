@@ -52,50 +52,52 @@ const Home = () => {
 
       <div className='homepage'>
       <Text text={t('nextRanking')} />
-        <section className='firstSection'>
+        <section>
+          <div className='firstSection'>
+            <div>
+              <h1>{t('mainTitle')}</h1>
+              <div className="presentation">
 
-          <div>
-            <h1>{t('mainTitle')}</h1>
-            <div className="presentation">
+                <p>{t('pflPresentation')}</p>
 
-              <p>{t('pflPresentation')}</p>
+                {/* <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="save-button"
+                  onClick={() => (modalOpen ? close() : open())}
+                >
+                  Launch modal
+                </motion.button> */}
 
-              {/* <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="save-button"
-                onClick={() => (modalOpen ? close() : open())}
-              >
-                Launch modal
-              </motion.button> */}
-
-            {!isMobile ? 
-              import.meta.env.VITE_REGISTER_IFRAME_LINK !== "" &&
-                <div className='d-flex-center'>
-                  <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
-                </div>
-              : <a href={import.meta.env.VITE_REGISTER_LINK} className='announcement'>{t('register')}</a>
-              }
-      
-                <div className='logoSection'>
-                  <div className='logos'>
-                    <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoYuzu'/>
-                    <img src={nsxcLogo} alt="NSxC" className='evo logoNSXC'/>
-                    <img src={logo256} alt="NSxC" className='evo logoNSXC'/>
+              {!isMobile ? 
+                import.meta.env.VITE_REGISTER_IFRAME_LINK !== "" &&
+                  <div className='d-flex-center'>
+                    <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
                   </div>
+                : <a href={import.meta.env.VITE_REGISTER_LINK} className='announcement'>{t('register')}</a>
+                }
+        
 
-                  <div>
-                    <img src={evoLogo} alt="EVO 2023" className='evo'/>
-                  </div>
-                </div>
+              </div>
+            </div>
+
+            <div className='logoDates'>
+              {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
+              <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
+              <h2>{t('pflDates')}</h2>
+            </div>
+
+          </div>
+
+          <div className='logoSection'>
+            <div className='logos'>
+              <img src={yuzuLogo} alt="Yuzu Gaming" className='evo logoYuzu'/>
+              <img src={nsxcLogo} alt="NSxC" className='evo logoNSXC'/>
+              <img src={logo256} alt="NSxC" className='evo logoNSXC'/>
+              <img src={evoLogo} alt="EVO 2023" className='evo'/>
             </div>
           </div>
 
-          <div className='logoDates'>
-            {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
-            <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
-            <h2>{t('pflDates')}</h2>
-          </div>
         </section>
       </div>
 

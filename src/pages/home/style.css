@@ -14,9 +14,13 @@
   font-size: 30px;
   line-height: 40px;
   font-weight: 700;
-  letter-spacing: 1px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+  .homepage .presentation {
+    padding-right: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .homepage .presentation {
     padding-right: 120px;
   }
@@ -42,6 +46,16 @@
 .homepage .presentation .announcement {
   margin: 0;
   font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .homepage .presentation .announcement {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .homepage .presentation .announcement {
+    margin: 0;
+  }
 }
 @media screen and (min-width: 992px) {
   .homepage {
@@ -90,6 +104,7 @@
   justify-content: center;
   align-items: center;
   color: #f0f1f3;
+  margin-top: 25px;
 }
 .firstSection img {
   width: 100%;
@@ -99,28 +114,11 @@
   text-transform: uppercase;
   font-size: 28px;
 }
-.firstSection .logoSection {
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-}
-@media screen and (min-width: 992px) {
-  .firstSection .logoSection {
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-}
 @media screen and (min-width: 992px) {
   .firstSection {
     display: flex;
     flex-direction: row;
     margin-bottom: 0;
-  }
-}
-@media screen and (min-height: 780px) {
-  .firstSection {
-    margin-top: 15px;
   }
 }
 .firstSection .pfl-logo {
@@ -207,4 +205,35 @@
   .mmt50 {
     margin-top: -50px;
   }
+}
+.logoSection {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+@media screen and (min-width: 992px) {
+  .logoSection {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+}
+
+.logos {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .logos {
+    display: flex;
+  }
+}
+.logos img {
+  width: 100%;
+  max-width: 120px;
+}
+.logos img.logoYuzu:hover {
+  filter: drop-shadow(0 0 2em #ffd342);
+}
+.logos img.logoNSXC:hover {
+  filter: drop-shadow(0 0 2em #ff7f26);
 }/*# sourceMappingURL=style.css.map */

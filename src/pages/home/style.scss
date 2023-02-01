@@ -2,7 +2,6 @@
 
 .homepage {
     padding: 120px 15px 15px;
-    // background: url('../../assets/2.png') no-repeat center bottom fixed, green;
     background: radial-gradient(circle, transparent 90%, rgba(0, 1, 0, 0.5)),
         linear-gradient(to right, rgba(0, 1, 0, 0.5), rgba(0, 1, 0, 0.5)),
         url('../../assets/4.png'), rgba(0, 1, 0, 0.5);
@@ -23,9 +22,13 @@
         font-size: 30px;
         line-height: 40px;
         font-weight: 700;
-        letter-spacing: 1px;
+        // letter-spacing: 1px;
 
-        @media screen and (min-width: $media-queries-tablet) {
+        @media screen and (min-width: $media-queries-desktop) {
+            padding-right: 70px;
+        }
+
+        @media screen and (min-width: $media-queries-desktop-xl) {
             padding-right: 120px;
         }
 
@@ -53,6 +56,14 @@
         .announcement {
             margin: 0;
             font-size: 24px;
+
+            @media screen and (min-width: $media-queries-tablet) {
+                margin: auto;
+            }
+
+            @media screen and (min-width: $media-queries-desktop) {
+                margin: 0;
+            }
         }
     }
 
@@ -101,6 +112,7 @@
     justify-content: center;
     align-items: center;
     color: $white;
+    margin-top: 25px;
 
     img {
         width: 100%;
@@ -112,27 +124,11 @@
         font-size: 28px;
     }
 
-    .logoSection {
-        display: flex;
-        align-items: center;
-        margin-top: 30px;
-
-        @media screen and (min-width: $media-queries-desktop) {
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-    }
-
     @media screen and (min-width: $media-queries-desktop) {
         display: flex;
         flex-direction: row;
         // max-width: 1300px;
         margin-bottom: 0;
-    }
-    
-    @media screen and (min-height: 780px) {
-        margin-top: 15px;
     }
 
     .pfl-logo {
@@ -223,5 +219,38 @@
 @media screen and (min-width: $media-queries-desktop) {
     .mmt50 {
         margin-top: -50px
+    }
+}
+
+.logoSection {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    @media screen and (min-width: $media-queries-desktop) {
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+}
+
+.logos {
+    width: 100%;
+
+    @media screen and (min-width: $media-queries-tablet) {
+        display: flex;
+    }
+
+    img {
+        width: 100%;
+        max-width: 120px;
+
+        &.logoYuzu:hover {
+            filter: drop-shadow(0 0 2em $yellow);
+        }
+
+        &.logoNSXC:hover {
+            filter: drop-shadow(0 0 2em $orange);
+        }
     }
 }

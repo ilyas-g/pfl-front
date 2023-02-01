@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   right: 0;
   top: 0;
@@ -16,14 +16,16 @@
   transform: translate(-50%, -50%);
 }
 
+.video-container {
+  position: relative;
+}
+
 .close {
   color: #ffffff;
   font-size: 60px;
   font-weight: bold;
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-370px);
+  right: 10px;
   z-index: 2;
 }
 
@@ -35,13 +37,9 @@
 
 .video {
   max-width: 1050px;
+  padding: 50px;
+  height: 590.9615384615px;
 }
-@media (min-width: 1050px) {
-  .video {
-    height: 590.9615384615px;
-  }
-}
-
 .register {
   max-width: 1900px;
 }
