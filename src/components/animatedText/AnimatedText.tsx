@@ -8,7 +8,7 @@ const squareVariants = {
   hidden: { opacity: 0, scale: 0 }
 };
 
-function AnimatedSquare({text}) {
+function AnimatedText({text}) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -28,4 +28,4 @@ function AnimatedSquare({text}) {
   );
 }
 
-export default AnimatedSquare;
+export default AnimatedText;

@@ -27,7 +27,6 @@ import {STANDING_QUERY} from "../../queries/queries"
 
 import {useTranslation} from 'react-i18next'
 import { motion } from "framer-motion";
-import AnimateModal from '../../components/animateModal/AnimateModal';
 
 const Home = () => {
 
@@ -135,14 +134,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* {isBracket && 
-        <AnimateModal modalOpen={isBracket} handleClose={close}>
-        <div className='embedt'>
-            <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
-          </div>
-        </AnimateModal>
-      } */}
 
     {isBracket === true &&
       <Modal func={() => {setIsBracket(false)}}>

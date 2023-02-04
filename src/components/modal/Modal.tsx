@@ -1,7 +1,12 @@
 import React from 'react'
 import "./style.css"
 
-export default function Modal({func, children}) {
+interface Props_Modal {
+  func: React.MouseEventHandler<HTMLButtonElement>;
+  children?: JSX.Element | JSX.Element[];
+}
+
+export default function Modal({func, children}: Props_Modal) {
 
   return (
     <div className="modal">

@@ -5,7 +5,11 @@ import yuzuLogo from '../../assets/logo-yuzu.svg';
 import nsxcLogo from '../../assets/nsxc-logo.svg';
 import logo256 from '../../assets/level_256_paris_logobis_noirbleu.svg';
 
-export const Footer = ({children}) => {
+type Props = {  
+  children?: JSX.Element | JSX.Element[];
+};
+
+export const Footer = ({children}: Props) => {
   return (
     <footer className='container-footer'>
         <div className='footer-images'>

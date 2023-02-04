@@ -52,7 +52,6 @@ function App() {
       <Header 
       rankingFunc={() => {{ranking === false ? setRanking(true) :  setRanking(false)}}}
       bracketFunc={() => setIsBracket(true)}
-      langFunc={() => {console.log('lang')}}
       classAnnouncement={ranking === true ? 'gly-rotate-180' : ''}
       langName={t('langTitle')}>
 
