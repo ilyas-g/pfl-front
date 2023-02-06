@@ -59,7 +59,7 @@ i18n
           "standingGGST": "Classement Guilty Gear Strive",
           "nextRanking": "Prochains rankings : 10/02, 17/02, 10/03, 17/03",
           "mainTitle": "La PFL est de retour !",
-          "pflPresentation": "La PFL est un projet événementiel créé par Yuzu Gaming et NSxC. Cette année, la PFL offre aux joueurs la possibilité de gagner un voyage pour l'EVO 2023!",
+          "pflPresentation": "La PFL est un projet événementiel créé par Yuzu Gaming et NSxC. Cette année, la PFL offre aux joueurs la possibilité de gagner un voyage pour l'EVO 2023 !",
           "pflDates": "De Novembre 2022 à Mai 2023",
           "offline": "12 Rankings offline (Octobre 2022 - Avril 2023)",
           "online": "6 Rankings online (Janvier 2023 - Mars 2023)",
