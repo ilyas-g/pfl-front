@@ -3,7 +3,11 @@ import "./style.css"
 
 import useDeviceDetect from "../../utils/useDeviceDetect";
 
-export default function SocialMedias({func}) {
+type PropsSocial = {
+  func?: React.MouseEventHandler<HTMLButtonElement>
+}
+
+export default function SocialMedias({func}: PropsSocial) {
   const { isMobile } = useDeviceDetect();
 
   return (

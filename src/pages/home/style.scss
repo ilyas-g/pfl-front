@@ -22,7 +22,6 @@
         font-size: 30px;
         line-height: 40px;
         font-weight: 700;
-        // letter-spacing: 1px;
 
         @media screen and (min-width: $media-queries-desktop) {
             padding-right: 70px;
@@ -253,4 +252,13 @@
             filter: drop-shadow(0 0 2em #125995);
         }
     }
+}
+
+.embedt {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 768px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }

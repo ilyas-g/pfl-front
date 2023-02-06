@@ -31,21 +31,11 @@
   }
 }
 
-.tabs {
-  display: flex;
-  justify-content: space-around;
-}
-
-.tab {
-  font-size: 25px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: rgb(95, 105, 125);
-}
-.tab:hover {
-  color: rgb(0, 29, 110);
-}
-.tab.active {
-  color: rgb(230, 0, 31);
+.embedt {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 768px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */

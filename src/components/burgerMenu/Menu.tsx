@@ -2,7 +2,11 @@ import React from 'react'
 import WrapMenu from '../wrapMenu/WrapMenu'
 import "./style.css"
 
-export default function Menu({func}) {
+type PropsMenu = {
+  func?: React.MouseEventHandler<HTMLLIElement>
+}
+
+export default function Menu({func}: PropsMenu) {
   return (
     <div className='menu'>
       <WrapMenu menuFunc={func}/>

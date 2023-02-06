@@ -14,11 +14,6 @@ header {
 
     // margin: 0 71px;
     // padding: 0.65rem 48px;
-    // background-color: rgba(0, 0, 0, 0.4);
-    // background-color: #e7e7e7;
-    // background-color: rgba(59, 130, 246, 0.45);
-    // background-color: rgba(7, 232, 131, 0.45);
-    // color: rgb(95, 105, 125);
 
     @media screen and (min-width: $media-queries-tablet) {
         position: absolute;
@@ -38,7 +33,6 @@ header {
         font-size: 18px;
         font-weight: bold;
         text-transform: uppercase;
-    
         display: flex;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.4);
@@ -47,7 +41,7 @@ header {
         text-decoration: none;
         transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
         user-select: none;
-    
+
         span.textButton {
             display: none;
             @media screen and (min-width: $media-queries-tablet) {
@@ -55,18 +49,18 @@ header {
                 margin-right: 10px;
             }
         }
-    
+
         .icon-arrow-down {
             font-size: 16px;
             transition: all $transition-time;
             margin-left: 5px;
         }
-    
+
         &:hover {
             border: 2px solid #faf4ea;
             box-shadow: 0 5px 18px rgb(250 244 234 / 60%);
         }
-    
+
         p {
             margin: 0;
         }
@@ -141,7 +135,6 @@ nav {
             }
 
             a {
-                // color: $darkBlue2;
                 display: block;
                 font-size: 60px;
                 font-weight: 400;
@@ -171,16 +164,16 @@ nav {
     padding: 16px;
     font-size: 16px;
     border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
     position: relative;
     display: inline-block;
 
     &:hover .dropdown-content {display: block;}
     &:hover .dropbtn {background-color: #3e568e;}
-  }
+}
 
   .dropdown-content {
     display: none;
@@ -195,9 +188,7 @@ nav {
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-
-        // &:hover {background-color: #ddd;}
-      }
+    }
   }
 
   .redButton {

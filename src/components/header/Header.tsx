@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
 import 'react-i18next'
 import "./style.css"
 
 import Menu from '../burgerMenu/Menu';
-import Text from '../text/Text'
 import WrapMenu from '../wrapMenu/WrapMenu';
 import AnnouncementBlock from '../announcementBlock/AnnouncementBlock';
 import DropdownMenu from '../dropdownMenu/DropdownMenu';
@@ -14,7 +12,16 @@ import logo from '../../assets/pfl-logo.png';
 
 import {useTranslation} from 'react-i18next'
 
-const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAnnouncement}) => {
+interface Props_Header {
+  rankingFunc?: React.MouseEventHandler<HTMLButtonElement>;
+  bracketFunc?: React.MouseEventHandler<HTMLButtonElement>;
+  langFunc?: React.MouseEventHandler<HTMLButtonElement>;
+  children?: JSX.Element | JSX.Element[];
+  classAnnouncement?: string;
+  langName?: string | DefaultTFuncReturn;
+}
+
+const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAnnouncement}: Props_Header) => {
 
   const [burger, setBurger] = useState<boolean>(false)
 
@@ -39,14 +46,10 @@ const Header = ({rankingFunc, bracketFunc, langFunc, langName, children, classAn
           </div>
         </div>
       </div>
-      {/* {!isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
 
       <div className='header-navigation'>
         <span className='icon-menu' onClick={() => { setBurger(true) }}></span>
         {burger === true && <Menu func={() => { setBurger(false) }} />}
-
-        {/* <button className='announcement' onClick={rankingFunc}><span className='textButton'>
-          {t('rankingButton')}</span> <i className={`icon-arrow-down ${classAnnouncement}`}></i> */}
 
         {!isMobile && import.meta.env.VITE_REGISTER_IFRAME_LINK !== "" && <AnnouncementBlock func={bracketFunc} text={t('register')} />}
 
