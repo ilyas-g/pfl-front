@@ -61,7 +61,6 @@
         background-blend-mode: color;
 
         &:hover {
-            // margin-top:-5px;
             background: 
             radial-gradient(circle, transparent 40%, rgb(191, 110, 110) 75%),
             linear-gradient(to right, rgb(191, 110, 110), rgb(191, 110, 110)),
@@ -69,8 +68,6 @@
             rgba(55, 14, 14, 0.65);
             background-position: center center;
             background-size: cover;
-            // border: 2px solid $beige;
-
             ul {text-shadow: 2px 2px 2px #000000;}
         }
     }
@@ -109,7 +106,6 @@
         text-transform: uppercase;
         line-height: 24px;
         margin-top: 0;
-        // padding: 10px;
         line-height: 1.5;
     }
 }
@@ -122,7 +118,6 @@
 
 @media only screen and (min-width: $media-queries-desktop) {
     .layer {
-        // background-color: rgba(14, 17, 55, 0.85);
         border-radius: 5px;
         position: absolute;
         top: 0;
@@ -163,12 +158,9 @@
 
     &>.cards__front__footer {
         padding: 0 50px;
-        // position: absolute;
-        // bottom: 20px;
 
         &>.btn {
             display: block;
-            // margin: 5px;
             background-color: rgba(0, 0, 0, 0.4);
             color: #fff;
             border: 2px solid #c1a768;
@@ -197,7 +189,6 @@
         @media only screen and (min-width: $media-queries-desktop) {
             display: inherit;
             justify-content: space-around;
-            // position: absolute;
             width: 100%;
             bottom: 0;
             padding-bottom: 1px;

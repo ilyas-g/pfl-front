@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from "@apollo/client";
 
-import AnimatePage from '../../components/animatePage/AnimatePage';
 import Spinner from '../../components/spinner/Spinner';
 import Modal from '../../components/modal/Modal';
 import Text from '../../components/text/Text';
@@ -26,7 +25,6 @@ import useDeviceDetect from "../../utils/useDeviceDetect";
 import {STANDING_QUERY} from "../../queries/queries"
 
 import {useTranslation} from 'react-i18next'
-import { motion } from "framer-motion";
 
 const Home = () => {
 
@@ -40,11 +38,6 @@ const Home = () => {
 
   if (loading) return <Spinner />;
   if (error) return <pre>{error.message}</pre>
-
-  // const [modalOpen, setModalOpen] = useState(false);
-
-  const close = () => setIsBracket(false);
-  const open = () => setIsBracket(true);
 
   return (
     <>
@@ -75,7 +68,6 @@ const Home = () => {
                   </div>
                 : <a href={import.meta.env.VITE_REGISTER_LINK} className='announcement'>{t('register')}</a>
                 }
-        
 
               </div>
             </div>

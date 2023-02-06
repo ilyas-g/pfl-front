@@ -1,7 +1,14 @@
+import React from 'react'
+
 import { motion } from "framer-motion";
 import './style.css'
 
-const Backdrop = ({ children, onClick }) => {
+interface Props_Backdrop {
+  children?: JSX.Element | JSX.Element[];
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
+
+const Backdrop = ({ children, onClick }: Props_Backdrop) => {
  
   return (
     <motion.div
