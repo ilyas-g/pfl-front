@@ -12,16 +12,7 @@ import {CARD_QUERY} from "../../queries/queries"
 import albums from "../../queries/data"
 
 export default function Ranking() {
-  const [tabs, setTabs] = useState<boolean>(true)
   const { data, loading, error } = useQuery(CARD_QUERY);
-
-  // const albumsFunc = () => {
-  //   albums.albums.map((album, index) => {
-  //     console.log(album.id)
-  //   })
-  // }
-
-  // albumsFunc()
 
   if (loading) return <Spinner />;
   if (error) return <pre>{error.message}</pre>

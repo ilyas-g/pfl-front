@@ -1,7 +1,5 @@
 import React from "react";
 import "./style.css"
-import { Link } from "react-router-dom";
-import albums from "../../queries/data"
 
 interface Props {
   cardSkin: string;
@@ -11,7 +9,7 @@ interface Props {
   title: string
 }
 
-function Card({cardSkin, children, title, link, linkPhotos}: Props): JSX.Element | null {
+function Card({cardSkin, children, title, link}: Props): JSX.Element | null {
   return (
     <div className={`cards__single ${cardSkin}`}>
         <div className="cards__front">
