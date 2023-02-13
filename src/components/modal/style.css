@@ -12,8 +12,6 @@
 .modal-content {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .video-container {
@@ -25,7 +23,8 @@
   font-size: 60px;
   font-weight: bold;
   position: absolute;
-  right: 10px;
+  top: -332px;
+  left: 55px;
   z-index: 2;
 }
 
