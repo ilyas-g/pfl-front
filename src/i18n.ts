@@ -38,7 +38,7 @@ i18n
           "pflDates": "FROM NOVEMBER 2022, TO MAY 2023",
           "offline": "12 Offline Rankings (October 2022 - April 2023)",
           "online": "6 Online Rankings (January 2023 - March 2023)",
-          "top7": "The Top 7 will qualify for the finals",
+          "top7": "The Top 7 will be qualified for the finals",
           "lcq": "+1 place of qualification during the LCQ (April 2023)",
           "winner": "The winner of the PFL will win a plane ticket to EVO 2023",
           "copyright": "Parisienne Fighting Ligue © Yuzu Gaming.",
