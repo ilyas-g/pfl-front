@@ -86,6 +86,7 @@ function App() {
       {isBracket === true && 
         <Modal func={() => {setIsBracket(false)}}>
           <div className='embedt'>
+            {/* <span className="close" onClick={() => {setIsBracket(false)}}>&times;</span> */}
             <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
           </div>
         </Modal>
