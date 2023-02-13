@@ -4,7 +4,6 @@ import './App.css'
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import AnnouncementBlock from './components/announcementBlock/AnnouncementBlock';
 import Card from './components/card/Card';
 import Header from './components/header/Header';
 import Home from './pages/home/Home';

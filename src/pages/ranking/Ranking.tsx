@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
+
 import { useQuery } from "@apollo/client";
 
 import Card from '../../components/card/Card'
@@ -7,10 +9,19 @@ import AnimatePage from '../../components/animatePage/AnimatePage'
 
 import "./style.css"
 import {CARD_QUERY} from "../../queries/queries"
+import albums from "../../queries/data"
 
 export default function Ranking() {
   const [tabs, setTabs] = useState<boolean>(true)
   const { data, loading, error } = useQuery(CARD_QUERY);
+
+  // const albumsFunc = () => {
+  //   albums.albums.map((album, index) => {
+  //     console.log(album.id)
+  //   })
+  // }
+
+  // albumsFunc()
 
   if (loading) return <Spinner />;
   if (error) return <pre>{error.message}</pre>
@@ -18,12 +29,25 @@ export default function Ranking() {
   return (
     <AnimatePage>
       <div className='tournaments-list'>
-        {data.league.events.nodes.map((event, index) => {
+        {data.league.events.nodes.map((event, indexx) => {
           const bracket = `${import.meta.env.VITE_STARTGG_URI}${event.slug}`
 
           return (
-            <div key={event.id} className="tournament">
-              <Card cardSkin="secondGame" link={bracket} title={event.tournament.name}>
+            <div key={indexx} className="tournament">
+              <Card 
+              cardSkin="secondGame" 
+              link={bracket} 
+              linkPhotos={
+                albums.albums.map((album, index) => {
+                  if (album.link) {
+                  if(index === indexx) {
+                      let test = import.meta.env.VITE_ALBUM_LINK + album.link
+                      return test
+                    }
+                  }
+                })
+              } 
+              title={event.tournament.name}>
                 <ul className="cards__front__classement">
                   {event.standings.nodes.map((player) => {
                     return <li key={player.entrant.id}>{player.entrant.name}</li>

@@ -89,25 +89,20 @@
 }
 .socials-aside_ready a.pfl-trailer.five .modal-background, .socials-aside_ready button.pfl-trailer.five .modal-background {
   background: rgba(0, 0, 0, 0);
-  -webkit-animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 .socials-aside_ready a.pfl-trailer.five .modal-background .modal, .socials-aside_ready button.pfl-trailer.five .modal-background .modal {
   transform: translateX(-1500px);
-  -webkit-animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 .socials-aside_ready a.pfl-trailer.five.out, .socials-aside_ready button.pfl-trailer.five.out {
-  -webkit-animation: quickScaleDown 0s 0.5s linear forwards;
-          animation: quickScaleDown 0s 0.5s linear forwards;
+  animation: quickScaleDown 0s 0.5s linear forwards;
 }
 .socials-aside_ready a.pfl-trailer.five.out .modal-background, .socials-aside_ready button.pfl-trailer.five.out .modal-background {
-  -webkit-animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 .socials-aside_ready a.pfl-trailer.five.out .modal-background .modal, .socials-aside_ready button.pfl-trailer.five.out .modal-background .modal {
-  -webkit-animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 .socials-aside_ready a.icon-video-camera1:before, .socials-aside_ready a.icon-cross:before, .socials-aside_ready a.icon-twitter:before, .socials-aside_ready a.icon-discord:before, .socials-aside_ready a.icon-video-camera:before, .socials-aside_ready button.icon-video-camera1:before, .socials-aside_ready button.icon-cross:before, .socials-aside_ready button.icon-twitter:before, .socials-aside_ready button.icon-discord:before, .socials-aside_ready button.icon-video-camera:before {
   padding-top: 1px;
