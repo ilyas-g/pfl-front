@@ -31,28 +31,26 @@ export default function Ranking() {
       <div className='tournaments-list'>
         {data.league.events.nodes.map((event, indexx) => {
           const bracket = `${import.meta.env.VITE_STARTGG_URI}${event.slug}`
-
           return (
             <div key={indexx} className="tournament">
               <Card 
               cardSkin="secondGame" 
-              link={bracket} 
-              linkPhotos={
-                albums.albums.map((album, index) => {
-                  if (album.link) {
-                  if(index === indexx) {
-                      let test = import.meta.env.VITE_ALBUM_LINK + album.link
-                      return test
-                    }
-                  }
-                })
-              } 
+              link={bracket}
               title={event.tournament.name}>
                 <ul className="cards__front__classement">
                   {event.standings.nodes.map((player) => {
                     return <li key={player.entrant.id}>{player.entrant.name}</li>
                   })}
                 </ul>
+
+                {albums.albums.map((album, index) => {
+                  if (album.link !== undefined) {
+                  if(index === indexx) {
+                const alb = `${import.meta.env.VITE_ALBUM_LINK}${album.link}`
+                return <a href={alb} className="btn" target="_blank">Photos</a>
+                  }
+                }
+              })}
               </Card>
             </div>
           )

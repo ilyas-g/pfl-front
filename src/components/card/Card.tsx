@@ -22,7 +22,6 @@ function Card({cardSkin, children, title, link, linkPhotos}: Props): JSX.Element
           {link && 
             <div className="cards__front__footer">
               <a className="btn" href={link} target="_blank" rel="noreferrer">Bracket</a>
-              {linkPhotos && <a className="btn" href={linkPhotos} target="_blank" rel="noreferrer">Photos</a> }
             </div>
           }
         </div>
