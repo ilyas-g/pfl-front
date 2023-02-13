@@ -14,7 +14,7 @@ import img7 from '../../assets/7.jpg';
 import img8 from '../../assets/8.jpg';
 import img9 from '../../assets/9.jpg';
 import img13 from '../../assets/13.jpg';
-import img10 from '../../assets/10.jpg';
+import img15 from '../../assets/15.jpg';
 import yuzuLogo from '../../assets/logo-yuzu.svg';
 import nsxcLogo from '../../assets/nsxc-logo.svg';
 import logo256 from '../../assets/logo-level256.svg';
@@ -101,14 +101,14 @@ const Home = () => {
           </div>
           <div>
             <img src={img7} alt="img7" />
-            <img src={img10} alt="img10" className='img-crop mmt50'/>
+            <img src={img8} alt="img8" className='img-crop mmt50'/>
           </div>
         </div>
 
         <div className='mb-30'>
           <div>
-            <img src={img8} alt="img7" />
-            <img src={img13} alt="img10" className='img-crop mmt50'/>
+            <img src={img15} alt="img15" />
+            <img src={img13} alt="img13" className='img-crop mmt50'/>
           </div>
           <div>
             <AnimatedText text={t('top7')} />
