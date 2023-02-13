@@ -86,7 +86,7 @@ function App() {
       {isBracket === true && 
         <Modal func={() => {setIsBracket(false)}}>
           <div className='embedt'>
-            <iframe className='register' src="https://www.start.gg/tournament/pfl-ranking-6-road-to-evo-2k23/register/embed"></iframe>
+            <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
           </div>
         </Modal>
       }
