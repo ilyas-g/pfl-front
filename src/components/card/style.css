@@ -153,9 +153,7 @@
   color: #C49C48;
 }
 .cards__front > .cards__front__footer {
-  padding: 0 50px;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 15px;
 }
 .cards__front > .cards__front__footer > .btn {
   display: block;
