@@ -47,10 +47,8 @@ function App() {
   return (
   <>
     <div>
-      {/* {isMobile && <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />} */}
       <Header 
       rankingFunc={() => {{ranking === false ? setRanking(true) :  setRanking(false)}}}
-      bracketFunc={() => setIsBracket(true)}
       classAnnouncement={ranking === true ? 'gly-rotate-180' : ''}
       langName={t('langTitle')}>
 
@@ -63,18 +61,15 @@ function App() {
         </ul>
       </Header>
 
-      {/* {ranking === true ?  */}
-        <Card cardSkin={`secondGame classement ${ranking === true ? 'active' : ''}`} title={t('standingGGST')}>
-          <ul className="cards__front__classement">
-            {data.league.standings.nodes.map((participant, index) => {
-              return <li key={index}>{participant.entrant.name}</li>
-            })}
-          </ul>
-        </Card>
-         {/* : ""} */}
+      <Card cardSkin={`secondGame classement ${ranking === true ? 'active' : ''}`} title={t('standingGGST')}>
+        <ul className="cards__front__classement">
+          {data.league.standings.nodes.map((participant, index) => {
+            return <li key={index}>{participant.entrant.name}</li>
+          })}
+        </ul>
+      </Card>
 
       {!isMobile && <SocialMedias func={() => {setIsModal(true)}} /> }
-      {/* <SocialMedias func={() => {setIsModal(true)}} /> */}
       {isModal === true && 
         <Modal func={() => {setIsModal(false)}}>
             <iframe className="video" src="https://www.youtube.com/embed/FZgkhis5Cdg" 
@@ -86,7 +81,6 @@ function App() {
       {isBracket === true && 
         <Modal func={() => {setIsBracket(false)}}>
           <div className='embedt'>
-            {/* <span className="close" onClick={() => {setIsBracket(false)}}>&times;</span> */}
             <iframe className='register' src={import.meta.env.VITE_REGISTER_IFRAME_LINK}></iframe>
           </div>
         </Modal>
@@ -96,8 +90,6 @@ function App() {
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/ranking" element={<Ranking />} />
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/product/:productId" element={<Product />} /> */}
         </Routes>
       </AnimatePresence>
 
