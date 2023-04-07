@@ -3,9 +3,7 @@ import { useQuery } from "@apollo/client";
 
 import Spinner from '../../components/spinner/Spinner';
 import Modal from '../../components/modal/Modal';
-import Text from '../../components/text/Text';
 import AnimatedText from '../../components/animatedText/AnimatedText';
-import AnnouncementBlock from '../../components/announcementBlock/AnnouncementBlock';
 
 import evoLogo from '../../assets/evo720.png';
 import pfl from '../../assets/pfl-logo.png';
@@ -21,7 +19,6 @@ import logo256 from '../../assets/logo-level256.svg';
 
 import './style.css'
 
-import useDeviceDetect from "../../utils/useDeviceDetect";
 import {STANDING_QUERY} from "../../queries/queries"
 
 import {useTranslation} from 'react-i18next'
@@ -29,8 +26,6 @@ import {useTranslation} from 'react-i18next'
 const Home = () => {
 
   const { data, loading, error } = useQuery(STANDING_QUERY);
-
-  const { isMobile } = useDeviceDetect();
 
   const [isBracket, setIsBracket] = useState(false)
 
@@ -43,7 +38,6 @@ const Home = () => {
     <>
 
       <div className='homepage'>
-      <Text text={t('nextRanking')} />
         <section>
           <div className='firstSection'>
             <div>
@@ -51,29 +45,10 @@ const Home = () => {
               <div className="presentation">
 
                 <p>{t('pflPresentation')}</p>
-
-                {/* <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="save-button"
-                  onClick={() => (modalOpen ? close() : open())}
-                >
-                  Launch modal
-                </motion.button> */}
-
-              {!isMobile ? 
-                import.meta.env.VITE_REGISTER_IFRAME_LINK !== "" &&
-                  <div className='d-flex-center'>
-                    <AnnouncementBlock text={t('register')} func={() => setIsBracket(true)} />
-                  </div>
-                : <a href={import.meta.env.VITE_REGISTER_LINK} className='announcement'>{t('register')}</a>
-                }
-
               </div>
             </div>
 
             <div className='logoDates'>
-              {/* {isMobile && <Text text='Prochains rankings : 13/01 10/02 17/02 10/03 17/03' />} */}
               <img src={pfl} className="pfl-logo" alt="Parisienne Fighting Ligue by Yuzu Gaming & NSxC" />
               <h2>{t('pflDates')}</h2>
             </div>
