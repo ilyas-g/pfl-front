@@ -1,1 +1,61 @@
-.finales {color: red;}
+.finales {
+    padding: 130px;
+    h1, h2 {
+        text-transform: uppercase;
+    }
+
+    .lcq, .podium {
+        display: flex;
+        justify-content: space-around;
+    }
+    .lcqPhoto {
+        width: 100%;
+        max-width: 350px;
+        display: blocks;
+        padding: 1vh;
+        background: #efecdb;
+        box-shadow: 0 10px 50px #5f2f1182;
+    }
+
+    .lcqWinner {
+        writing-mode: vertical-rl;
+        font-size: 70px;
+        text-transform: uppercase;
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        margin: 0;
+        color: #fff;
+        text-shadow: 2px 2px 7px black;
+    }
+
+    .lcqChara {
+        filter: drop-shadow(2px 2px 5px #000);
+        @media screen and (min-width: 992px) {
+            width: 100%;
+            max-width: 250px;
+            position: absolute;
+            left: -75px;
+            top: 65px;
+        }
+    }
+
+    .img-wrapper {
+        // transform: rotate(90deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40vh;
+        transform-origin: 50% 50%;
+        transform: translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
+        transition: 1s;
+      }
+      
+    .img-wrapper:hover {
+        min-width: 65vh;
+       }
+
+    .slower {
+      transform: translateZ(-.2px) scale(1.1) translateX(0%) translateY(-10vh);
+    }
+}

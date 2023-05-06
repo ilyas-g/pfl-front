@@ -1,3 +1,56 @@
 .finales {
-  color: red;
+  padding: 130px;
+}
+.finales h1, .finales h2 {
+  text-transform: uppercase;
+}
+.finales .lcq, .finales .podium {
+  display: flex;
+  justify-content: space-around;
+}
+.finales .lcqPhoto {
+  width: 100%;
+  max-width: 350px;
+  display: blocks;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+.finales .lcqWinner {
+  writing-mode: vertical-rl;
+  font-size: 70px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 7px black;
+}
+.finales .lcqChara {
+  filter: drop-shadow(2px 2px 5px #000);
+}
+@media screen and (min-width: 992px) {
+  .finales .lcqChara {
+    width: 100%;
+    max-width: 250px;
+    position: absolute;
+    left: -75px;
+    top: 65px;
+  }
+}
+.finales .img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40vh;
+  transform-origin: 50% 50%;
+  transform: translateZ(0.1px) scale(0.9) translateX(0px) translateY(-3vh);
+  transition: 1s;
+}
+.finales .img-wrapper:hover {
+  min-width: 65vh;
+}
+.finales .slower {
+  transform: translateZ(-0.2px) scale(1.1) translateX(0%) translateY(-10vh);
 }/*# sourceMappingURL=style.css.map */

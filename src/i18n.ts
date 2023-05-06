@@ -44,7 +44,8 @@ i18n
           "websiteby": "Website made by",
           "photosby": "Photos by",
           "venueTitle": "Venue",
-          "venueText": "The PFL will take place from November 2022 to May 2023 at the following address:"
+          "venueText": "The PFL will take place from November 2022 to May 2023 at the following address:",
+          "standingLCQ": "Last Chance Qualifier Standing"
         }
       },
       fr: {
@@ -67,7 +68,8 @@ i18n
           "websiteby": "Site réalisé par",
           "photosby": "Photos prises par",
           "venueTitle": "Plan d'accès",
-          "venueText": "La PFL se déroulera du mois de Novembre 2022 à Mai 2023 à l'adresse suivante :"
+          "venueText": "La PFL se déroulera du mois de Novembre 2022 à Mai 2023 à l'adresse suivante :",
+          "standingLCQ": "Classement du Last Chance Qualifier"
         }
       }
     }
