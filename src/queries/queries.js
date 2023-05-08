@@ -46,7 +46,7 @@ const STANDING_QUERY = gql`
     league(slug: "classement-parisienne-fighting-ligue-ggst-road-to-evo-2k23") {
       standings (query: {
         page: 1,
-        perPage: 8
+        perPage: 7
       }) {
         pageInfo {
           totalPages

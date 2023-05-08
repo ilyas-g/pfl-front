@@ -4,7 +4,7 @@
 .finales h1, .finales h2 {
   text-transform: uppercase;
 }
-.finales .lcq, .finales .podium {
+.finales .lcq {
   display: flex;
   justify-content: space-around;
 }
@@ -22,7 +22,7 @@
   text-transform: uppercase;
   position: absolute;
   top: 5px;
-  right: 30px;
+  right: -20px;
   margin: 0;
   color: #fff;
   text-shadow: 2px 2px 7px black;
@@ -35,7 +35,7 @@
     width: 100%;
     max-width: 250px;
     position: absolute;
-    left: -75px;
+    left: -150px;
     top: 65px;
   }
 }
@@ -43,14 +43,183 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 40vh;
   transform-origin: 50% 50%;
   transform: translateZ(0.1px) scale(0.9) translateX(0px) translateY(-3vh);
   transition: 1s;
 }
-.finales .img-wrapper:hover {
-  min-width: 65vh;
-}
 .finales .slower {
   transform: translateZ(-0.2px) scale(1.1) translateX(0%) translateY(-10vh);
+}
+.finales .top h2 {
+  font-size: 3vw;
+}
+.finales .topPFL {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 250px;
+}
+.finales .topPFL .podiumPhoto {
+  width: 100%;
+  max-width: 270px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+.finales .topPFL .podiumWinner {
+  writing-mode: vertical-rl;
+  font-size: 70px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 5px;
+  right: -40px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 7px black;
+}
+.finales .topPFL .podiumChara {
+  filter: drop-shadow(2px 2px 5px #000);
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .podiumChara {
+    width: 100%;
+    max-width: 250px;
+    position: absolute;
+    left: -150px;
+    top: 65px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .img-wrapper.ror .podiumChara {
+    left: -100px;
+    top: inherit;
+    bottom: -20px;
+  }
+}
+.finales .topPFL .img-wrapper.arefu {
+  margin-top: 30px;
+  margin-left: 15px;
+}
+.finales .topPFL .img-wrapper.arefu .podiumWinner {
+  top: inherit;
+  bottom: -10px;
+  left: -13px;
+  right: initial;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .img-wrapper.arefu .podiumChara {
+    left: inherit;
+    right: -140px;
+    top: 110px;
+  }
+}
+.finales .topPFL .img-wrapper.neos {
+  margin-right: 70px;
+  margin-top: 115px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .img-wrapper.neos .podiumChara {
+    width: inherit;
+    max-width: 350px;
+    left: 0;
+    top: inherit;
+    bottom: -80px;
+  }
+}
+.finales .topPFL .img-wrapper.crillou .podiumWinner {
+  right: inherit;
+  left: -10px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .img-wrapper.crillou .podiumChara {
+    left: 150px;
+    top: inherit;
+    bottom: 0;
+  }
+}
+.finales .topPFL .img-wrapper.dase .podiumPhoto {
+  max-width: 285px;
+}
+.finales .topPFL .img-wrapper.dase .podiumWinner {
+  font-size: 60px;
+  right: inherit;
+  left: -10px;
+  top: inherit;
+  bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .img-wrapper.dase .podiumChara {
+    width: inherit;
+    max-width: 370px;
+    left: 130px;
+  }
+}
+.finales .topPFL .img-wrapper.patachu .podiumPhoto {
+  max-width: 310px;
+}
+.finales .topPFL .img-wrapper.patachu .podiumWinner {
+  width: initial;
+  max-width: initial;
+  right: inherit;
+  left: -22px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .img-wrapper.patachu .podiumChara {
+    width: initial;
+    max-width: 450px;
+    top: 170px;
+    left: 67px;
+  }
+}
+.finales .topPFL .img-wrapper.gagayoux .podiumPhoto {
+  max-width: 335px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .img-wrapper.gagayoux .podiumChara {
+    top: inherit;
+    bottom: -80px;
+    left: -190px;
+    width: inherit;
+    max-width: 360px;
+  }
+}
+.finales .topPFL.champ {
+  background-color: cadetblue;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL.champ .img-wrapper {
+    width: 70%;
+  }
+}
+.finales .topPFL.champ .podiumPhoto {
+  max-width: 350px;
+}
+.finales .topPFL.champ .podiumWinner {
+  right: 70px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL.champ .podiumChara {
+    left: -150px;
+    top: inherit;
+    bottom: -90px;
+    max-width: 450px;
+    width: inherit;
+  }
+}
+.finales .tieplace {
+  display: flex;
+}
+.finales .tieplace .fifthPlace {
+  position: absolute;
+  right: 0;
+  top: 80px;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */

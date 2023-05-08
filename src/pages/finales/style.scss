@@ -4,7 +4,7 @@
         text-transform: uppercase;
     }
 
-    .lcq, .podium {
+    .lcq {
         display: flex;
         justify-content: space-around;
     }
@@ -23,7 +23,7 @@
         text-transform: uppercase;
         position: absolute;
         top: 5px;
-        right: 30px;
+        right: -20px;
         margin: 0;
         color: #fff;
         text-shadow: 2px 2px 7px black;
@@ -35,7 +35,7 @@
             width: 100%;
             max-width: 250px;
             position: absolute;
-            left: -75px;
+            left: -150px;
             top: 65px;
         }
     }
@@ -45,17 +45,217 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: 40vh;
+        // min-width: 40vh;
         transform-origin: 50% 50%;
         transform: translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
         transition: 1s;
       }
-      
-    .img-wrapper:hover {
-        min-width: 65vh;
-       }
+
+    // .img-wrapper:hover {
+    //     min-width: 65vh;
+    // }
 
     .slower {
       transform: translateZ(-.2px) scale(1.1) translateX(0%) translateY(-10vh);
     }
+
+    .top {
+        h2 {
+            font-size: 3vw;
+        }
+    }
+    .topPFL {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 250px;
+
+        .podiumPhoto {
+            width: 100%;
+            max-width: 270px;
+            display: block;
+            padding: 1vh;
+            background: #efecdb;
+            box-shadow: 0 10px 50px #5f2f1182;
+        }
+
+        .podiumWinner {
+            writing-mode: vertical-rl;
+            font-size: 70px;
+            text-transform: uppercase;
+            position: absolute;
+            top: 5px;
+            right: -40px;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 7px black;
+        }
+
+        .podiumChara {
+            filter: drop-shadow(2px 2px 5px #000);
+            @media screen and (min-width: 992px) {
+                width: 100%;
+                max-width: 250px;
+                position: absolute;
+                left: -150px;
+                top: 65px;
+            }
+        }
+
+        .img-wrapper {
+            &.ror {
+                // margin-top: 30px;
+                .podiumChara {
+                    @media screen and (min-width: 992px) {
+                        left: -100px;
+                        top: inherit;
+                        bottom: -20px ;
+                    }
+                }
+            }
+
+            &.arefu {
+                margin-top: 30px;
+                margin-left: 15px;
+                .podiumWinner {top: inherit; bottom: -10px; left: -13px; right: initial;}
+                @media screen and (min-width: 992px) {
+                    .podiumChara {left: inherit; right: -140px; top: 110px;}
+                }
+            }
+
+            &.neos {
+                margin-right: 70px;
+                margin-top: 115px;
+
+                @media screen and (min-width: 992px) {
+                    .podiumChara {
+                        width: inherit;
+                        max-width: 350px;
+                        left: 0;
+                        top: inherit;
+                        bottom: -80px;
+                    }
+                }
+            }
+
+            &.crillou {
+                .podiumWinner {
+                    right: inherit;
+                        left: -10px;
+                }
+
+                @media screen and (min-width: 992px) {
+                    .podiumChara {
+                        left: 150px;
+                        top: inherit;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            &.dase {
+                .podiumPhoto {
+                    max-width: 285px;
+                }
+
+                .podiumWinner {
+                    font-size: 60px;
+                    right: inherit;
+                    left: -10px;
+                    top: inherit;
+                    bottom: 10px;
+                }
+
+                @media screen and (min-width: 992px) {
+                    .podiumChara {
+                        width: inherit;
+                        max-width: 370px;
+                        left: 130px;
+                    }
+                }
+            }
+
+            &.patachu {
+                .podiumPhoto {
+                    max-width: 310px;
+                }
+
+                .podiumWinner {
+                    width: initial;
+                    max-width: initial;
+                    right: inherit;
+                    left: -22px;
+                }
+
+                @media screen and (min-width: 992px) {
+                    .podiumChara {
+                        width: initial;
+                        max-width: 450px;
+                        top: 170px;
+                        left: 67px;
+                    }
+                }
+            }
+
+            &.gagayoux {
+                .podiumPhoto {
+                    max-width: 335px;
+                }
+
+                @media screen and (min-width: 992px) {
+                    .podiumChara {
+                        top: inherit;
+                        bottom: -80px;
+                        left: -190px;
+                        width: inherit;
+                        max-width: 360px;
+                    }
+                }
+            }
+        }
+
+        &.champ {
+            background-color: cadetblue;
+            @media screen and (min-width: 992px) {
+                .img-wrapper {
+                    width: 70%;
+                }
+            }
+            .podiumPhoto {
+                max-width: 350px;
+            }
+
+            .podiumWinner {
+                right: 70px;
+            }
+
+            .podiumChara {
+                @media screen and (min-width: 992px) {
+                    left: -150px;
+                    top: inherit;
+                    bottom: -90px ;
+                    max-width: 450px;
+                    width: inherit;
+                }
+            }
+        }
+    }
+
+    .tieplace {
+        display: flex;
+
+        .fifthPlace {
+            position: absolute;
+            right: 0;
+            top: 80px;
+        }
+    }
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
 }
