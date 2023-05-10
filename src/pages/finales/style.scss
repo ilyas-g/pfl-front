@@ -411,7 +411,11 @@
 
 
     &.champ {
+      display: block;
+
       @media screen and (min-width: 992px) {
+        display: flex;
+        align-items: center;
         margin: 0;
 
         .img-wrapper {
@@ -425,6 +429,14 @@
 
       .playerName {
         right: 0;
+
+        @media screen and (min-width: 768px) {
+          right: 180px;
+        }
+
+        @media screen and (min-width: 992px) {
+          right: -25px;
+        }
       }
 
       .playerChara {

@@ -377,8 +377,13 @@
     max-width: 360px;
   }
 }
+.finales .topPFL.champ {
+  display: block;
+}
 @media screen and (min-width: 992px) {
   .finales .topPFL.champ {
+    display: flex;
+    align-items: center;
     margin: 0;
   }
   .finales .topPFL.champ .img-wrapper {
@@ -395,6 +400,16 @@
 }
 .finales .topPFL.champ .playerName {
   right: 0;
+}
+@media screen and (min-width: 768px) {
+  .finales .topPFL.champ .playerName {
+    right: 180px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL.champ .playerName {
+    right: -25px;
+  }
 }
 @media screen and (min-width: 992px) {
   .finales .topPFL.champ .playerChara {

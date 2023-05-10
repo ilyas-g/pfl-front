@@ -44,13 +44,13 @@ export const Finales = () => {
 
         <div className='lcq'>
           <div className='lcqStanding'>
-            <Card cardSkin="secondGame width360" title={t('standingLCQ')}>
+            {/* <Card cardSkin="secondGame width360" title={t('standingLCQ')}>
               <ul className="cards__front__classement">
                 {data.event.standings.nodes.map((participant, index) => {
                   return <li key={index}>{participant.entrant.name}</li>
                 })}
               </ul>
-            </Card>
+            </Card> */}
 
             <section className='secondSection'>
               <div className='mb-30 '>
