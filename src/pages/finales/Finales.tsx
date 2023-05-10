@@ -46,9 +46,16 @@ export const Finales = () => {
           <div className='lcqStanding'>
             <Card cardSkin="secondGame width360" title={t('standingLCQ')}>
               <ul className="cards__front__classement">
-                {data.event.standings.nodes.map((participant, index) => {
+                {/* {data.event.standings.nodes.map((participant, index) => {
                   return <li key={index}>{participant.entrant.name}</li>
-                })}
+                })} */}
+                <li>Oplon | Skyll</li>
+                <li>Gagayoux</li>
+                <li>NSxC | PataChu</li>
+                <li>Platy | NH | Daseinologist</li>
+                <li>Neøs</li><li>Sommet | Crillou</li>
+                <li>Arefu</li>
+                <li>ROR2000</li>
               </ul>
             </Card>
 
