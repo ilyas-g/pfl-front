@@ -19,6 +19,7 @@ export default function WrapMenu({menuFunc}: PropsSocial) {
                 <ul role="list">
                     <li role="listitem" className="onglets" onClick={menuFunc}><Link to="/">{t('menuHome')}</Link></li>
                     <li role="listitem" className="onglets" onClick={menuFunc}><Link to="/ranking">{t('menuRanking')}</Link></li>
+                    <li role="listitem" className="onglets" onClick={menuFunc}><Link to="/finales">Finales</Link></li>
                 </ul>
             <SocialMedias />
             </nav>

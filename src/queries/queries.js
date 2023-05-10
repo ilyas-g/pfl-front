@@ -46,7 +46,7 @@ const STANDING_QUERY = gql`
     league(slug: "classement-parisienne-fighting-ligue-ggst-road-to-evo-2k23") {
       standings (query: {
         page: 1,
-        perPage: 8
+        perPage: 7
       }) {
         pageInfo {
           totalPages
@@ -65,4 +65,26 @@ const STANDING_QUERY = gql`
   }
 `;
 
-export { CARD_QUERY, STANDING_QUERY };
+const LCQ_QUERY = gql`
+query EventStandings {
+  event(slug: "tournament/final-lcq-pfl-road-to-evo-2023-espot-paris/event/top-8-pfl") {
+    id
+    name
+    slug
+    standings(query: {
+      perPage: 8,
+      page: 1
+    }){
+      nodes {
+        placement
+        entrant {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+`;
+
+export { CARD_QUERY, STANDING_QUERY, LCQ_QUERY };

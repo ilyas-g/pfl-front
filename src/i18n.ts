@@ -29,7 +29,7 @@ i18n
           "langTitle":  "EN",
           "menuHome": "Home",
           "menuRanking": "Ranking",
-          "rankingButton": "Standing",
+          "rankingButton": "Players qualified for the finals",
           "standingGGST": "Guilty Gear Strive Standing",
           "mainTitle": "The PFL is back!",
           "pflPresentation": "The PFL is an event project created by Yuzu Gaming and NSxC. This year the PFL is giving to the players the chance to win a travel for the EVO 2023!",
@@ -44,7 +44,20 @@ i18n
           "websiteby": "Website made by",
           "photosby": "Photos by",
           "venueTitle": "Venue",
-          "venueText": "The PFL will take place from November 2022 to May 2023 at the following address:"
+          "venueText": "The PFL will take place from November 2022 to May 2023 at the following address:",
+          "standingLCQ": "Last Chance Qualifier Standing",
+          "titleFinalsPage": "Finals",
+          "lastChanceToQualify": "Last chance to qualify for the finals",
+          "lastChanceWinner": "Winner of the LCQs",
+          "finalsResults": "Result of the finals",
+          "first": "1st",
+          "second": "2nd",
+          "third": "3rd",
+          "fourth": "4th",
+          "fifth": "5th",
+          "seventh": "7th",
+          "finalsCongrats": "Congratulations Skyll who wins the second edition of the Parisienne Fighting League!",
+          "finalsWinnerEVO": "He wins a trip to the EVO 2023!"
         }
       },
       fr: {
@@ -52,7 +65,7 @@ i18n
           "langTitle":  "FR",
           "menuHome": "Accueil",
           "menuRanking": "Classement",
-          "rankingButton": "Actuels Qualifiés",
+          "rankingButton": "Joueurs qualifiés pour les finales",
           "standingGGST": "Classement Guilty Gear Strive",
           "mainTitle": "La PFL est de retour !",
           "pflPresentation": "La PFL est un projet événementiel créé par Yuzu Gaming et NSxC. Cette année, la PFL offre aux joueurs la possibilité de gagner un voyage pour l'EVO 2023 !",
@@ -67,7 +80,20 @@ i18n
           "websiteby": "Site réalisé par",
           "photosby": "Photos prises par",
           "venueTitle": "Plan d'accès",
-          "venueText": "La PFL se déroulera du mois de Novembre 2022 à Mai 2023 à l'adresse suivante :"
+          "venueText": "La PFL se déroulera du mois de Novembre 2022 à Mai 2023 à l'adresse suivante :",
+          "standingLCQ": "Classement du Last Chance Qualifier",
+          "titleFinalsPage": "Finales",
+          "lastChanceToQualify": "Une dernière chance de se qualifier pour les finales",
+          "lastChanceWinner": "Gagnant des LCQs",
+          "finalsResults": "Résultats des finales",
+          "first": "1er",
+          "second": "2ème",
+          "third": "3ème",
+          "fourth": "4ème",
+          "fifth": "5ème",
+          "seventh": "7ème",
+          "finalsCongrats": "Félicitations à Skyll qui gagne cette second édition de la Parisienne Fighting Ligue !",
+          "finalsWinnerEVO": "Il remporte également un voyage pour l'EVO 2023 !"
         }
       }
     }

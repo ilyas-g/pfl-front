@@ -1,12 +1,11 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  /* line-height: 24px; */
+
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -36,28 +35,17 @@ a {
   text-decoration: inherit;
 }
 
-/* a:hover {
-  color: rgb(0 29 110);
-} */
-
 body {
   margin: 0;
-  /* display: flex; */
   place-items: center;
   min-width: 320px;
   /* min-height: 100vh; */
-  /* background-color: #eae9e4; */
   background-color: #f0f1f3;
-  /* background-color: #081333ba; */
-  /* background-color: rgb(0, 4, 26); */
-  /* background: linear-gradient(113deg, #0a0e2b, #4a4c7f, #c9cef4); */
   color: #183153;
-  /* color: #ffffff; */
   overflow-x: hidden;
 
   object-fit: contain;
   min-height: 100%;
-  margin: 0;
   padding: 0 0 182px 0;
   position: relative;
 }
@@ -110,4 +98,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.text-center {
+  text-align: center;
 }

@@ -21,6 +21,7 @@ import useDeviceDetect from "./utils/useDeviceDetect";
 import {STANDING_QUERY} from "./queries/queries"
 import { Footer } from './components/footer/Footer';
 import AccessMap from './components/accessmap/AccessMap';
+import { Finales } from './pages/finales/Finales';
 
 function App() {
   const [isModal, setIsModal] = useState(false)
@@ -90,6 +91,7 @@ function App() {
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/ranking" element={<Ranking />} />
+          <Route path="/finales" element={<Finales />} />
         </Routes>
       </AnimatePresence>
 
