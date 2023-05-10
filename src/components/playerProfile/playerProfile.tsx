@@ -12,10 +12,10 @@ interface Props {
 export default function playerProfile({profileSkin, place, firstImg, secondImg, name}: Props) {
   return (
     <div className={`img-wrapper ${profileSkin}`}>
-      <p className='podiumPlace'>{place}</p>
-      <img src={firstImg} className="podiumChara" alt={firstImg} />
+      <p className='playerRank'>{place}</p>
+      <img src={firstImg} className="playerChara" alt={firstImg} />
       <img src={secondImg} className="playerPhoto" alt={name} />
-      <p className='podiumWinner'>{name}</p>
+      <p className='playerName'>{name}</p>
   </div>
   )
 }

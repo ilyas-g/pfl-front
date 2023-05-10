@@ -63,21 +63,13 @@ export const Finales = () => {
 
           <div>
             <div className='p-relative'>
-              <h2 className='p-absolution'>{t('lastChanceWinner')}</h2>
+              <h2 className='p-absolution playerRank'>{t('lastChanceWinner')}</h2>
             </div>
-            <div className='img-wrapper'>
-              <img src={chaos} className="lcqChara" alt="Daseinologist" />
+            <div className='img-wrapper lcqWinner'>
+              <img src={chaos} className="playerChara" alt="Daseinologist" />
               <img src={daseinologist} className="playerPhoto" alt="Daseinologist" />
-              <p className='lcqWinner'>Daseinologist</p>
+              <p className='playerName'>Daseinologist</p>
             </div>
-
-            {/* <PlayerProfile
-              profileSkin='fifth-one'
-              place={t('fourth')}
-              firstImg={chaos}
-              secondImg={daseinologist}
-              name="Daseinologist"
-              /> */}
           </div>
         </div>
 

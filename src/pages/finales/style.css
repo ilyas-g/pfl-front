@@ -1,3 +1,11 @@
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
 .finales {
   padding: 130px 0 0;
 }
@@ -34,9 +42,15 @@
 }
 .finales .img-wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: 50% 50%;
+  transform: translateZ(0.1px) scale(0.9) translateX(0px) translateY(-3vh);
+  transition: 1s;
 }
-.finales .cards__single {
-  margin: auto;
+.finales .slower {
+  transform: translateZ(-0.2px) scale(1.1) translateX(0%) translateY(-10vh);
 }
 @media screen and (min-width: 992px) {
   .finales .lcq {
@@ -70,25 +84,16 @@
     margin: auto;
   }
 }
-.finales .lcq.fifth-one {
-  margin-top: 115px;
+.finales .lcq .playerRank {
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  margin: 10px 0;
+  -webkit-text-stroke: 2px #fff;
+  color: rgb(55, 14, 14);
 }
-@media screen and (min-width: 768px) {
-  .finales .lcq.fifth-one {
-    margin-left: 70px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .finales .lcq.fifth-one {
-    margin-right: 70px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .finales .lcq.fifth-one {
-    margin-right: 20px;
-  }
-}
-.finales .lcqWinner {
+.finales .playerName {
   writing-mode: vertical-rl;
   text-transform: uppercase;
   text-shadow: 2px 2px 7px black;
@@ -102,49 +107,35 @@
   right: 0;
 }
 @media screen and (min-width: 768px) {
-  .finales .lcqWinner {
+  .finales .playerName {
     right: 170px;
   }
 }
 @media screen and (min-width: 992px) {
-  .finales .lcqWinner {
+  .finales .playerName {
     right: -20px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .finales .lcqWinner {
+  .finales .playerName {
     right: 0px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .finales .lcqWinner {
-    right: 30px;
-  }
-}
-.finales .lcqChara {
+.finales .playerChara {
   display: none;
 }
 @media screen and (min-width: 992px) {
-  .finales .lcqChara {
+  .finales .playerChara {
     display: block;
     filter: drop-shadow(2px 2px 5px #000);
     width: initial;
     max-width: 430px;
-    left: -155px;
     position: absolute;
     top: 65px;
+    bottom: inherit;
+    left: -155px;
+    right: inherit;
   }
-}
-.finales .img-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: 50% 50%;
-  transform: translateZ(0.1px) scale(0.9) translateX(0px) translateY(-3vh);
-  transition: 1s;
-}
-.finales .slower {
-  transform: translateZ(-0.2px) scale(1.1) translateX(0%) translateY(-10vh);
 }
 .finales .topPFL {
   position: relative;
@@ -169,7 +160,7 @@
   background: #efecdb;
   box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
 }
-.finales .topPFL .podiumWinner {
+.finales .topPFL .playerName {
   writing-mode: vertical-rl;
   text-transform: uppercase;
   text-shadow: 2px 2px 7px black;
@@ -183,16 +174,16 @@
   right: 0;
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .podiumWinner {
+  .finales .topPFL .playerName {
     font-size: 70px;
     right: -40px;
   }
 }
-.finales .topPFL .podiumChara {
+.finales .topPFL .playerChara {
   display: none;
 }
 @media screen and (min-width: 1200px) {
-  .finales .topPFL .podiumChara {
+  .finales .topPFL .playerChara {
     display: block;
     filter: drop-shadow(2px 2px 5px #000);
     width: 100%;
@@ -203,7 +194,7 @@
   }
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .seventh-one .podiumChara {
+  .finales .topPFL .seventh-one .playerChara {
     left: -100px;
     top: inherit;
     bottom: -20px;
@@ -213,14 +204,14 @@
   margin-top: 30px;
   margin-left: 15px;
 }
-.finales .topPFL .seventh-two .podiumWinner {
+.finales .topPFL .seventh-two .playerName {
   top: inherit;
   bottom: 10px;
   left: -13px;
   right: initial;
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .seventh-two .podiumChara {
+  .finales .topPFL .seventh-two .playerChara {
     left: inherit;
     right: -140px;
     top: 110px;
@@ -245,7 +236,7 @@
   }
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .fifth-one .podiumChara {
+  .finales .topPFL .fifth-one .playerChara {
     width: inherit;
     max-width: 350px;
     left: 0;
@@ -253,21 +244,21 @@
     bottom: -80px;
   }
 }
-.finales .topPFL .fifth-two .podiumWinner {
+.finales .topPFL .fifth-two .playerName {
   right: inherit;
   left: -10px;
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .fifth-two .podiumChara {
+  .finales .topPFL .fifth-two .playerChara {
     left: 150px;
     top: inherit;
     bottom: 0;
   }
 }
-.finales .topPFL .seventh-one .podiumPlace,
-.finales .topPFL .seventh-two .podiumPlace,
-.finales .topPFL .fifth-one .podiumPlace,
-.finales .topPFL .fifth-two .podiumPlace {
+.finales .topPFL .seventh-one .playerRank,
+.finales .topPFL .seventh-two .playerRank,
+.finales .topPFL .fifth-one .playerRank,
+.finales .topPFL .fifth-two .playerRank {
   font-size: 55px;
   text-transform: uppercase;
   position: absolute;
@@ -277,7 +268,7 @@
   -webkit-text-stroke: 2px #fff;
   color: inherit;
 }
-.finales .topPFL .copper .podiumPlace {
+.finales .topPFL .copper .playerRank {
   font-size: 55px;
   text-transform: uppercase;
   position: absolute;
@@ -287,7 +278,7 @@
   -webkit-text-stroke: 2px #fff;
   color: #b36700;
 }
-.finales .topPFL .bronze .podiumPlace {
+.finales .topPFL .bronze .playerRank {
   font-size: 55px;
   text-transform: uppercase;
   position: absolute;
@@ -297,7 +288,7 @@
   -webkit-text-stroke: 2px #fff;
   color: #C49C48;
 }
-.finales .topPFL .silver .podiumPlace {
+.finales .topPFL .silver .playerRank {
   font-size: 55px;
   text-transform: uppercase;
   position: absolute;
@@ -307,7 +298,7 @@
   -webkit-text-stroke: 2px #fff;
   color: #C0C0C0;
 }
-.finales .topPFL .gold .podiumPlace {
+.finales .topPFL .gold .playerRank {
   font-size: 55px;
   text-transform: uppercase;
   position: absolute;
@@ -325,7 +316,7 @@
   background: #efecdb;
   box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
 }
-.finales .topPFL .copper .podiumWinner {
+.finales .topPFL .copper .playerName {
   font-size: 60px;
   right: inherit;
   left: -10px;
@@ -333,7 +324,7 @@
   bottom: 10px;
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .copper .podiumChara {
+  .finales .topPFL .copper .playerChara {
     width: inherit;
     max-width: 370px;
     left: 75px;
@@ -348,12 +339,12 @@
   background: #efecdb;
   box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
 }
-.finales .topPFL .bronze .podiumWinner {
+.finales .topPFL .bronze .playerName {
   right: inherit;
   left: -22px;
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .bronze .podiumChara {
+  .finales .topPFL .bronze .playerChara {
     width: initial;
     max-width: 450px;
     top: 170px;
@@ -369,7 +360,7 @@
   box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .silver .podiumChara {
+  .finales .topPFL .silver .playerChara {
     top: inherit;
     bottom: -80px;
     left: -190px;
@@ -382,7 +373,7 @@
     margin: 0;
   }
   .finales .topPFL.champ .img-wrapper {
-    width: 70%;
+    width: 100%;
   }
 }
 .finales .topPFL.champ .playerPhoto {
@@ -393,15 +384,15 @@
   background: #efecdb;
   box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
 }
-.finales .topPFL.champ .podiumWinner {
-  right: 70px;
+.finales .topPFL.champ .playerName {
+  right: 0;
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL.champ .podiumChara {
-    left: -150px;
+  .finales .topPFL.champ .playerChara {
+    left: -170px;
     top: inherit;
-    bottom: -90px;
-    max-width: 450px;
+    bottom: -120px;
+    max-width: 375px;
     width: inherit;
   }
 }
@@ -410,17 +401,4 @@
     display: flex;
     justify-content: center;
   }
-  .finales .tieplace .fifthPlace {
-    position: absolute;
-    right: 0;
-    top: 80px;
-  }
-}
-
-.p-relative {
-  position: relative;
-}
-
-.p-absolute {
-  position: absolute;
 }/*# sourceMappingURL=style.css.map */
