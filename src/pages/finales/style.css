@@ -40,6 +40,15 @@
   margin: 0 auto;
   width: initial;
 }
+.finales .evo {
+  width: 100%;
+  max-width: 150px;
+}
+@media screen and (min-width: 992px) {
+  .finales .evo {
+    max-width: 200px;
+  }
+}
 .finales .img-wrapper {
   position: relative;
   display: flex;
