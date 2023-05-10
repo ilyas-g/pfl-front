@@ -65,6 +65,7 @@
   .finales .lcq {
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
 }
 .finales .lcq .playerPhoto {
