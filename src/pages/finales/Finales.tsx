@@ -29,6 +29,7 @@ import {useTranslation} from 'react-i18next'
 import '../../i18n'
 import { useQuery } from "@apollo/client";
 import {STANDING_QUERY} from "../../queries/queries"
+import PlayerProfile from '../../components/playerProfile/playerProfile';
 export const Finales = () => {
   const { data, loading, error } = useQuery(STANDING_QUERY);
   const [ranking, setRanking] = useState<boolean>(false)
@@ -40,7 +41,7 @@ export const Finales = () => {
         <h1 className='text-center'>Phases finales</h1>
 
         <div className='lcq'>
-          <div>
+          <div className='lcqStanding'>
             <Card cardSkin="secondGame width360" title={t('standingLCQ')}>
               <ul className="cards__front__classement">
                 {data.league.standings.nodes.map((participant, index) => {
@@ -52,7 +53,7 @@ export const Finales = () => {
             <section className='secondSection'>
               <div className='mb-30 '>
                 <div>
-                  <AnimatedText text="Une dernière chance de se qualifier pour les finales " />
+                  <AnimatedText text={t('lastChanceToQualify')} />
                 </div>
               </div>
             </section>
@@ -60,7 +61,7 @@ export const Finales = () => {
 
           <div>
             <div className='p-relative'>
-              <h2 className='p-absolution'>Gagnant des Last Chance Qualifier</h2>
+              <h2 className='p-absolution'>{t('lastChanceWinner')}</h2>
             </div>
             <div className='img-wrapper'>
               <img src={chaos} className="lcqChara" alt="Daseinologist" />
@@ -71,8 +72,13 @@ export const Finales = () => {
         </div>
 
         <div className='top'>
-          <h2 className='text-center'>Résultat des finales</h2>
+          <h2 className='text-center'>{t('finalsResults')}</h2>
 
+        <div>
+          <div className='topPFL rank'>
+            <p className='rank techo'>{t('seventh')}</p>
+            <p className='rank techo'>{t('fifth')}</p>
+          </div>
           <div className='topPFL'>
             <div className='tieplace'>
               <div className='img-wrapper ror'>
@@ -99,6 +105,7 @@ export const Finales = () => {
               </div>
             </div>
           </div>
+        </div>
 
 
 
@@ -107,6 +114,7 @@ export const Finales = () => {
           <div className='topPFL'>
             <div className='tieplace'>
               <div className='img-wrapper patachu'>
+              <p className='podiumPlace third'>{t('third')}</p>
                 <img src={sin} className="podiumChara" alt="Sin Guilty Gear Strive" />
                 <img src={patachu} className="podiumPhoto" alt="Patachu" />
                 <p className='podiumWinner'>Patachu</p>
@@ -114,6 +122,7 @@ export const Finales = () => {
             </div>
             <div className='tieplace'>
               <div className='img-wrapper gagayoux'>
+              <p className='podiumPlace second'>{t('second')}</p>
                 <img src={chipp} className="podiumChara" alt="Chipp Guilty Gear Strive" />
                 <img src={gagayoux} className="podiumPhoto" alt="Gagayoux" />
                 <p className='podiumWinner'>Gagayoux</p>
@@ -121,6 +130,7 @@ export const Finales = () => {
             </div>
             <div className='tieplace'>
               <div className='img-wrapper dase'>
+              <p className='podiumPlace fourth'>{t('fourth')}</p>
                 <img src={chaos} className="podiumChara" alt="Happy Chaos Guilty Gear Strive" />
                 <img src={daseinologist} className="podiumPhoto" alt="Daseinologist" />
                 <p className='podiumWinner'>Daseinologist</p>
@@ -128,8 +138,12 @@ export const Finales = () => {
             </div>
           </div>
 
-          <div className='topPFL champ'>
 
+
+
+
+
+          <div className='topPFL champ'>
               <div className='img-wrapper skyll'>
                 <img src={sol} className="podiumChara" alt="Sol Guilty Gear Strive" />
                 <img src={skyll} className="podiumPhoto" alt="Skyll" />
@@ -139,8 +153,8 @@ export const Finales = () => {
             <section className='secondSection'>
               <div className='mb-30 '>
                 <div>
-                  <AnimatedText text="Félicitations à Skyll qui gagne cette seconde édition de la Parisienne Fighting Ligue !" />
-                  <AnimatedText text="Il remporte également un voyage pour l'EVO 2023 !" />
+                  <AnimatedText text={t('finalsCongrats')} />
+                  <AnimatedText text={t('finalsWinnerEVO')} />
                 </div>
               </div>
             </section>

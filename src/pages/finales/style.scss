@@ -1,12 +1,58 @@
+
+
 .finales {
-    padding: 130px;
+    padding: 130px 0 0;
+
+    @media screen and (min-width: 992px) {
+      padding: 130px 20px 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 130px 25px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 130px;
+    }
     h1, h2 {
         text-transform: uppercase;
     }
 
+    h2 {
+      text-align: center;
+    }
+
+    .cards__single {
+      margin: auto;
+    }
+
     .lcq {
-        display: flex;
-        justify-content: space-around;
+        @media screen and (min-width: 992px) {
+          display: flex;
+          justify-content: space-around;
+        }
+        .lcqStanding {
+        @media screen and (min-width: 992px) {
+
+          width: 50%;
+        }
+          .cards__single {
+            margin: auto;
+
+            @media screen and (min-width: 992px) {
+              margin: inherit;
+            }
+
+          @media screen and (min-width: 1024px) {
+              margin: auto;
+            }
+          }
+        }
+
+        .secondSection {
+          margin: 0 auto;
+          width: initial;
+        }
     }
     .lcqPhoto {
         width: 100%;
@@ -23,21 +69,35 @@
         text-transform: uppercase;
         position: absolute;
         top: 5px;
-        right: -20px;
+        right: 0;
+        @media screen and (min-width: 768px) {
+          right: 170px;
+        }
+        @media screen and (min-width: 992px) {
+          right: -20px;
+        }
+        @media screen and (min-width: 1024px) {
+          right: 0px;
+        }
+        @media screen and (min-width: 1200px) {
+          right: 30px;
+        }
         margin: 0;
         color: #fff;
         text-shadow: 2px 2px 7px black;
     }
 
     .lcqChara {
+      display: none;
+      @media screen and (min-width: 992px) {
+        display: block;
         filter: drop-shadow(2px 2px 5px #000);
-        @media screen and (min-width: 992px) {
-            width: 100%;
-            max-width: 250px;
-            position: absolute;
-            left: -150px;
-            top: 65px;
-        }
+        width: initial;
+        max-width: 430px;
+        left: -155px;
+        position: absolute;
+        top: 65px;
+      }
     }
 
     .img-wrapper {
@@ -59,197 +119,277 @@
       transform: translateZ(-.2px) scale(1.1) translateX(0%) translateY(-10vh);
     }
 
-    .top {
-        h2 {
-            font-size: 3vw;
-        }
+    @media screen and (min-width: 992px) {
+      .top h2 { font-size: 3vw; }
     }
+
+
+
     .topPFL {
+      @media screen and (min-width: 768px) {
         display: flex;
         justify-content: space-between;
-        position: relative;
-        margin-bottom: 250px;
+      }
+      position: relative;
+      margin-bottom: 125px;
 
+      @media screen and (min-width: 992px) {
+        margin-bottom: 100px;
+      }
+
+      &.rank {
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+      .techo {
+        font-size: 55px;
+        text-transform: uppercase;
+        text-align: center;
+        // position: absolute;
+        // top: 0px;
+        margin: 0;
+        text-shadow: 2px 2px 7px rgb(0, 0, 0);
+        -webkit-text-stroke: 2px #fff;
+
+      }
+
+      .podiumPhoto {
+        width: 100%;
+        max-width: 270px;
+        display: block;
+        padding: 1vh;
+        background: #efecdb;
+        box-shadow: 0 10px 50px #5f2f1182;
+      }
+
+      .podiumWinner {
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        position: absolute;
+        top: 5px;
+        font-size: 60px;
+        right: 0;
+        @media screen and (min-width: 992px) {
+          font-size: 70px;
+          right: -40px;
+        }
+        margin: 0;
+        color: #fff;
+        text-shadow: 2px 2px 7px black;
+      }
+
+      .podiumChara {
+        display: none;
+        @media screen and (min-width: 1200px) {
+          display: block;
+          filter: drop-shadow(2px 2px 5px #000);
+          width: 100%;
+          max-width: 250px;
+          position: absolute;
+          left: -150px;
+          top: 65px;
+        }
+      }
+
+      .img-wrapper {
+        position: relative;
+          &.ror {
+              // margin-top: 30px;
+              .podiumChara {
+                  @media screen and (min-width: 992px) {
+                      left: -100px;
+                      top: inherit;
+                      bottom: -20px ;
+                  }
+              }
+          }
+
+          &.arefu {
+              margin-top: 30px;
+              margin-left: 15px;
+              .podiumWinner {top: inherit; bottom: -10px; left: -13px; right: initial;}
+              @media screen and (min-width: 992px) {
+                  .podiumChara {left: inherit; right: -140px; top: 110px;}
+              }
+          }
+
+          &.neos {
+            @media screen and (min-width: 768px) {
+              margin-left: 70px;
+            }
+
+            @media screen and (min-width: 992px) {
+              margin-right: 70px;
+            }
+
+            @media screen and (min-width: 992px) {
+              margin-right: 20px;
+            }
+
+            margin-top: 115px;
+
+              @media screen and (min-width: 992px) {
+                  .podiumChara {
+                      width: inherit;
+                      max-width: 350px;
+                      left: 0;
+                      top: inherit;
+                      bottom: -80px;
+                  }
+              }
+          }
+
+          &.crillou {
+              .podiumWinner {
+                  right: inherit;
+                      left: -10px;
+              }
+
+              @media screen and (min-width: 992px) {
+                  .podiumChara {
+                      left: 150px;
+                      top: inherit;
+                      bottom: 0;
+                  }
+              }
+          }
+
+          &.dase {
+              .podiumPlace {
+                font-size: 55px;
+                text-transform: uppercase;
+                position: absolute;
+                top: 21px;
+                margin: 0;
+                text-shadow: 2px 2px 7px rgb(0, 0, 0);
+                -webkit-text-stroke: 2px #fff;
+                color: #b36700;
+              }
+              .podiumPhoto {
+                  max-width: 285px;
+              }
+
+              .podiumWinner {
+                  font-size: 60px;
+                  right: inherit;
+                  left: -10px;
+                  top: inherit;
+                  bottom: 10px;
+              }
+
+              @media screen and (min-width: 992px) {
+                  .podiumChara {
+                      width: inherit;
+                      max-width: 370px;
+                      left: 130px;
+                  }
+              }
+          }
+
+          &.patachu {
+              .podiumPlace {
+                font-size: 55px;
+                text-transform: uppercase;
+                position: absolute;
+                top: 0px;
+                margin: 0;
+                text-shadow: 2px 2px 7px rgb(0, 0, 0);
+                -webkit-text-stroke: 2px #fff;
+                color: #C49C48;
+
+                &.fourth {color: #b36700;}
+                &.second {color: #C0C0C0;}
+                &.first {color: #FFD700}
+              }
+              .podiumPhoto {
+                  max-width: 310px;
+              }
+
+              .podiumWinner {
+                  width: initial;
+                  max-width: initial;
+                  right: inherit;
+                  left: -22px;
+              }
+
+              @media screen and (min-width: 992px) {
+                  .podiumChara {
+                      width: initial;
+                      max-width: 450px;
+                      top: 170px;
+                      left: 67px;
+                  }
+              }
+          }
+
+          &.gagayoux {
+              .podiumPlace {
+                font-size: 55px;
+                text-transform: uppercase;
+                position: absolute;
+                top: -23px;
+                margin: 0;
+                text-shadow: 2px 2px 7px rgb(0, 0, 0);
+                -webkit-text-stroke: 2px #fff;
+                color: #C0C0C0;
+
+                &.fourth {color: #b36700;}
+                &.first {color: #FFD700}
+              }
+              .podiumPhoto {
+                  max-width: 335px;
+              }
+
+              @media screen and (min-width: 992px) {
+                  .podiumChara {
+                      top: inherit;
+                      bottom: -80px;
+                      left: -190px;
+                      width: inherit;
+                      max-width: 360px;
+                  }
+              }
+          }
+      }
+
+      &.champ {
+        @media screen and (min-width: 992px) {
+          margin: 0;
+          .img-wrapper {
+              width: 70%;
+          }
+        }
         .podiumPhoto {
-            width: 100%;
-            max-width: 270px;
-            display: block;
-            padding: 1vh;
-            background: #efecdb;
-            box-shadow: 0 10px 50px #5f2f1182;
+          max-width: 350px;
         }
 
         .podiumWinner {
-            writing-mode: vertical-rl;
-            font-size: 70px;
-            text-transform: uppercase;
-            position: absolute;
-            top: 5px;
-            right: -40px;
-            margin: 0;
-            color: #fff;
-            text-shadow: 2px 2px 7px black;
+          right: 70px;
         }
 
         .podiumChara {
-            filter: drop-shadow(2px 2px 5px #000);
-            @media screen and (min-width: 992px) {
-                width: 100%;
-                max-width: 250px;
-                position: absolute;
-                left: -150px;
-                top: 65px;
-            }
+          @media screen and (min-width: 992px) {
+            left: -150px;
+            top: inherit;
+            bottom: -90px ;
+            max-width: 450px;
+            width: inherit;
+          }
         }
-
-        .img-wrapper {
-            &.ror {
-                // margin-top: 30px;
-                .podiumChara {
-                    @media screen and (min-width: 992px) {
-                        left: -100px;
-                        top: inherit;
-                        bottom: -20px ;
-                    }
-                }
-            }
-
-            &.arefu {
-                margin-top: 30px;
-                margin-left: 15px;
-                .podiumWinner {top: inherit; bottom: -10px; left: -13px; right: initial;}
-                @media screen and (min-width: 992px) {
-                    .podiumChara {left: inherit; right: -140px; top: 110px;}
-                }
-            }
-
-            &.neos {
-                margin-right: 70px;
-                margin-top: 115px;
-
-                @media screen and (min-width: 992px) {
-                    .podiumChara {
-                        width: inherit;
-                        max-width: 350px;
-                        left: 0;
-                        top: inherit;
-                        bottom: -80px;
-                    }
-                }
-            }
-
-            &.crillou {
-                .podiumWinner {
-                    right: inherit;
-                        left: -10px;
-                }
-
-                @media screen and (min-width: 992px) {
-                    .podiumChara {
-                        left: 150px;
-                        top: inherit;
-                        bottom: 0;
-                    }
-                }
-            }
-
-            &.dase {
-                .podiumPhoto {
-                    max-width: 285px;
-                }
-
-                .podiumWinner {
-                    font-size: 60px;
-                    right: inherit;
-                    left: -10px;
-                    top: inherit;
-                    bottom: 10px;
-                }
-
-                @media screen and (min-width: 992px) {
-                    .podiumChara {
-                        width: inherit;
-                        max-width: 370px;
-                        left: 130px;
-                    }
-                }
-            }
-
-            &.patachu {
-                .podiumPhoto {
-                    max-width: 310px;
-                }
-
-                .podiumWinner {
-                    width: initial;
-                    max-width: initial;
-                    right: inherit;
-                    left: -22px;
-                }
-
-                @media screen and (min-width: 992px) {
-                    .podiumChara {
-                        width: initial;
-                        max-width: 450px;
-                        top: 170px;
-                        left: 67px;
-                    }
-                }
-            }
-
-            &.gagayoux {
-                .podiumPhoto {
-                    max-width: 335px;
-                }
-
-                @media screen and (min-width: 992px) {
-                    .podiumChara {
-                        top: inherit;
-                        bottom: -80px;
-                        left: -190px;
-                        width: inherit;
-                        max-width: 360px;
-                    }
-                }
-            }
-        }
-
-        &.champ {
-            background-color: cadetblue;
-            @media screen and (min-width: 992px) {
-                .img-wrapper {
-                    width: 70%;
-                }
-            }
-            .podiumPhoto {
-                max-width: 350px;
-            }
-
-            .podiumWinner {
-                right: 70px;
-            }
-
-            .podiumChara {
-                @media screen and (min-width: 992px) {
-                    left: -150px;
-                    top: inherit;
-                    bottom: -90px ;
-                    max-width: 450px;
-                    width: inherit;
-                }
-            }
-        }
+      }
     }
 
+    @media screen and (min-width: 768px) {
     .tieplace {
-        display: flex;
-
-        .fifthPlace {
-            position: absolute;
-            right: 0;
-            top: 80px;
-        }
+      display: flex;
+      justify-content: center;
+      .fifthPlace {
+        position: absolute;
+        right: 0;
+        top: 80px;
+      }
     }
+  }
 }
 
 .p-relative {
@@ -259,3 +399,10 @@
 .p-absolute {
     position: absolute;
 }
+
+
+
+
+/* ------------------------------
+------------------------------
+------------------------------ */
