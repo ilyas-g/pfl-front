@@ -66,27 +66,25 @@ const STANDING_QUERY = gql`
 `;
 
 const LCQ_QUERY = gql`
-  query LeagueStandings {
-    league(slug: "final-lcq-pfl-road-to-evo-2023-espot-paris") {
-      standings (query: {
-        page: 1,
-        perPage: 8
-      }) {
-        pageInfo {
-          totalPages
-          total
-        }
-        nodes {
+query EventStandings {
+  event(slug: "tournament/final-lcq-pfl-road-to-evo-2023-espot-paris/event/top-8-pfl") {
+    id
+    name
+    slug
+    standings(query: {
+      perPage: 8,
+      page: 1
+    }){
+      nodes {
+        placement
+        entrant {
           id
-          placement
-          entrant {
-            id
-            name
-          }
+          name
         }
       }
     }
   }
+}
 `;
 
 export { CARD_QUERY, STANDING_QUERY, LCQ_QUERY };

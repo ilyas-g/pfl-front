@@ -28,23 +28,25 @@ import AnimatedText from '../../components/animatedText/AnimatedText';
 import {useTranslation} from 'react-i18next'
 import '../../i18n'
 import { useQuery } from "@apollo/client";
-import {STANDING_QUERY} from "../../queries/queries"
+import {LCQ_QUERY} from "../../queries/queries"
 import PlayerProfile from '../../components/playerProfile/playerProfile';
+
 export const Finales = () => {
-  const { data, loading, error } = useQuery(STANDING_QUERY);
-  const [ranking, setRanking] = useState<boolean>(false)
+  const { data, loading, error } = useQuery(LCQ_QUERY);
   const { t, i18n } = useTranslation();
 
+  console.log(data);
+  
   return (
     <>
       <div className='finales'>
-        <h1 className='text-center'>Phases finales</h1>
+        <h1 className='text-center'>{t('titleFinalsPage')}</h1>
 
         <div className='lcq'>
           <div className='lcqStanding'>
             <Card cardSkin="secondGame width360" title={t('standingLCQ')}>
               <ul className="cards__front__classement">
-                {data.league.standings.nodes.map((participant, index) => {
+                {data.event.standings.nodes.map((participant, index) => {
                   return <li key={index}>{participant.entrant.name}</li>
                 })}
               </ul>

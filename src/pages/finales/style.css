@@ -277,7 +277,8 @@
   .finales .topPFL .img-wrapper.dase .podiumChara {
     width: inherit;
     max-width: 370px;
-    left: 130px;
+    left: 75px;
+    top: 140px;
   }
 }
 .finales .topPFL .img-wrapper.patachu .podiumPlace {
