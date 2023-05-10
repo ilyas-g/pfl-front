@@ -44,13 +44,13 @@ export const Finales = () => {
 
         <div className='lcq'>
           <div className='lcqStanding'>
-            <Card cardSkin="secondGame width360" title={t('standingLCQ')}>
+            {/* <Card cardSkin="secondGame width360" title={t('standingLCQ')}>
               <ul className="cards__front__classement">
                 {data.event.standings.nodes.map((participant, index) => {
                   return <li key={index}>{participant.entrant.name}</li>
                 })}
               </ul>
-            </Card>
+            </Card> */}
 
             <section className='secondSection'>
               <div className='mb-30 '>
@@ -67,91 +67,96 @@ export const Finales = () => {
             </div>
             <div className='img-wrapper'>
               <img src={chaos} className="lcqChara" alt="Daseinologist" />
-              <img src={daseinologist} className="lcqPhoto" alt="Daseinologist" />
+              <img src={daseinologist} className="playerPhoto" alt="Daseinologist" />
               <p className='lcqWinner'>Daseinologist</p>
             </div>
+
+            {/* <PlayerProfile
+              profileSkin='fifth-one'
+              place={t('fourth')}
+              firstImg={chaos}
+              secondImg={daseinologist}
+              name="Daseinologist"
+              /> */}
           </div>
         </div>
 
         <div className='top'>
+
           <h2 className='text-center'>{t('finalsResults')}</h2>
-
-        <div>
-          <div className='topPFL rank'>
-            <p className='rank techo'>{t('seventh')}</p>
-            <p className='rank techo'>{t('fifth')}</p>
-          </div>
           <div className='topPFL'>
             <div className='tieplace'>
-              <div className='img-wrapper ror'>
-                <img src={ky} className="podiumChara" alt="Ky Guilty Gear Strive" />
-                <img src={rayane} className="podiumPhoto" alt="Rayane ROR" />
-                <p className='podiumWinner'>ROR2000</p>
-              </div>
-              <div className='img-wrapper arefu'>
-                <img src={giovanna} className="podiumChara" alt="Giovanna Guilty Gear Strive" />
-                <img src={arefu} className="podiumPhoto" alt="Arefu" />
-                <p className='podiumWinner'>Arefu</p>
-              </div>
+              <PlayerProfile 
+              profileSkin='seventh-one'
+              place={t('seventh')}
+              firstImg={ky}
+              secondImg={rayane}
+              name="ROR2000"
+              />
+              <PlayerProfile 
+              profileSkin='seventh-two'
+              place={t('seventh')}
+              firstImg={giovanna}
+              secondImg={arefu}
+              name="Arefu"
+              />
             </div>
             <div className='tieplace'>
-              <div className='img-wrapper neos'>
-                <img src={leo} className="podiumChara" alt="Leo Guilty Gear Strive" />
-                <img src={neos} className="podiumPhoto" alt="Neos" />
-                <p className='podiumWinner'>Neos</p>
-              </div>
-              <div className='img-wrapper crillou'>
-                <img src={bridget} className="podiumChara" alt="Bridget" />
-                <img src={crillou} className="podiumPhoto" alt="Crillou" />
-                <p className='podiumWinner'>Crillou</p>
-              </div>
+              <PlayerProfile 
+              profileSkin='fifth-one'
+              place={t('fifth')}
+              firstImg={leo}
+              secondImg={neos}
+              name="Neos"
+              />
+              <PlayerProfile 
+              profileSkin='fifth-two'
+              place={t('fifth')}
+              firstImg={bridget}
+              secondImg={crillou}
+              name="Crillou"
+              />
             </div>
           </div>
-        </div>
-
-
-
-
 
           <div className='topPFL'>
             <div className='tieplace'>
-              <div className='img-wrapper patachu'>
-              <p className='podiumPlace third'>{t('third')}</p>
-                <img src={sin} className="podiumChara" alt="Sin Guilty Gear Strive" />
-                <img src={patachu} className="podiumPhoto" alt="Patachu" />
-                <p className='podiumWinner'>Patachu</p>
-              </div>
+              <PlayerProfile 
+              profileSkin='bronze'
+              place={t('third')}
+              firstImg={sin}
+              secondImg={patachu}
+              name="Patachu"
+              />
             </div>
             <div className='tieplace'>
-              <div className='img-wrapper gagayoux'>
-              <p className='podiumPlace second'>{t('second')}</p>
-                <img src={chipp} className="podiumChara" alt="Chipp Guilty Gear Strive" />
-                <img src={gagayoux} className="podiumPhoto" alt="Gagayoux" />
-                <p className='podiumWinner'>Gagayoux</p>
-              </div>
+              <PlayerProfile 
+              profileSkin='silver'
+              place={t('second')}
+              firstImg={chipp}
+              secondImg={gagayoux}
+              name="Gagayoux"
+              />
             </div>
             <div className='tieplace'>
-              <div className='img-wrapper dase'>
-              <p className='podiumPlace fourth'>{t('fourth')}</p>
-                <img src={chaos} className="podiumChara" alt="Happy Chaos Guilty Gear Strive" />
-                <img src={daseinologist} className="podiumPhoto" alt="Daseinologist" />
-                <p className='podiumWinner'>Daseinologist</p>
-              </div>
+              <PlayerProfile
+              profileSkin='copper'
+              place={t('fourth')}
+              firstImg={chaos}
+              secondImg={daseinologist}
+              name="Daseinologist"
+              />
             </div>
           </div>
-
-
-
-
-
 
           <div className='topPFL champ'>
-              <div className='img-wrapper skyll'>
-                <img src={sol} className="podiumChara" alt="Sol Guilty Gear Strive" />
-                <img src={skyll} className="podiumPhoto" alt="Skyll" />
-                <p className='podiumWinner'>Skyll</p>
-              </div>
-
+              <PlayerProfile
+              profileSkin='gold'
+              place={t('first')}
+              firstImg={sol}
+              secondImg={skyll}
+              name="Skyll"
+              />
             <section className='secondSection'>
               <div className='mb-30 '>
                 <div>

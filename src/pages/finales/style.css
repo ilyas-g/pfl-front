@@ -16,11 +16,24 @@
     padding: 130px;
   }
 }
-.finales h1, .finales h2 {
+.finales h1,
+.finales h2 {
   text-transform: uppercase;
 }
 .finales h2 {
   text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .finales .top h2 {
+    font-size: 3vw;
+  }
+}
+.finales .secondSection {
+  margin: 0 auto;
+  width: initial;
+}
+.finales .img-wrapper {
+  position: relative;
 }
 .finales .cards__single {
   margin: auto;
@@ -30,6 +43,14 @@
     display: flex;
     justify-content: space-around;
   }
+}
+.finales .lcq .playerPhoto {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
 }
 @media screen and (min-width: 992px) {
   .finales .lcq .lcqStanding {
@@ -49,28 +70,36 @@
     margin: auto;
   }
 }
-.finales .lcq .secondSection {
-  margin: 0 auto;
-  width: initial;
+.finales .lcq.fifth-one {
+  margin-top: 115px;
 }
-.finales .lcqPhoto {
-  width: 100%;
-  max-width: 350px;
-  display: blocks;
-  padding: 1vh;
-  background: #efecdb;
-  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+@media screen and (min-width: 768px) {
+  .finales .lcq.fifth-one {
+    margin-left: 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .lcq.fifth-one {
+    margin-right: 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .lcq.fifth-one {
+    margin-right: 20px;
+  }
 }
 .finales .lcqWinner {
   writing-mode: vertical-rl;
-  font-size: 70px;
   text-transform: uppercase;
-  position: absolute;
-  top: 5px;
-  right: 0;
+  text-shadow: 2px 2px 7px black;
   margin: 0;
   color: #fff;
-  text-shadow: 2px 2px 7px black;
+  font-size: 70px;
+  position: absolute;
+  top: 5px;
+  bottom: inherit;
+  left: inherit;
+  right: 0;
 }
 @media screen and (min-width: 768px) {
   .finales .lcqWinner {
@@ -117,11 +146,6 @@
 .finales .slower {
   transform: translateZ(-0.2px) scale(1.1) translateX(0%) translateY(-10vh);
 }
-@media screen and (min-width: 992px) {
-  .finales .top h2 {
-    font-size: 3vw;
-  }
-}
 .finales .topPFL {
   position: relative;
   margin-bottom: 125px;
@@ -137,19 +161,7 @@
     margin-bottom: 100px;
   }
 }
-.finales .topPFL.rank {
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-.finales .topPFL .techo {
-  font-size: 55px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-  text-shadow: 2px 2px 7px rgb(0, 0, 0);
-  -webkit-text-stroke: 2px #fff;
-}
-.finales .topPFL .podiumPhoto {
+.finales .topPFL .playerPhoto {
   width: 100%;
   max-width: 270px;
   display: block;
@@ -160,13 +172,15 @@
 .finales .topPFL .podiumWinner {
   writing-mode: vertical-rl;
   text-transform: uppercase;
-  position: absolute;
-  top: 5px;
-  font-size: 60px;
-  right: 0;
+  text-shadow: 2px 2px 7px black;
   margin: 0;
   color: #fff;
-  text-shadow: 2px 2px 7px black;
+  font-size: 60px;
+  position: absolute;
+  top: 5px;
+  bottom: inherit;
+  left: inherit;
+  right: 0;
 }
 @media screen and (min-width: 992px) {
   .finales .topPFL .podiumWinner {
@@ -188,53 +202,50 @@
     top: 65px;
   }
 }
-.finales .topPFL .img-wrapper {
-  position: relative;
-}
 @media screen and (min-width: 992px) {
-  .finales .topPFL .img-wrapper.ror .podiumChara {
+  .finales .topPFL .seventh-one .podiumChara {
     left: -100px;
     top: inherit;
     bottom: -20px;
   }
 }
-.finales .topPFL .img-wrapper.arefu {
+.finales .topPFL .seventh-two {
   margin-top: 30px;
   margin-left: 15px;
 }
-.finales .topPFL .img-wrapper.arefu .podiumWinner {
+.finales .topPFL .seventh-two .podiumWinner {
   top: inherit;
-  bottom: -10px;
+  bottom: 10px;
   left: -13px;
   right: initial;
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .img-wrapper.arefu .podiumChara {
+  .finales .topPFL .seventh-two .podiumChara {
     left: inherit;
     right: -140px;
     top: 110px;
   }
 }
-.finales .topPFL .img-wrapper.neos {
+.finales .topPFL .fifth-one {
   margin-top: 115px;
 }
 @media screen and (min-width: 768px) {
-  .finales .topPFL .img-wrapper.neos {
+  .finales .topPFL .fifth-one {
     margin-left: 70px;
   }
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .img-wrapper.neos {
+  .finales .topPFL .fifth-one {
     margin-right: 70px;
   }
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .img-wrapper.neos {
+  .finales .topPFL .fifth-one {
     margin-right: 20px;
   }
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .img-wrapper.neos .podiumChara {
+  .finales .topPFL .fifth-one .podiumChara {
     width: inherit;
     max-width: 350px;
     left: 0;
@@ -242,18 +253,31 @@
     bottom: -80px;
   }
 }
-.finales .topPFL .img-wrapper.crillou .podiumWinner {
+.finales .topPFL .fifth-two .podiumWinner {
   right: inherit;
   left: -10px;
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .img-wrapper.crillou .podiumChara {
+  .finales .topPFL .fifth-two .podiumChara {
     left: 150px;
     top: inherit;
     bottom: 0;
   }
 }
-.finales .topPFL .img-wrapper.dase .podiumPlace {
+.finales .topPFL .seventh-one .podiumPlace,
+.finales .topPFL .seventh-two .podiumPlace,
+.finales .topPFL .fifth-one .podiumPlace,
+.finales .topPFL .fifth-two .podiumPlace {
+  font-size: 55px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px #fff;
+  color: inherit;
+}
+.finales .topPFL .copper .podiumPlace {
   font-size: 55px;
   text-transform: uppercase;
   position: absolute;
@@ -263,61 +287,17 @@
   -webkit-text-stroke: 2px #fff;
   color: #b36700;
 }
-.finales .topPFL .img-wrapper.dase .podiumPhoto {
-  max-width: 285px;
-}
-.finales .topPFL .img-wrapper.dase .podiumWinner {
-  font-size: 60px;
-  right: inherit;
-  left: -10px;
-  top: inherit;
-  bottom: 10px;
-}
-@media screen and (min-width: 992px) {
-  .finales .topPFL .img-wrapper.dase .podiumChara {
-    width: inherit;
-    max-width: 370px;
-    left: 75px;
-    top: 140px;
-  }
-}
-.finales .topPFL .img-wrapper.patachu .podiumPlace {
+.finales .topPFL .bronze .podiumPlace {
   font-size: 55px;
   text-transform: uppercase;
   position: absolute;
-  top: 0px;
+  top: 0;
   margin: 0;
   text-shadow: 2px 2px 7px rgb(0, 0, 0);
   -webkit-text-stroke: 2px #fff;
   color: #C49C48;
 }
-.finales .topPFL .img-wrapper.patachu .podiumPlace.fourth {
-  color: #b36700;
-}
-.finales .topPFL .img-wrapper.patachu .podiumPlace.second {
-  color: #C0C0C0;
-}
-.finales .topPFL .img-wrapper.patachu .podiumPlace.first {
-  color: #FFD700;
-}
-.finales .topPFL .img-wrapper.patachu .podiumPhoto {
-  max-width: 310px;
-}
-.finales .topPFL .img-wrapper.patachu .podiumWinner {
-  width: initial;
-  max-width: initial;
-  right: inherit;
-  left: -22px;
-}
-@media screen and (min-width: 992px) {
-  .finales .topPFL .img-wrapper.patachu .podiumChara {
-    width: initial;
-    max-width: 450px;
-    top: 170px;
-    left: 67px;
-  }
-}
-.finales .topPFL .img-wrapper.gagayoux .podiumPlace {
+.finales .topPFL .silver .podiumPlace {
   font-size: 55px;
   text-transform: uppercase;
   position: absolute;
@@ -327,17 +307,69 @@
   -webkit-text-stroke: 2px #fff;
   color: #C0C0C0;
 }
-.finales .topPFL .img-wrapper.gagayoux .podiumPlace.fourth {
-  color: #b36700;
-}
-.finales .topPFL .img-wrapper.gagayoux .podiumPlace.first {
+.finales .topPFL .gold .podiumPlace {
+  font-size: 55px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -23px;
+  margin: 0;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px #fff;
   color: #FFD700;
 }
-.finales .topPFL .img-wrapper.gagayoux .podiumPhoto {
-  max-width: 335px;
+.finales .topPFL .copper .playerPhoto {
+  width: 100%;
+  max-width: 285px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+.finales .topPFL .copper .podiumWinner {
+  font-size: 60px;
+  right: inherit;
+  left: -10px;
+  top: inherit;
+  bottom: 10px;
 }
 @media screen and (min-width: 992px) {
-  .finales .topPFL .img-wrapper.gagayoux .podiumChara {
+  .finales .topPFL .copper .podiumChara {
+    width: inherit;
+    max-width: 370px;
+    left: 75px;
+    top: 140px;
+  }
+}
+.finales .topPFL .bronze .playerPhoto {
+  width: 100%;
+  max-width: 310px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+.finales .topPFL .bronze .podiumWinner {
+  right: inherit;
+  left: -22px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .bronze .podiumChara {
+    width: initial;
+    max-width: 450px;
+    top: 170px;
+    left: 67px;
+  }
+}
+.finales .topPFL .silver .playerPhoto {
+  width: 100%;
+  max-width: 335px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .silver .podiumChara {
     top: inherit;
     bottom: -80px;
     left: -190px;
@@ -353,8 +385,13 @@
     width: 70%;
   }
 }
-.finales .topPFL.champ .podiumPhoto {
+.finales .topPFL.champ .playerPhoto {
+  width: 100%;
   max-width: 350px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
 }
 .finales .topPFL.champ .podiumWinner {
   right: 70px;
@@ -386,8 +423,4 @@
 
 .p-absolute {
   position: absolute;
-}
-
-/* ------------------------------
-------------------------------
------------------------------- *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
