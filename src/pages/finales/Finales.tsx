@@ -42,47 +42,57 @@ export const Finales = () => {
       <div className='finales'>
         <h1 className='text-center'>{t('titleFinalsPage')}</h1>
 
-        <div className='lcq'>
-          <div className='lcqStanding'>
-            <Card cardSkin="secondGame width360" title={t('standingLCQ')}>
-              <ul className="cards__front__classement">
-                {/* {data.event.standings.nodes.map((participant, index) => {
-                  return <li key={index}>{participant.entrant.name}</li>
-                })} */}
-                <li>Oplon | Skyll</li>
-                <li>Gagayoux</li>
-                <li>NSxC | PataChu</li>
-                <li>Platy | NH | Daseinologist</li>
-                <li>Neøs</li><li>Sommet | Crillou</li>
-                <li>Arefu</li>
-                <li>ROR2000</li>
-              </ul>
-            </Card>
-
+        <div className='top'>
+        <div className='topPFL champ'>
+          <PlayerProfile
+          profileSkin='gold'
+          place={t('first')}
+          firstImg={sol}
+          secondImg={skyll}
+          name="Skyll"
+          />
             <section className='secondSection'>
               <div className='mb-30 '>
                 <div>
-                  <AnimatedText text={t('lastChanceToQualify')} />
+                  <AnimatedText text={t('finalsCongrats')} />
+                  <AnimatedText text={t('finalsWinnerEVO')} />
+                  <img className='evo' src={evoLogo} />
                 </div>
               </div>
             </section>
           </div>
+          <h2 className='text-center'>{t('finalsResults')}</h2>
 
-          <div>
-            <div className='p-relative'>
-              <h2 className='p-absolution playerRank'>{t('lastChanceWinner')}</h2>
+          <div className='topPFL'>
+            <div className='tieplace'>
+              <PlayerProfile 
+              profileSkin='bronze'
+              place={t('third')}
+              firstImg={sin}
+              secondImg={patachu}
+              name="Patachu"
+              />
             </div>
-            <div className='img-wrapper lcqWinner'>
-              <img src={chaos} className="playerChara" alt="Daseinologist" />
-              <img src={daseinologist} className="playerPhoto" alt="Daseinologist" />
-              <p className='playerName'>Daseinologist</p>
+            <div className='tieplace'>
+              <PlayerProfile 
+              profileSkin='silver'
+              place={t('second')}
+              firstImg={chipp}
+              secondImg={gagayoux}
+              name="Gagayoux"
+              />
+            </div>
+            <div className='tieplace'>
+              <PlayerProfile
+              profileSkin='copper'
+              place={t('fourth')}
+              firstImg={chaos}
+              secondImg={daseinologist}
+              name="Daseinologist"
+              />
             </div>
           </div>
-        </div>
 
-        <div className='top'>
-
-          <h2 className='text-center'>{t('finalsResults')}</h2>
           <div className='topPFL'>
             <div className='tieplace'>
               <PlayerProfile 
@@ -117,56 +127,46 @@ export const Finales = () => {
               />
             </div>
           </div>
+        </div>
 
-          <div className='topPFL'>
-            <div className='tieplace'>
-              <PlayerProfile 
-              profileSkin='bronze'
-              place={t('third')}
-              firstImg={sin}
-              secondImg={patachu}
-              name="Patachu"
-              />
-            </div>
-            <div className='tieplace'>
-              <PlayerProfile 
-              profileSkin='silver'
-              place={t('second')}
-              firstImg={chipp}
-              secondImg={gagayoux}
-              name="Gagayoux"
-              />
-            </div>
-            <div className='tieplace'>
-              <PlayerProfile
-              profileSkin='copper'
-              place={t('fourth')}
-              firstImg={chaos}
-              secondImg={daseinologist}
-              name="Daseinologist"
-              />
-            </div>
-          </div>
+        <div className='lcq'>
+          <div className='lcqStanding'>
+            <Card cardSkin="secondGame width360" title={t('standingLCQ')}>
+              <ul className="cards__front__classement">
+                {/* {data.event.standings.nodes.map((participant, index) => {
+                  return <li key={index}>{participant.entrant.name}</li>
+                })} */}
 
-          <div className='topPFL champ'>
-              <PlayerProfile
-              profileSkin='gold'
-              place={t('first')}
-              firstImg={sol}
-              secondImg={skyll}
-              name="Skyll"
-              />
+                <li>Platy | NH | Daseinologist</li>
+                <li>gwak.fr | Achorawl</li>
+                <li>DoKuNu</li>
+                <li>NSxC | WhiteBl4ck</li>
+                <li>Heapski</li>
+                <li>SSD | Spicyy</li>
+                <li>Platy | Harmeko</li>
+                <li>Sommet | Themajin972</li>
+              </ul>
+            </Card>
+
             <section className='secondSection'>
               <div className='mb-30 '>
                 <div>
-                  <AnimatedText text={t('finalsCongrats')} />
-                  <AnimatedText text={t('finalsWinnerEVO')} />
-                  <img className='evo' src={evoLogo} />
+                  <AnimatedText text={t('lastChanceToQualify')} />
                 </div>
               </div>
             </section>
-            </div>
+          </div>
 
+          <div>
+            <div className='p-relative'>
+              <h2 className='p-absolution playerRank'>{t('lastChanceWinner')}</h2>
+            </div>
+            <div className='img-wrapper lcqWinner'>
+              <img src={chaos} className="playerChara" alt="Daseinologist" />
+              <img src={daseinologist} className="playerPhoto" alt="Daseinologist" />
+              <p className='playerName'>Daseinologist</p>
+            </div>
+          </div>
         </div>
       </div>
     {/*

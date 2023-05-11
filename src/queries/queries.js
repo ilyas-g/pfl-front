@@ -67,7 +67,7 @@ const STANDING_QUERY = gql`
 
 const LCQ_QUERY = gql`
 query EventStandings {
-  event(slug: "tournament/final-lcq-pfl-road-to-evo-2023-espot-paris/event/top-8-pfl") {
+  event(slug: "tournament/final-lcq-pfl-road-to-evo-2023-espot-paris/event/last-chance-qualifier-pfl") {
     id
     name
     slug
