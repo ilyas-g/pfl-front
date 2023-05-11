@@ -24,15 +24,15 @@ export default function HomeWinter2023() {
 
           </div>
           <div>
-            <img src={img7} alt="img7" />
-            <img src={img8} alt="img8" className='img-crop mmt50'/>
+            <img src={img7} alt="img7" className='photo'/>
+            <img src={img8} alt="img8" className='img-crop mmt50 photo'/>
           </div>
         </div>
 
         <div className='mb-30'>
           <div>
-            <img src={img15} alt="img15" />
-            <img src={img13} alt="img13" className='img-crop mmt50'/>
+            <img src={img15} alt="img15" className='photo'/>
+            <img src={img13} alt="img13" className='img-crop mmt50 photo'/>
           </div>
           <div>
             <AnimatedText text={t('top7')} />
@@ -45,8 +45,8 @@ export default function HomeWinter2023() {
             <AnimatedText text={t('winner')} />
           </div>
           <div>
-            <img src={img9} alt="img7" />
-            <img src={img6} alt="img10" className='img-crop mmt50'/>
+            <img src={img9} alt="img7" className='photo'/>
+            <img src={img6} alt="img10" className='img-crop mmt50 photo'/>
           </div>
         </div>
       </section>

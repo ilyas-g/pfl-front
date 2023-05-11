@@ -53,6 +53,11 @@
     position: relative;
   }
 }
+.homepageWinter2023 .secondSection .photo {
+  padding: 0.5vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
 
 /* -------------------------
         TOURNOIS 2023
