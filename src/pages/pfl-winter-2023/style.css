@@ -1,0 +1,529 @@
+.homepageWinter2023 .secondSection {
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 1;
+}
+.homepageWinter2023 .secondSection h1 {
+  font-size: 1.5em;
+}
+.homepageWinter2023 .secondSection img {
+  width: 100%;
+  max-width: 740px;
+}
+.homepageWinter2023 .secondSection p {
+  padding: 10px 15px;
+}
+.homepageWinter2023 .secondSection > div {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 992px) {
+  .homepageWinter2023 .secondSection > div {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .homepageWinter2023 .secondSection {
+    font-size: 3vw;
+    width: 85%;
+    padding-top: 125px;
+    margin: auto;
+  }
+  .homepageWinter2023 .secondSection .img-crop {
+    width: 420px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 0;
+       object-position: 50% 0;
+  }
+  .homepageWinter2023 .secondSection .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  .homepageWinter2023 .secondSection .d-flex p {
+    padding: 0 60px 0 0;
+  }
+  .homepageWinter2023 .secondSection .d-flex:nth-child(2n) p {
+    padding: 0 0 0 60px;
+  }
+  .homepageWinter2023 .secondSection .d-flex div {
+    position: relative;
+  }
+}
+.homepageWinter2023 .secondSection .photo {
+  padding: 0.5vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+
+/* -------------------------
+        TOURNOIS 2023
+------------------------- */
+.tournaments-list {
+  padding: 135px 0 65px;
+  z-index: 1;
+}
+.tournaments-list .tournament {
+  padding: 15px;
+}
+@media screen and (min-width: 768px) {
+  .tournaments-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tournaments-list .cards {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+  .tournaments-list .tournament {
+    flex: 50%;
+    max-width: 28%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .tournaments-list .tournament {
+    flex: 25%;
+    max-width: 22%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+}
+
+/* -------------------------
+        FINALES 2023
+------------------------- */
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.finales {
+  padding: 130px 0 0;
+}
+@media screen and (min-width: 992px) {
+  .finales {
+    padding: 130px 20px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .finales {
+    padding: 130px 25px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .finales {
+    padding: 130px;
+  }
+}
+.finales h1,
+.finales h2 {
+  text-transform: uppercase;
+}
+.finales h2 {
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .finales .top h2 {
+    font-size: 3vw;
+  }
+}
+.finales .secondSection {
+  margin: 0 auto;
+  width: initial;
+}
+.finales .evo {
+  width: 100%;
+  max-width: 150px;
+}
+@media screen and (min-width: 992px) {
+  .finales .evo {
+    max-width: 200px;
+  }
+}
+.finales .img-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: 50% 50%;
+  transform: translateZ(0.1px) scale(0.9) translateX(0px) translateY(-3vh);
+  transition: 1s;
+}
+.finales .slower {
+  transform: translateZ(-0.2px) scale(1.1) translateX(0%) translateY(-10vh);
+}
+@media screen and (min-width: 992px) {
+  .finales .lcq {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.finales .lcq .playerPhoto {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+@media screen and (min-width: 992px) {
+  .finales .lcq .lcqStanding {
+    width: 50%;
+  }
+}
+.finales .lcq .lcqStanding .cards__single {
+  margin: auto;
+}
+@media screen and (min-width: 992px) {
+  .finales .lcq .lcqStanding .cards__single {
+    margin: inherit;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .finales .lcq .lcqStanding .cards__single {
+    margin: auto;
+  }
+}
+.finales .lcq .playerRank {
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  margin: 10px 0;
+  -webkit-text-stroke: 2px #fff;
+  color: rgb(55, 14, 14);
+}
+.finales .playerName {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 7px black;
+  margin: 0;
+  color: #fff;
+  font-size: 70px;
+  position: absolute;
+  top: 5px;
+  bottom: inherit;
+  left: inherit;
+  right: 0;
+}
+@media screen and (min-width: 768px) {
+  .finales .playerName {
+    right: 170px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .playerName {
+    right: -20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .finales .playerName {
+    right: 0px;
+  }
+}
+.finales .playerChara {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .finales .playerChara {
+    display: block;
+    filter: drop-shadow(2px 2px 5px #000);
+    width: initial;
+    max-width: 430px;
+    position: absolute;
+    top: 65px;
+    bottom: inherit;
+    left: -155px;
+    right: inherit;
+  }
+}
+.finales .topPFL {
+  position: relative;
+  margin-bottom: 125px;
+}
+@media screen and (min-width: 768px) {
+  .finales .topPFL {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL {
+    margin-bottom: 100px;
+  }
+}
+.finales .topPFL .playerPhoto {
+  width: 100%;
+  max-width: 270px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+.finales .topPFL .playerName {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 7px black;
+  margin: 0;
+  color: #fff;
+  font-size: 60px;
+  position: absolute;
+  top: 5px;
+  bottom: inherit;
+  left: inherit;
+  right: 0;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .playerName {
+    font-size: 70px;
+    right: -40px;
+  }
+}
+.finales .topPFL .playerChara {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .finales .topPFL .playerChara {
+    display: block;
+    filter: drop-shadow(2px 2px 5px #000);
+    width: 100%;
+    max-width: 250px;
+    position: absolute;
+    left: -150px;
+    top: 65px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .seventh-one .playerChara {
+    left: -100px;
+    top: inherit;
+    bottom: -20px;
+  }
+}
+.finales .topPFL .seventh-two {
+  margin-top: -30px;
+  margin-left: 15px;
+}
+.finales .topPFL .seventh-two .playerName {
+  top: inherit;
+  bottom: 10px;
+  left: -13px;
+  right: initial;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .seventh-two .playerChara {
+    left: inherit;
+    right: -140px;
+    top: 110px;
+  }
+}
+.finales .topPFL .fifth-one {
+  margin-top: -50px;
+}
+@media screen and (min-width: 768px) {
+  .finales .topPFL .fifth-one {
+    margin-left: 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .fifth-one {
+    margin-right: 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .fifth-one {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .fifth-one .playerChara {
+    width: inherit;
+    max-width: 350px;
+    left: 0;
+    top: inherit;
+    bottom: -80px;
+  }
+}
+.finales .topPFL .fifth-two .playerName {
+  right: inherit;
+  left: -10px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .fifth-two .playerChara {
+    left: 150px;
+    top: inherit;
+    bottom: 0;
+  }
+}
+.finales .topPFL .seventh-one .playerRank,
+.finales .topPFL .seventh-two .playerRank,
+.finales .topPFL .fifth-one .playerRank,
+.finales .topPFL .fifth-two .playerRank {
+  font-size: 55px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px #fff;
+  color: inherit;
+}
+.finales .topPFL .copper .playerRank {
+  font-size: 55px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 21px;
+  margin: 0;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px #fff;
+  color: #b36700;
+}
+.finales .topPFL .bronze .playerRank {
+  font-size: 55px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px #fff;
+  color: #C49C48;
+}
+.finales .topPFL .silver .playerRank {
+  font-size: 55px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -23px;
+  margin: 0;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px #fff;
+  color: #C0C0C0;
+}
+.finales .topPFL .gold .playerRank {
+  font-size: 55px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -23px;
+  margin: 0;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px #fff;
+  color: #FFD700;
+}
+.finales .topPFL .copper .playerPhoto {
+  width: 100%;
+  max-width: 285px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+.finales .topPFL .copper .playerName {
+  font-size: 60px;
+  right: inherit;
+  left: -10px;
+  top: inherit;
+  bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .copper .playerChara {
+    width: inherit;
+    max-width: 370px;
+    left: 75px;
+    top: 140px;
+  }
+}
+.finales .topPFL .bronze .playerPhoto {
+  width: 100%;
+  max-width: 310px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+.finales .topPFL .bronze .playerName {
+  right: inherit;
+  left: -22px;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .bronze .playerChara {
+    width: initial;
+    max-width: 450px;
+    top: 170px;
+    left: 67px;
+  }
+}
+.finales .topPFL .silver .playerPhoto {
+  width: 100%;
+  max-width: 335px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL .silver .playerChara {
+    top: inherit;
+    bottom: -80px;
+    left: -190px;
+    width: inherit;
+    max-width: 360px;
+  }
+}
+.finales .topPFL.champ {
+  display: block;
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL.champ {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .finales .topPFL.champ .img-wrapper {
+    width: 100%;
+  }
+}
+.finales .topPFL.champ .playerPhoto {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  padding: 1vh;
+  background: #efecdb;
+  box-shadow: 0 10px 50px rgba(95, 47, 17, 0.5098039216);
+}
+.finales .topPFL.champ .playerName {
+  right: 0;
+}
+@media screen and (min-width: 768px) {
+  .finales .topPFL.champ .playerName {
+    right: 180px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL.champ .playerName {
+    right: -25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .finales .topPFL.champ .playerChara {
+    left: -170px;
+    top: inherit;
+    bottom: -120px;
+    max-width: 375px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 768px) {
+  .finales .tieplace {
+    display: flex;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */
