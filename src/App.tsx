@@ -22,6 +22,7 @@ import {STANDING_QUERY} from "./queries/queries"
 import { Footer } from './components/footer/Footer';
 import AccessMap from './components/accessmap/AccessMap';
 import { Finales } from './pages/finales/Finales';
+import PFLWinter2023 from './pages/pfl-winter-2023/PFLWinter2023';
 
 function App() {
   const [isModal, setIsModal] = useState(false)
@@ -92,6 +93,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/ranking" element={<Ranking />} />
           <Route path="/finales" element={<Finales />} />
+          <Route path="/pflwinter2023" element={<PFLWinter2023 />} />
         </Routes>
       </AnimatePresence>
 
