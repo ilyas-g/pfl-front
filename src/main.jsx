@@ -14,7 +14,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = import.meta.env.VITE_GRAY_TOKEN;
+  const token = 'a51f666d4eb616ab389160365a0f3029';
   return {
     headers: {
       ...headers,
