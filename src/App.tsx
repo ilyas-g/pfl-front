@@ -100,9 +100,9 @@ function App() {
       <AccessMap title={t('venueTitle')} text={t('venueText')} />
 
       <Footer>
-        <p>{t('copyright')} 2021 - {currentYear}. {t('rights')}</p>
-        <p>{t('websiteby')} <a href="https://twitter.com/iamarktall" target="_blank">Arktall (@iamarktall)</a>. {t('photosby')} <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a>.
-        </p>
+        <p>{t('copyright')} 2021 - {currentYear}. {t('rights')} - {t('photosby')} <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a>.</p>
+        {/* <p>{t('websiteby')} <a href="https://twitter.com/iamarktall" target="_blank">Arktall (@iamarktall)</a>. {t('photosby')} <a href="https://twitter.com/nestie__z" target="_blank">Nestie (@nestie__z)</a>. */}
+        {/* </p> */}
       </Footer>
 
       </div>
